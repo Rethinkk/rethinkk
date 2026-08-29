@@ -197,7 +197,7 @@ button { color: inherit; }
 .section-head {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   gap: 24px;
   margin-bottom: 34px;
 }

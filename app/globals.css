@@ -1,0 +1,81 @@
+@import "../outputs/rethinkk-site/styles.css";
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.primary-nav a,
+.text-link,
+.back-link {
+  color: #c8c8c4;
+}
+
+.primary-nav a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}
+
+.primary-nav a:hover,
+.text-link,
+.back-link,
+.yellow {
+  color: var(--rethinkk-yellow);
+}
+
+.archive-item a {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr) 120px;
+  gap: 22px;
+  width: 100%;
+}
+
+.desk-note {
+  max-width: 760px;
+}
+
+.article-panel,
+.desk-login-grid {
+  margin-top: 40px;
+}
+
+.source-title {
+  font-size: 32px;
+  margin-top: 42px;
+}
+
+.related-block {
+  margin-top: 48px;
+}
+
+.related-grid {
+  margin-top: 18px;
+}
+
+.archive-search {
+  max-width: 520px;
+}
+
+.statement-title {
+  font-size: clamp(34px, 5vw, 58px);
+  margin-top: 46px;
+}
+
+.form-note {
+  color: var(--rethinkk-yellow);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 18px 0 0;
+}
+
+.desk-credentials {
+  font-size: 22px;
+}
+
+@media (max-width: 860px) {
+  .archive-item a {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
