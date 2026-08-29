@@ -1,0 +1,211 @@
+window.RETHINKK_CONTENT = {
+  settings: {
+    today: "2026-08-28",
+    tagline: "Rethink knowledge.",
+    statement: "We don't shout. We present."
+  },
+  categories: [
+    "Democracy & Institutions",
+    "Economics & Wealth",
+    "Migration & Society",
+    "Europe & Geopolitics",
+    "Power & Politics",
+    "Ideas"
+  ],
+  publications: [
+    {
+      id: "think-europe-small",
+      slug: "europe-is-not-small",
+      type: "thinking",
+      status: "published",
+      title: "Europe is not small. It just talks as if it is.",
+      subtitle: "A note on scale, power and the stories institutions tell about themselves.",
+      excerpt: "Europe is one of the world's largest economic blocs. Perhaps it is time we stopped talking about it as though it were powerless.",
+      category: "Europe & Geopolitics",
+      tags: ["Europe", "power", "geopolitics"],
+      author: "RETHINKK",
+      publicationDate: "2026-08-28",
+      updatedDate: "2026-08-28",
+      heroPriority: 1,
+      featuredUntil: "2026-09-05",
+      editorialWeight: 98,
+      readingMinutes: 7,
+      sections: {
+        data: "Europe remains a large market, a major regulatory actor and a decisive diplomatic bloc.",
+        facts: "Economic weight and institutional reach do not automatically become political confidence.",
+        analysis: "The gap between material capacity and rhetorical weakness shapes how European choices are framed.",
+        assessment: "RETHINKK's view: the problem is not size. It is strategic self-perception."
+      },
+      sources: ["src-eurostat", "src-oecd"],
+      relatedContent: ["think-confidence", "data-migration-europe"]
+    },
+    {
+      id: "think-dehumanising",
+      slug: "dehumanising",
+      type: "thinking",
+      status: "published",
+      title: "Dehumanising",
+      subtitle: "When migration becomes the explanation for everything, people disappear behind the argument.",
+      excerpt: "A sharper distinction between evidence, perception and political convenience is overdue.",
+      category: "Migration & Society",
+      tags: ["migration", "language", "society"],
+      author: "RETHINKK",
+      publicationDate: "2026-08-25",
+      heroPriority: 2,
+      editorialWeight: 86,
+      readingMinutes: 5,
+      sections: {
+        data: "Migration patterns differ widely by route, country, legal status and time period.",
+        facts: "Public arguments often compress distinct phenomena into one emotional category.",
+        analysis: "That compression makes the policy debate less accurate and less humane.",
+        assessment: "The language of the debate is itself a research object."
+      },
+      sources: ["src-unhcr"],
+      relatedContent: ["data-migration-europe"]
+    },
+    {
+      id: "think-183-day",
+      slug: "the-183-day-myth",
+      type: "thinking",
+      status: "published",
+      title: "The 183-day myth",
+      subtitle: "A familiar number. A much less familiar rule.",
+      excerpt: "Tax residency is often discussed as a countdown. The reality is usually more factual and less theatrical.",
+      category: "Economics & Wealth",
+      tags: ["tax", "wealth", "residency"],
+      author: "RETHINKK",
+      publicationDate: "2026-08-21",
+      heroPriority: 3,
+      editorialWeight: 80,
+      readingMinutes: 6,
+      sections: {
+        data: "Residency tests vary by jurisdiction and treaty.",
+        facts: "The number of days is only one part of a broader factual assessment.",
+        analysis: "The myth survives because simple thresholds are easier to repeat than legal context.",
+        assessment: "A precise question deserves a precise framework."
+      },
+      sources: ["src-oecd"],
+      relatedContent: []
+    },
+    {
+      id: "think-accountability",
+      slug: "power-without-accountability",
+      type: "thinking",
+      status: "published",
+      title: "Power without accountability",
+      subtitle: "Institutional independence rarely disappears overnight.",
+      excerpt: "More often, autonomy is narrowed by procedure, budget, appointments and fatigue.",
+      category: "Democracy & Institutions",
+      tags: ["institutions", "democracy", "power"],
+      author: "RETHINKK",
+      publicationDate: "2026-08-18",
+      editorialWeight: 74,
+      readingMinutes: 8,
+      sections: {
+        data: "Institutional pressure can be tracked through appointment rules, budgets and oversight mechanisms.",
+        facts: "Formal independence may remain while practical independence declines.",
+        analysis: "Democratic erosion is easier to miss when it is procedural.",
+        assessment: "Procedure is where power often hides."
+      },
+      sources: ["src-vdem"],
+      relatedContent: ["index-ddi-2026"]
+    },
+    {
+      id: "think-confidence",
+      slug: "the-european-confidence-problem",
+      type: "thinking",
+      status: "published",
+      title: "The European confidence problem",
+      subtitle: "Institutions can have capacity and still speak as if they need permission.",
+      excerpt: "A short essay on institutional self-doubt and the politics of scale.",
+      category: "Europe & Geopolitics",
+      tags: ["Europe", "institutions"],
+      author: "RETHINKK",
+      publicationDate: "2026-08-10",
+      editorialWeight: 52,
+      readingMinutes: 4,
+      sections: {
+        data: "Public trust, economic capacity and geopolitical agency do not move in perfect alignment.",
+        facts: "The European project contains both large-scale power and structural hesitation.",
+        analysis: "Confidence is not branding. It is the ability to choose under pressure.",
+        assessment: "Europe needs fewer declarations of relevance and more habits of consequence."
+      },
+      sources: ["src-eurostat"],
+      relatedContent: ["think-europe-small"]
+    },
+    {
+      id: "data-migration-europe",
+      slug: "europe-migration-2019-2026",
+      type: "data",
+      status: "published",
+      title: "Migration to Europe, 2019-2026",
+      subtitle: "An illustrative data note on direction, context and interpretation.",
+      hypothesis: "Claims about migration become clearer when trend, route and legal category are separated.",
+      excerpt: "A compact charting note showing why one number rarely explains the whole migration debate.",
+      category: "Migration & Society",
+      tags: ["migration", "Europe", "data"],
+      author: "RETHINKK Data",
+      publicationDate: "2026-08-24",
+      heroPriority: 0,
+      editorialWeight: 82,
+      dataset: [
+        { "year": 2019, "value": 118 },
+        { "year": 2020, "value": 76 },
+        { "year": 2021, "value": 88 },
+        { "year": 2022, "value": 104 },
+        { "year": 2023, "value": 132 },
+        { "year": 2024, "value": 126 },
+        { "year": 2025, "value": 119 },
+        { "year": 2026, "value": 113 }
+      ],
+      methodology: "Sample development dataset for interface design. Replace with sourced production data before publication.",
+      sources: ["src-unhcr", "src-eurostat"],
+      relatedContent: ["think-dehumanising", "think-europe-small"]
+    },
+    {
+      id: "index-ddi-2026",
+      slug: "democracy-direction-2026",
+      type: "index",
+      status: "published",
+      title: "Democracy Direction Index 2026",
+      subtitle: "Democracy is not a status. It is a direction.",
+      excerpt: "A research product measuring institutional status, direction and velocity.",
+      category: "Democracy & Institutions",
+      tags: ["democracy", "index", "institutions"],
+      author: "RETHINKK Research",
+      publicationDate: "2026-08-20",
+      editorialWeight: 90,
+      currentEdition: 2026,
+      methodologyVersion: "0.1",
+      countries: [
+        { country: "Netherlands", isoCode: "NL", status: "resilient", direction: "stable", velocity: "low", institutionalScore: 78, change: 0.4, confidence: "medium" },
+        { country: "Germany", isoCode: "DE", status: "resilient", direction: "improving", velocity: "low", institutionalScore: 81, change: 1.2, confidence: "medium" },
+        { country: "United States", isoCode: "US", status: "pressured", direction: "deteriorating", velocity: "medium", institutionalScore: 63, change: -3.8, confidence: "medium" },
+        { country: "Hungary", isoCode: "HU", status: "strained", direction: "deteriorating", velocity: "medium", institutionalScore: 42, change: -2.1, confidence: "medium" },
+        { country: "Poland", isoCode: "PL", status: "recovering", direction: "improving", velocity: "medium", institutionalScore: 61, change: 4.6, confidence: "medium" }
+      ],
+      relatedContent: ["think-accountability"]
+    },
+    {
+      id: "method-ddi",
+      slug: "democracy-direction-methodology",
+      type: "methodology",
+      status: "published",
+      title: "Methodology note: Democracy Direction",
+      subtitle: "How status, direction and velocity are separated.",
+      excerpt: "A draft methodological frame for treating democratic change as movement over time.",
+      category: "Democracy & Institutions",
+      tags: ["methodology", "democracy"],
+      author: "RETHINKK Research",
+      publicationDate: "2026-08-12",
+      editorialWeight: 45,
+      relatedContent: ["index-ddi-2026"]
+    }
+  ],
+  sources: [
+    { id: "src-eurostat", organisation: "Eurostat", title: "European statistical datasets", publicationDate: "2026-01-01", sourceType: "official-data" },
+    { id: "src-oecd", organisation: "OECD", title: "Policy and tax residency references", publicationDate: "2026-01-01", sourceType: "research-institute" },
+    { id: "src-unhcr", organisation: "UNHCR", title: "Forced displacement and migration context", publicationDate: "2026-01-01", sourceType: "official-data" },
+    { id: "src-vdem", organisation: "V-Dem Institute", title: "Democracy and institutional indicators", publicationDate: "2026-01-01", sourceType: "research-institute" }
+  ]
+};

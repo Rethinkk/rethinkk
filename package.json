@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "mkdir -p dist && cp -R outputs/rethinkk-site/. dist/"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
