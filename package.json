@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "mkdir -p dist && cp -R outputs/rethinkk-site/. dist/"
+    "build": "node scripts/build-sites.mjs"
   },
   "dependencies": {},
   "devDependencies": {}
