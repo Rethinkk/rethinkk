@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { categories } from "@/lib/content";
+import { getLatestPublishedEdition } from "@/lib/democracy-index";
 
 export function DeskClient() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -37,6 +38,8 @@ export function DeskClient() {
     );
   }
 
+  const democracyEdition = getLatestPublishedEdition();
+
   return (
     <div className="desk-grid desk-login-grid">
       <form className="panel">
@@ -51,6 +54,16 @@ export function DeskClient() {
         <div className="kicker muted">Current session</div>
         <p className="lede">Publishing desk, not website builder.</p>
         <p className="copy">This is now a client-side prototype of the future CMS. The production version should store content in PostgreSQL and gate access with real roles.</p>
+        <div className="desk-index-module">
+          <div className="kicker yellow">Democracy Direction Index</div>
+          <p className="copy">Manage annual editions, country assessments, dimensions, confidence, sources and review state.</p>
+          <div className="desk-action-grid">
+            <button className="ghost-btn" type="button">Create edition</button>
+            <button className="ghost-btn" type="button">Duplicate {democracyEdition?.year || "previous"} baseline</button>
+            <button className="ghost-btn" type="button">Import CSV / JSON</button>
+            <button className="ghost-btn" type="button">Preview edition</button>
+          </div>
+        </div>
         <div className="button-row"><button className="ghost-btn" type="button" onClick={() => setAuthenticated(false)}>Sign out</button></div>
       </div>
     </div>

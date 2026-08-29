@@ -4,6 +4,7 @@ import { IndexPanel } from "@/components/index-panel";
 import { ArticleCard, Section } from "@/components/site";
 import { activeRanked, categoryPath, publicationPath, published } from "@/lib/queries";
 import { categories, settings } from "@/lib/content";
+import { getLatestPublishedEdition } from "@/lib/democracy-index";
 
 export default function HomePage() {
   const ranked = activeRanked();
@@ -11,6 +12,7 @@ export default function HomePage() {
   const secondary = ranked.filter((item) => item.id !== hero.id).slice(0, 3);
   const data = activeRanked("data")[0];
   const index = activeRanked("index")[0];
+  const democracyIndex = getLatestPublishedEdition();
 
   return (
     <>
@@ -69,9 +71,9 @@ export default function HomePage() {
         <div className="section-inner split-grid">
           <div>
             <div className="kicker yellow">Rethinkk Index</div>
-            <h2 className="display-title">Democracy Direction Index<br /><span className="yellow">2026</span></h2>
-            <p className="lede">Democracy is not a status. <span className="yellow">It is a direction.</span></p>
-            <Link className="text-link" href={publicationPath(index)}>Explore the index -&gt;</Link>
+            <h2 className="display-title">Democracy Direction Index<br /><span className="yellow">{democracyIndex?.year || 2026}</span></h2>
+            <p className="lede">{democracyIndex?.subtitle || "Democracy is not a status. It is a direction."}</p>
+            <Link className="text-link" href={democracyIndex ? `/index/democracy-direction/${democracyIndex.year}` : publicationPath(index)}>Explore the index -&gt;</Link>
           </div>
           <IndexPanel index={index} />
         </div>

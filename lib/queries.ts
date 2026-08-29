@@ -11,6 +11,7 @@ export function categoryPath(category: string) {
 export function publicationPath(item: Publication) {
   if (item.type === "thinking") return `/thinking/${item.slug}`;
   if (item.type === "data") return `/data/${item.slug}`;
+  if (item.type === "index" && item.slug === "democracy-direction-2026") return "/index/democracy-direction/2026";
   if (item.type === "index") return `/indices/${item.slug}`;
   if (item.type === "methodology") return `/methodology/${item.slug}`;
   return `/archive/${item.slug}`;
