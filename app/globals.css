@@ -185,13 +185,22 @@ a {
 
 .world-map {
   border: 1px solid var(--rethinkk-rule);
-  min-height: 430px;
+  aspect-ratio: 1.92 / 1;
+  min-width: 0;
   overflow: hidden;
   position: relative;
-  background:
-    linear-gradient(90deg, transparent 24.8%, rgba(145,145,145,.18) 25%, transparent 25.2%, transparent 49.8%, rgba(145,145,145,.18) 50%, transparent 50.2%, transparent 74.8%, rgba(145,145,145,.18) 75%, transparent 75.2%),
-    linear-gradient(0deg, transparent 24.8%, rgba(145,145,145,.18) 25%, transparent 25.2%, transparent 49.8%, rgba(145,145,145,.18) 50%, transparent 50.2%, transparent 74.8%, rgba(145,145,145,.18) 75%, transparent 75.2%),
-    #070707;
+  background: #070707;
+}
+
+.world-map svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.map-graticule line {
+  stroke: rgba(145, 145, 145, .16);
+  stroke-width: .8;
 }
 
 .map-frame,
@@ -249,6 +258,84 @@ a {
   left: 80%;
   top: 70%;
   width: 14%;
+}
+
+.map-country {
+  fill: rgba(145, 145, 145, .12);
+  stroke: rgba(220, 220, 214, .18);
+  stroke-width: .6;
+  transition: fill .16s ease, stroke .16s ease;
+}
+
+.map-country.status-resilient {
+  fill: rgba(244, 244, 236, .68);
+}
+
+.map-country.status-erosion {
+  fill: rgba(245, 197, 66, .74);
+}
+
+.map-country.status-autocratic {
+  fill: rgba(35, 35, 32, .94);
+}
+
+.map-country.status-not-assessed {
+  fill: rgba(145, 145, 145, .28);
+}
+
+.map-country-link:hover .map-country,
+.map-country.selected {
+  stroke: var(--rethinkk-yellow);
+  stroke-width: 1.8;
+}
+
+.map-marker {
+  color: var(--rethinkk-white);
+  pointer-events: visiblePainted;
+}
+
+.map-marker circle {
+  fill: #070707;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.map-marker.status-resilient circle {
+  fill: var(--rethinkk-white);
+  stroke: var(--rethinkk-black);
+}
+
+.map-marker.status-erosion circle {
+  fill: var(--rethinkk-yellow);
+  stroke: var(--rethinkk-black);
+}
+
+.map-marker.status-autocratic circle {
+  fill: #070707;
+  stroke: var(--rethinkk-white);
+}
+
+.map-marker.status-not-assessed circle {
+  fill: var(--rethinkk-grey);
+  stroke: var(--rethinkk-black);
+}
+
+.map-marker text {
+  fill: var(--rethinkk-yellow);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  paint-order: stroke;
+  stroke: #070707;
+  stroke-width: 3px;
+  text-transform: uppercase;
+}
+
+.map-marker:hover circle,
+.map-marker:focus-visible circle,
+.map-marker.selected circle {
+  stroke: var(--rethinkk-yellow);
+  stroke-width: 2.6;
 }
 
 .country-marker,
@@ -821,7 +908,6 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .world-map,
   .trajectory-chart {
     min-height: 330px;
   }

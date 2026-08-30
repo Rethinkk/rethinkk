@@ -1,13 +1,26 @@
 import Link from "next/link";
+import { geoNaturalEarth1, geoPath } from "d3-geo";
+import { feature } from "topojson-client";
+import countriesTopology from "world-atlas/countries-110m.json" with { type: "json" };
 import {
   CountryAssessment,
   DemocracyDirectionEdition,
   getDirectionSymbol,
   getMovementLabel,
+  getCountryNumericCode,
   getStatusDesignToken,
   getStatusLabel,
   groupCountriesByDirection
 } from "@/lib/democracy-index";
+
+const mapWidth = 960;
+const mapHeight = 500;
+const countryFeatureCollection = feature(
+  countriesTopology as never,
+  (countriesTopology.objects as { countries: unknown }).countries as never
+) as unknown as GeoJSON.FeatureCollection;
+const mapProjection = geoNaturalEarth1().fitExtent([[14, 18], [946, 482]], countryFeatureCollection);
+const mapPath = geoPath(mapProjection);
 
 export function DemocracyIndexHero({ edition }: { edition: DemocracyDirectionEdition }) {
   return (
@@ -84,27 +97,58 @@ function LegendItem({ token, label }: { token: string; label: string }) {
 
 export function WorldStatusMap({ assessments, selected }: { assessments: CountryAssessment[]; selected?: string }) {
   const current = assessments.find((country) => country.slug === selected) || assessments[0];
+  const countriesByNumericCode = new Map(
+    assessments
+      .map((country) => [getCountryNumericCode(country.iso3), country] as const)
+      .filter(([numericCode]) => Boolean(numericCode))
+  );
   return (
     <div className="map-layout">
       <div className="world-map" role="img" aria-label="Interactive world view of assessed Democracy Direction Index countries">
-        <div className="map-frame" aria-hidden="true">
-          <span className="continent americas" />
-          <span className="continent europe" />
-          <span className="continent africa" />
-          <span className="continent asia" />
-          <span className="continent oceania" />
-        </div>
-        {assessments.map((country) => (
-          <Link
-            className={`country-marker ${getStatusDesignToken(country.status)} ${country.slug === current.slug ? "selected" : ""}`}
-            href={`/index/democracy-direction/${country.year}/${country.slug}`}
-            key={country.id}
-            style={{ left: `${((country.longitude + 180) / 360) * 100}%`, top: `${((90 - country.latitude) / 180) * 100}%` }}
-            title={`${country.countryName}: ${getStatusLabel(country.status)}, ${getMovementLabel(country.direction, country.velocity)}`}
-          >
-            <span>{country.iso2}</span>
-          </Link>
-        ))}
+        <svg viewBox={`0 0 ${mapWidth} ${mapHeight}`} aria-hidden="true">
+          <g className="map-graticule">
+            {[120, 240, 360, 480, 600, 720, 840].map((x) => <line key={`x-${x}`} x1={x} x2={x} y1="32" y2="468" />)}
+            {[100, 200, 300, 400].map((y) => <line key={`y-${y}`} x1="32" x2="928" y1={y} y2={y} />)}
+          </g>
+          <g>
+            {countryFeatureCollection.features.map((countryFeature) => {
+              const country = countriesByNumericCode.get(String(countryFeature.id));
+              return (
+                <a
+                  href={country ? `/index/democracy-direction/${country.year}/${country.slug}` : undefined}
+                  key={String(countryFeature.id)}
+                  className={country ? "map-country-link" : undefined}
+                >
+                  <path
+                    className={`map-country ${country ? getStatusDesignToken(country.status) : ""} ${country?.slug === current.slug ? "selected" : ""}`}
+                    d={mapPath(countryFeature) || undefined}
+                  />
+                  {country && <title>{`${country.countryName}: ${getStatusLabel(country.status)}, ${getMovementLabel(country.direction, country.velocity)}`}</title>}
+                </a>
+              );
+            })}
+          </g>
+          <g>
+            {assessments.map((country) => {
+              const point = mapProjection([country.longitude, country.latitude]);
+              if (!point) return null;
+              const isSelected = country.slug === current.slug;
+              return (
+                <a
+                  href={`/index/democracy-direction/${country.year}/${country.slug}`}
+                  className={`map-marker ${getStatusDesignToken(country.status)} ${isSelected ? "selected" : ""}`}
+                  key={country.id}
+                >
+                  <title>{`${country.countryName}: ${getStatusLabel(country.status)}, ${getMovementLabel(country.direction, country.velocity)}`}</title>
+                  <g transform={`translate(${point[0]} ${point[1]})`}>
+                    <circle r={isSelected ? 7 : 3.6} />
+                    {isSelected && <text x="10" y="4">{country.iso2}</text>}
+                  </g>
+                </a>
+              );
+            })}
+          </g>
+        </svg>
       </div>
       <CountryMapPanel country={current} />
     </div>

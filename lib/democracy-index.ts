@@ -105,6 +105,8 @@ const supplementalCountryMetadata: CountryMetadata[] = [
   { countryName: "Kosovo", slug: "kosovo", iso2: "XK", iso3: "XKX", region: "Europe", latitude: 42.6, longitude: 20.9 }
 ];
 
+const numericCountryCodes = new Map(worldCountries.map((country) => [country.cca3, country.ccn3]));
+
 export const countryMetadata: CountryMetadata[] = [
   ...worldCountries.map(toCountryMetadata),
   ...supplementalCountryMetadata
@@ -135,6 +137,10 @@ function mapCountryRegion(country: WorldCountry): Region {
 
 export function getCountryMetadata(iso3: string) {
   return countryMetadata.find((country) => country.iso3 === iso3.toUpperCase()) || null;
+}
+
+export function getCountryNumericCode(iso3: string) {
+  return numericCountryCodes.get(iso3.toUpperCase()) || null;
 }
 
 const sourceLibrary: Record<string, SourceReference> = {
