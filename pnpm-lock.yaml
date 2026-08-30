@@ -17,6 +17,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.2.8(react@19.2.8)
+      world-countries:
+        specifier: ^5.1.0
+        version: 5.1.0
     devDependencies:
       '@types/node':
         specifier: ^24.3.0
@@ -367,6 +370,9 @@ packages:
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
+  world-countries@5.1.0:
+    resolution: {integrity: sha512-CXR6EBvTbArDlDDIWU3gfKb7Qk0ck2WNZ234b/A0vuecPzIfzzxH+O6Ejnvg1sT8XuiZjVlzOH0h08ZtaO7g0w==}
+
 snapshots:
 
   '@emnapi/runtime@1.11.3':
@@ -624,3 +630,5 @@ snapshots:
   typescript@5.9.3: {}
 
   undici-types@7.18.2: {}
+
+  world-countries@5.1.0: {}

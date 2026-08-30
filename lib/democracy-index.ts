@@ -1,3 +1,7 @@
+import worldCountries from "world-countries";
+import type { Country as WorldCountry } from "world-countries";
+import reviewData from "../data/democracy-direction-2026-review.json" with { type: "json" };
+
 export type DemocracyStatus = "resilient" | "erosion" | "autocratic" | "not_assessed";
 export type Direction = "improving" | "stable" | "deteriorating";
 export type Velocity = "rapid" | "normal" | "limited";
@@ -28,8 +32,6 @@ export type CountryMetadata = {
   latitude: number;
   longitude: number;
 };
-
-import reviewData from "../data/democracy-direction-2026-review.json" with { type: "json" };
 
 export type SourceReference = {
   id: string;
@@ -99,29 +101,37 @@ export type DemocracyDirectionEdition = {
   assessments: CountryAssessment[];
 };
 
-export const countryMetadata: CountryMetadata[] = [
-  { countryName: "Netherlands", slug: "netherlands", iso2: "NL", iso3: "NLD", region: "Europe", latitude: 52.1, longitude: 5.3 },
-  { countryName: "Germany", slug: "germany", iso2: "DE", iso3: "DEU", region: "Europe", latitude: 51.2, longitude: 10.4 },
-  { countryName: "Austria", slug: "austria", iso2: "AT", iso3: "AUT", region: "Europe", latitude: 47.5, longitude: 14.5 },
-  { countryName: "Italy", slug: "italy", iso2: "IT", iso3: "ITA", region: "Europe", latitude: 41.9, longitude: 12.6 },
-  { countryName: "France", slug: "france", iso2: "FR", iso3: "FRA", region: "Europe", latitude: 46.2, longitude: 2.2 },
-  { countryName: "United States", slug: "united-states", iso2: "US", iso3: "USA", region: "North America", latitude: 39.8, longitude: -98.6 },
-  { countryName: "India", slug: "india", iso2: "IN", iso3: "IND", region: "Asia", latitude: 20.6, longitude: 78.9 },
-  { countryName: "Israel", slug: "israel", iso2: "IL", iso3: "ISR", region: "Middle East", latitude: 31, longitude: 35 },
-  { countryName: "Brazil", slug: "brazil", iso2: "BR", iso3: "BRA", region: "Latin America & Caribbean", latitude: -14.2, longitude: -51.9 },
-  { countryName: "Serbia", slug: "serbia", iso2: "RS", iso3: "SRB", region: "Europe", latitude: 44, longitude: 20.9 },
-  { countryName: "Tunisia", slug: "tunisia", iso2: "TN", iso3: "TUN", region: "Africa", latitude: 34, longitude: 9.5 },
-  { countryName: "Hungary", slug: "hungary", iso2: "HU", iso3: "HUN", region: "Europe", latitude: 47.2, longitude: 19.5 },
-  { countryName: "Poland", slug: "poland", iso2: "PL", iso3: "POL", region: "Europe", latitude: 52, longitude: 19.1 },
-  { countryName: "Georgia", slug: "georgia", iso2: "GE", iso3: "GEO", region: "Asia", latitude: 42.3, longitude: 43.4 },
-  { countryName: "Sweden", slug: "sweden", iso2: "SE", iso3: "SWE", region: "Europe", latitude: 60.1, longitude: 18.6 },
-  { countryName: "Slovenia", slug: "slovenia", iso2: "SI", iso3: "SVN", region: "Europe", latitude: 46.2, longitude: 14.9 },
-  { countryName: "Turkey", slug: "turkey", iso2: "TR", iso3: "TUR", region: "Middle East", latitude: 39, longitude: 35.2 },
-  { countryName: "Russia", slug: "russia", iso2: "RU", iso3: "RUS", region: "Europe", latitude: 61.5, longitude: 105.3 },
-  { countryName: "Venezuela", slug: "venezuela", iso2: "VE", iso3: "VEN", region: "Latin America & Caribbean", latitude: 6.4, longitude: -66.6 },
-  { countryName: "Iran", slug: "iran", iso2: "IR", iso3: "IRN", region: "Middle East", latitude: 32.4, longitude: 53.7 },
-  { countryName: "Nicaragua", slug: "nicaragua", iso2: "NI", iso3: "NIC", region: "Latin America & Caribbean", latitude: 12.9, longitude: -85.2 }
+const supplementalCountryMetadata: CountryMetadata[] = [
+  { countryName: "Kosovo", slug: "kosovo", iso2: "XK", iso3: "XKX", region: "Europe", latitude: 42.6, longitude: 20.9 }
 ];
+
+export const countryMetadata: CountryMetadata[] = [
+  ...worldCountries.map(toCountryMetadata),
+  ...supplementalCountryMetadata
+];
+
+function toCountryMetadata(country: WorldCountry): CountryMetadata {
+  return {
+    countryName: country.name.common,
+    slug: slugify(country.name.common),
+    iso2: country.cca2,
+    iso3: country.cca3,
+    region: mapCountryRegion(country),
+    latitude: country.latlng[0],
+    longitude: country.latlng[1]
+  };
+}
+
+function mapCountryRegion(country: WorldCountry): Region {
+  if (country.region === "Europe") return "Europe";
+  if (country.region === "Africa") return "Africa";
+  if (country.region === "Oceania") return "Oceania";
+  if (country.region === "Americas") {
+    return country.subregion === "North America" ? "North America" : "Latin America & Caribbean";
+  }
+  if (country.subregion === "Western Asia") return "Middle East";
+  return "Asia";
+}
 
 export function getCountryMetadata(iso3: string) {
   return countryMetadata.find((country) => country.iso3 === iso3.toUpperCase()) || null;

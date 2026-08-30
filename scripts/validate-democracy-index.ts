@@ -33,7 +33,7 @@ assert.equal(grouped.deteriorating[0].velocity, "rapid", "rapid movement should 
 assert.ok(grouped.improving.some((country) => country.slug === "poland"), "improving countries should be grouped");
 
 const serialized = serializeEdition(edition);
-assert.equal(edition.assessments.length, 21, "review import should contain 21 country assessments");
+assert.equal(edition.assessments.length, 197, "global review import should contain 197 country assessments");
 assert.equal(serialized.assessments.length, edition.assessments.filter(isVisibleAssessment).length);
 assert.ok(serialized.assessments.every((country) => "sources" in country), "serialized output should include evidence sources");
 assert.ok(serialized.assessments.every((country) => "mediaFreedomRationale" in country), "serialized output should include dimension rationales");
@@ -124,7 +124,7 @@ const publishedWithSources = parseDemocracyImport(JSON.stringify({
 }), "json", 2026);
 assert.equal(publishedWithSources.accepted.length, 1, "published imports with genuine sources should pass");
 assert.equal(publishedWithSources.accepted[0].countryName, "Netherlands", "country metadata should be derived from ISO3");
-assert.equal(publishedWithSources.accepted[0].latitude, 52.1, "geography should be derived from permanent metadata");
+assert.equal(publishedWithSources.accepted[0].latitude, 52.5, "geography should be derived from permanent metadata");
 assert.equal(publishedWithSources.accepted[0].previousYearScore, null, "supplied previousYearScore should be ignored");
 assert.deepEqual(deriveHistoricalComparison(publishedWithSources.accepted[0]), { previousYearStatus: null, previousYearScore: null, scoreChange: null });
 
