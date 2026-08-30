@@ -8,6 +8,7 @@ import {
   serializeEdition,
   validateAssessment
 } from "../lib/democracy-index.ts";
+import { parseDemocracyImport, sampleDemocracyCsv } from "../lib/democracy-import.ts";
 
 const latest = getLatestPublishedEdition();
 assert.equal(latest?.year, 2026, "latest published edition should be 2026");
@@ -45,5 +46,14 @@ duplicatedBaseline.assessments = duplicatedBaseline.assessments.map((country) =>
   assessmentStatus: "draft"
 }));
 assert.equal(JSON.stringify(democracyDirectionEditions.find((item) => item.year === 2026)), immutableSnapshot, "duplicating a future baseline must not mutate 2026");
+
+const importPreview = parseDemocracyImport(sampleDemocracyCsv, "csv", 2026);
+assert.equal(importPreview.accepted.length, 2, "sample CSV should produce two accepted records");
+assert.equal(importPreview.rejected.length, 0, "sample CSV should not produce rejected records");
+assert.ok(importPreview.normalizedJson.includes("\"countryName\": \"Netherlands\""), "normalized JSON should preserve country name");
+
+const invalidImport = parseDemocracyImport("country,iso2,iso3,year,status,direction,velocity,confidence,short_rationale\nTest,TT,TST,2026,wrong,sideways,fast,maybe,", "csv", 2026);
+assert.equal(invalidImport.accepted.length, 0, "invalid import should not be accepted");
+assert.ok(invalidImport.rejected[0].errors.length >= 4, "invalid import should explain validation failures");
 
 console.log("Democracy Direction Index validation passed.");

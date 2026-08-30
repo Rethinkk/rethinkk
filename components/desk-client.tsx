@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { categories } from "@/lib/content";
 import { getLatestPublishedEdition } from "@/lib/democracy-index";
+import { DemocracyImportDesk } from "@/components/democracy-import-desk";
 
 export function DeskClient() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -41,31 +42,34 @@ export function DeskClient() {
   const democracyEdition = getLatestPublishedEdition();
 
   return (
-    <div className="desk-grid desk-login-grid">
-      <form className="panel">
-        <div className="field"><label htmlFor="desk-title">Title</label><input id="desk-title" defaultValue="A new institutional question" /></div>
-        <div className="field"><label htmlFor="desk-excerpt">Excerpt</label><textarea id="desk-excerpt" defaultValue="Short, evidence-led context for a new RETHINKK publication." /></div>
-        <div className="field"><label htmlFor="desk-type">Type</label><select id="desk-type"><option>thinking</option><option>data</option><option>index</option><option>methodology</option></select></div>
-        <div className="field"><label htmlFor="desk-category">Category</label><select id="desk-category">{categories.map((category) => <option key={category}>{category}</option>)}</select></div>
-        <div className="field"><label htmlFor="desk-priority">Homepage priority</label><select id="desk-priority"><option>Normal</option><option>Lead story</option><option>Secondary story</option></select></div>
-        <div className="button-row"><button className="solid-btn" type="button">Save draft</button></div>
-      </form>
-      <div className="panel">
-        <div className="kicker muted">Current session</div>
-        <p className="lede">Publishing desk, not website builder.</p>
-        <p className="copy">This is now a client-side prototype of the future CMS. The production version should store content in PostgreSQL and gate access with real roles.</p>
-        <div className="desk-index-module">
-          <div className="kicker yellow">Democracy Direction Index</div>
-          <p className="copy">Manage annual editions, country assessments, dimensions, confidence, sources and review state.</p>
-          <div className="desk-action-grid">
-            <button className="ghost-btn" type="button">Create edition</button>
-            <button className="ghost-btn" type="button">Duplicate {democracyEdition?.year || "previous"} baseline</button>
-            <button className="ghost-btn" type="button">Import CSV / JSON</button>
-            <button className="ghost-btn" type="button">Preview edition</button>
+    <div className="desk-stack">
+      <div className="desk-grid desk-login-grid">
+        <form className="panel">
+          <div className="field"><label htmlFor="desk-title">Title</label><input id="desk-title" defaultValue="A new institutional question" /></div>
+          <div className="field"><label htmlFor="desk-excerpt">Excerpt</label><textarea id="desk-excerpt" defaultValue="Short, evidence-led context for a new RETHINKK publication." /></div>
+          <div className="field"><label htmlFor="desk-type">Type</label><select id="desk-type"><option>thinking</option><option>data</option><option>index</option><option>methodology</option></select></div>
+          <div className="field"><label htmlFor="desk-category">Category</label><select id="desk-category">{categories.map((category) => <option key={category}>{category}</option>)}</select></div>
+          <div className="field"><label htmlFor="desk-priority">Homepage priority</label><select id="desk-priority"><option>Normal</option><option>Lead story</option><option>Secondary story</option></select></div>
+          <div className="button-row"><button className="solid-btn" type="button">Save draft</button></div>
+        </form>
+        <div className="panel">
+          <div className="kicker muted">Current session</div>
+          <p className="lede">Publishing desk, not website builder.</p>
+          <p className="copy">This is now a client-side prototype of the future CMS. The production version should store content in PostgreSQL and gate access with real roles.</p>
+          <div className="desk-index-module">
+            <div className="kicker yellow">Democracy Direction Index</div>
+            <p className="copy">Manage annual editions, country assessments, dimensions, confidence, sources and review state.</p>
+            <div className="desk-action-grid">
+              <button className="ghost-btn" type="button">Create edition</button>
+              <button className="ghost-btn" type="button">Duplicate {democracyEdition?.year || "previous"} baseline</button>
+              <button className="ghost-btn" type="button">Import CSV / JSON</button>
+              <button className="ghost-btn" type="button">Preview edition</button>
+            </div>
           </div>
+          <div className="button-row"><button className="ghost-btn" type="button" onClick={() => setAuthenticated(false)}>Sign out</button></div>
         </div>
-        <div className="button-row"><button className="ghost-btn" type="button" onClick={() => setAuthenticated(false)}>Sign out</button></div>
       </div>
+      <DemocracyImportDesk year={democracyEdition?.year || 2026} />
     </div>
   );
 }
