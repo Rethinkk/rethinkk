@@ -229,20 +229,20 @@ export function InstitutionScore({ country }: { country: CountryAssessment }) {
 
 export function InstitutionDimensions({ country }: { country: CountryAssessment }) {
   const dimensions = [
-    ["Judicial independence", country.judicialIndependence],
-    ["Media freedom", country.mediaFreedom],
-    ["Electoral integrity", country.electoralIntegrity],
-    ["Civic space & human rights", country.civicSpace],
-    ["Checks & balances", country.checksAndBalances]
+    ["Judicial independence", country.judicialIndependence, country.judicialIndependenceRationale],
+    ["Media freedom", country.mediaFreedom, country.mediaFreedomRationale],
+    ["Electoral integrity", country.electoralIntegrity, country.electoralIntegrityRationale],
+    ["Civic space & human rights", country.civicSpace, country.civicSpaceRationale],
+    ["Checks & balances", country.checksAndBalances, country.checksAndBalancesRationale]
   ] as const;
   return (
     <div className="dimension-list">
-      {dimensions.map(([label, value]) => <InstitutionDimension key={label} label={label} value={value} />)}
+      {dimensions.map(([label, value, rationale]) => <InstitutionDimension key={label} label={label} value={value} rationale={rationale} />)}
     </div>
   );
 }
 
-function InstitutionDimension({ label, value }: { label: string; value: number | null }) {
+function InstitutionDimension({ label, value, rationale }: { label: string; value: number | null; rationale: string }) {
   return (
     <div className="dimension-row">
       <span>{label}</span>
@@ -250,6 +250,7 @@ function InstitutionDimension({ label, value }: { label: string; value: number |
         {[1, 2, 3, 4, 5].map((step) => <i className={value && step <= value ? "filled" : ""} key={step} />)}
       </span>
       <strong>{value ?? "not assessed"} / 5</strong>
+      {rationale && <p>{rationale}</p>}
     </div>
   );
 }
@@ -272,6 +273,7 @@ export function EvidenceList({ country }: { country: CountryAssessment }) {
           <strong>{source.title}</strong>
           <em>{source.publicationDate || "Accessed"} / {source.accessedAt}</em>
           <Link href={source.url}>Source -&gt;</Link>
+          {source.supports && source.supports.length > 0 && <small>Supports: {source.supports.join(", ")}</small>}
         </li>
       ))}
     </ul>

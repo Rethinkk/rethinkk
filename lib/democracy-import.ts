@@ -4,11 +4,12 @@ import type {
   CountryAssessment,
   DemocracyStatus,
   Direction,
+  InstitutionDimensionKey,
   Region,
   SourceReference,
   Velocity
 } from "./democracy-index.ts";
-import { validateAssessment } from "./democracy-index.ts";
+import { deriveHistoricalComparison, getCountryMetadata, validateAssessment } from "./democracy-index.ts";
 
 export type ImportFormat = "csv" | "json";
 
@@ -28,20 +29,11 @@ const velocities: Velocity[] = ["rapid", "normal", "limited"];
 const confidences: Confidence[] = ["high", "medium", "low"];
 const assessmentStatuses: AssessmentStatus[] = ["draft", "review", "approved", "published"];
 const regions: Region[] = ["Europe", "North America", "Latin America & Caribbean", "Africa", "Middle East", "Asia", "Oceania"];
+const sourceTypes: SourceReference["sourceType"][] = ["primary", "official", "academic", "ngo", "research", "legal", "media"];
+const dimensions: InstitutionDimensionKey[] = ["judicialIndependence", "mediaFreedom", "electoralIntegrity", "civicSpace", "checksAndBalances"];
 
-const sampleSource: SourceReference = {
-  id: "import-review",
-  organisation: "RETHINKK Desk",
-  title: "Imported assessment pending evidence review",
-  url: "https://rethinkk.org",
-  accessedAt: "2026-08-30",
-  sourceType: "primary",
-  note: "Replace with structured source references before publication."
-};
-
-export const sampleDemocracyCsv = `country,iso2,iso3,region,year,status,direction,velocity,overall_score,judicial_independence,media_freedom,electoral_integrity,civic_space,checks_balances,confidence,assessment_status,short_rationale,trajectory_analysis,what_changed,assessment
-Netherlands,NL,NLD,Europe,2026,resilient,stable,limited,21,5,4,4,4,4,medium,review,"Institutions remain resilient.","Movement is stable, but institutional capacity and trust require monitoring.","Development review note.","RETHINKK assessment note."
-United States,US,USA,North America,2026,erosion,deteriorating,rapid,18,4,4,3,4,3,medium,review,"Strong institutions can still deteriorate.","The direction signal concerns contested norms around electoral trust and institutional restraint.","Development review note.","RETHINKK assessment note."`;
+export const sampleDemocracyCsv = `country,iso2,iso3,region,year,status,direction,velocity,overall_score,judicial_independence,judicial_independence_rationale,media_freedom,media_freedom_rationale,electoral_integrity,electoral_integrity_rationale,civic_space,civic_space_rationale,checks_balances,checks_balances_rationale,confidence,assessment_status,short_rationale,trajectory_analysis,what_changed,assessment,sources_json
+Netherlands,NL,NLD,Europe,2026,resilient,stable,limited,21,5,"Courts are institutionally independent.",4,"Pluralism remains strong while pressure points are monitored.",4,"Election administration remains reliable.",4,"Civic space remains open.",4,"Checks remain functional.",medium,review,"Institutions remain resilient.","Movement is stable, but institutional capacity and trust require monitoring.","Development review note.","RETHINKK assessment note.","[]"`;
 
 export function parseDemocracyImport(input: string, format?: ImportFormat, editionYear = 2026): ImportPreview {
   const trimmed = input.trim();
@@ -113,31 +105,33 @@ function splitCsvLine(line: string) {
 
 function normalizeRecord(raw: RawRecord, editionYear: number) {
   const errors: string[] = [];
-  const countryName = requiredString(raw, errors, "country", "countryName");
-  const iso2 = requiredString(raw, errors, "iso2").toUpperCase();
   const iso3 = requiredString(raw, errors, "iso3").toUpperCase();
+  const metadata = getCountryMetadata(iso3);
+  const countryName = metadata?.countryName || requiredString(raw, errors, "country", "countryName");
+  const iso2 = metadata?.iso2 || requiredString(raw, errors, "iso2").toUpperCase();
   const year = readNumber(raw, "year") ?? editionYear;
   const status = enumValue(raw, errors, statuses, "status");
   const direction = enumValue(raw, errors, directions, "direction");
   const velocity = enumValue(raw, errors, velocities, "velocity");
   const confidence = enumValue(raw, errors, confidences, "confidence");
-  const assessmentStatus = enumValue(raw, errors, assessmentStatuses, "assessment_status", "assessmentStatus") || "review";
-  const region = enumValue(raw, errors, regions, "region") || "Europe";
+  const assessmentStatus = optionalEnumValue(raw, errors, assessmentStatuses, "assessment_status", "assessmentStatus") || "review";
+  const region = metadata?.region || optionalEnumValue(raw, errors, regions, "region") || "Europe";
   const overallInstitutionalScore = readNumber(raw, "overall_score", "overallInstitutionalScore");
   const shortRationale = requiredString(raw, errors, "short_rationale", "shortRationale");
   const trajectoryAnalysis = readString(raw, "trajectory_analysis", "trajectoryAnalysis") || "Imported trajectory observation pending editorial review.";
   const whatChanged = readString(raw, "what_changed", "whatChanged") || "Imported working note pending editorial review.";
   const assessmentText = readString(raw, "assessment") || "Imported assessment pending RETHINKK review.";
+  const sources = normalizeSources(raw, errors);
 
   if (!countryName || !iso2 || !iso3 || !status || !direction || !velocity || !confidence || errors.length) {
     return { errors, assessment: null };
   }
 
-  const assessment: CountryAssessment = {
+  const assessmentBase: CountryAssessment = {
     id: `ddi-${year}-${iso3.toLowerCase()}`,
     indexEditionId: `ddi-${year}`,
-    countryName,
-    slug: slugify(countryName),
+    countryName: metadata?.countryName || countryName,
+    slug: metadata?.slug || slugify(countryName),
     iso2,
     iso3,
     region,
@@ -151,23 +145,83 @@ function normalizeRecord(raw: RawRecord, editionYear: number) {
     electoralIntegrity: readNumber(raw, "electoral_integrity", "electoralIntegrity"),
     civicSpace: readNumber(raw, "civic_space", "civicSpace"),
     checksAndBalances: readNumber(raw, "checks_balances", "checksAndBalances"),
+    judicialIndependenceRationale: readString(raw, "judicial_independence_rationale", "judicialIndependenceRationale"),
+    mediaFreedomRationale: readString(raw, "media_freedom_rationale", "mediaFreedomRationale"),
+    electoralIntegrityRationale: readString(raw, "electoral_integrity_rationale", "electoralIntegrityRationale"),
+    civicSpaceRationale: readString(raw, "civic_space_rationale", "civicSpaceRationale"),
+    checksAndBalancesRationale: readString(raw, "checks_balances_rationale", "checksAndBalancesRationale"),
     previousYearStatus: null,
-    previousYearScore: readNumber(raw, "previous_year_score", "previousYearScore"),
-    scoreChange: readNumber(raw, "score_change", "scoreChange"),
+    previousYearScore: null,
+    scoreChange: null,
     confidence,
     assessmentStatus,
     reviewedBy: readString(raw, "reviewed_by", "reviewedBy") || "RETHINKK Desk",
     reviewedAt: readString(raw, "reviewed_at", "reviewedAt") || new Date().toISOString().slice(0, 10),
-    latitude: readNumber(raw, "latitude") ?? 0,
-    longitude: readNumber(raw, "longitude") ?? 0,
+    latitude: metadata?.latitude ?? readNumber(raw, "latitude") ?? 0,
+    longitude: metadata?.longitude ?? readNumber(raw, "longitude") ?? 0,
     shortRationale,
     trajectoryAnalysis,
     whatChanged,
     assessment: assessmentText,
-    sources: assessmentStatus === "published" ? [sampleSource] : []
+    sources
+  };
+
+  const assessment: CountryAssessment = {
+    ...assessmentBase,
+    ...deriveHistoricalComparison(assessmentBase)
   };
 
   return { errors, assessment };
+}
+
+function normalizeSources(raw: RawRecord, errors: string[]) {
+  const sourceValue = raw.sources ?? raw.sources_json ?? raw.sourcesJson;
+  if (!sourceValue) return [];
+  let sources: unknown;
+  try {
+    sources = typeof sourceValue === "string" ? JSON.parse(sourceValue) : sourceValue;
+  } catch {
+    errors.push("sources must be valid JSON");
+    return [];
+  }
+  if (!Array.isArray(sources)) {
+    errors.push("sources must be an array");
+    return [];
+  }
+  return sources.map((source, index) => normalizeSource(source as RawRecord, index, errors)).filter(Boolean) as SourceReference[];
+}
+
+function normalizeSource(source: RawRecord, index: number, errors: string[]) {
+  const sourceType = enumValue(source, errors, sourceTypes, "sourceType", "source_type");
+  const supports = normalizeSupports(source.supports, index, errors);
+  const organisation = requiredString(source, errors, "organisation");
+  const title = requiredString(source, errors, "title");
+  const url = requiredString(source, errors, "url", "URL");
+  const publicationDate = requiredString(source, errors, "publicationDate", "publication_date");
+  if (!sourceType || !organisation || !title || !url || !publicationDate) return null;
+  return {
+    id: readString(source, "id") || slugify(`${organisation}-${title}`),
+    organisation,
+    title,
+    url,
+    publicationDate,
+    accessedAt: readString(source, "accessedAt", "accessed_at") || new Date().toISOString().slice(0, 10),
+    sourceType,
+    note: readString(source, "note") || undefined,
+    supports
+  };
+}
+
+function normalizeSupports(value: unknown, index: number, errors: string[]) {
+  if (!value) return undefined;
+  const rawSupports = Array.isArray(value) ? value : String(value).split(/[;|]/);
+  const result: InstitutionDimensionKey[] = [];
+  rawSupports.forEach((item) => {
+    const match = dimensions.find((dimension) => normalizeEnum(dimension) === normalizeEnum(String(item)));
+    if (match) result.push(match);
+    else errors.push(`source ${index + 1} supports contains invalid dimension: ${item}`);
+  });
+  return result.length ? result : undefined;
 }
 
 function readString(raw: RawRecord, ...keys: string[]) {
@@ -206,6 +260,17 @@ function enumValue<T extends string>(raw: RawRecord, errors: string[], allowed: 
   return match;
 }
 
+function optionalEnumValue<T extends string>(raw: RawRecord, errors: string[], allowed: readonly T[], ...keys: string[]) {
+  const value = normalizeEnum(readString(raw, ...keys));
+  if (!value) return null;
+  const match = allowed.find((item) => normalizeEnum(item) === value);
+  if (!match) {
+    errors.push(`${keys[0]} must be one of: ${allowed.join(", ")}`);
+    return null;
+  }
+  return match;
+}
+
 function normalizeEnum(value: string) {
   return value.trim().toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
 }
@@ -222,16 +287,25 @@ function toCsv(assessments: CountryAssessment[]) {
     "velocity",
     "overall_score",
     "judicial_independence",
+    "judicial_independence_rationale",
     "media_freedom",
+    "media_freedom_rationale",
     "electoral_integrity",
+    "electoral_integrity_rationale",
     "civic_space",
+    "civic_space_rationale",
     "checks_balances",
+    "checks_balances_rationale",
     "confidence",
     "assessment_status",
     "short_rationale",
     "trajectory_analysis",
     "what_changed",
-    "assessment"
+    "assessment",
+    "sources_json",
+    "previous_year_status",
+    "previous_year_score",
+    "score_change"
   ];
   const rows = assessments.map((country) => [
     country.countryName,
@@ -244,16 +318,25 @@ function toCsv(assessments: CountryAssessment[]) {
     country.velocity,
     country.overallInstitutionalScore,
     country.judicialIndependence,
+    country.judicialIndependenceRationale,
     country.mediaFreedom,
+    country.mediaFreedomRationale,
     country.electoralIntegrity,
+    country.electoralIntegrityRationale,
     country.civicSpace,
+    country.civicSpaceRationale,
     country.checksAndBalances,
+    country.checksAndBalancesRationale,
     country.confidence,
     country.assessmentStatus,
     country.shortRationale,
     country.trajectoryAnalysis,
     country.whatChanged,
-    country.assessment
+    country.assessment,
+    JSON.stringify(country.sources),
+    country.previousYearStatus,
+    country.previousYearScore,
+    country.scoreChange
   ]);
   return [headers, ...rows].map((row) => row.map(csvCell).join(",")).join("\n");
 }

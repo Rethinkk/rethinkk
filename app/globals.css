@@ -495,6 +495,14 @@ a {
   padding: 13px 0;
 }
 
+.dimension-row p {
+  color: var(--rethinkk-grey);
+  font-size: 12px;
+  grid-column: 1 / -1;
+  line-height: 1.55;
+  margin: 0;
+}
+
 .dimension-row:first-child {
   border-top: 0;
 }
@@ -565,6 +573,16 @@ a {
 
 .evidence-list a {
   color: var(--rethinkk-yellow);
+}
+
+.evidence-list small {
+  color: var(--rethinkk-grey);
+  display: block;
+  font-size: 11px;
+  grid-column: 2 / -1;
+  letter-spacing: .08em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .history-strip {
