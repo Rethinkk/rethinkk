@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="section-inner split-grid">
           <div>
             <div className="kicker yellow">Author network</div>
-            <h2 className="display-title">Help rethink what we think we know.</h2>
+            <h2 className="display-title">Help RETHINKK what we think we know.</h2>
           </div>
           <div>
             <p className="copy">RETHINKK grows by adding people who can research carefully, write clearly and separate evidence from interpretation.</p>
