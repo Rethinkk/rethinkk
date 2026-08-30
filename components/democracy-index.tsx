@@ -76,8 +76,8 @@ export function MapLegend() {
         <div className="kicker muted">Status</div>
         <LegendItem token="status-resilient" label="Resilient democracy" />
         <LegendItem token="status-erosion" label="Institutional erosion" />
-        <LegendItem token="status-autocratic" label="Autocratic" />
-        <LegendItem token="status-not-assessed" label="Not assessed - grey only means outside this edition" />
+        <LegendItem token="status-autocratic" label="Autocratic - assessed" />
+        <LegendItem token="status-not-assessed" label="Not assessed in this edition" />
       </div>
       <div>
         <div className="kicker muted">Direction</div>
@@ -106,6 +106,12 @@ export function WorldStatusMap({ assessments, selected }: { assessments: Country
     <div className="map-layout">
       <div className="world-map" role="img" aria-label="Interactive world view of assessed Democracy Direction Index countries">
         <svg viewBox={`0 0 ${mapWidth} ${mapHeight}`} aria-hidden="true">
+          <defs>
+            <pattern id="ddi-map-autocratic" width="8" height="8" patternUnits="userSpaceOnUse">
+              <rect width="8" height="8" fill="#070707" />
+              <path d="M-2 8 L8 -2 M0 10 L10 0" />
+            </pattern>
+          </defs>
           <g className="map-graticule">
             {[120, 240, 360, 480, 600, 720, 840].map((x) => <line key={`x-${x}`} x1={x} x2={x} y1="32" y2="468" />)}
             {[100, 200, 300, 400].map((y) => <line key={`y-${y}`} x1="32" x2="928" y1={y} y2={y} />)}

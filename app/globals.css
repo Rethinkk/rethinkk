@@ -261,8 +261,8 @@ a {
 }
 
 .map-country {
-  fill: rgba(145, 145, 145, .12);
-  stroke: rgba(220, 220, 214, .18);
+  fill: rgba(145, 145, 145, .05);
+  stroke: rgba(220, 220, 214, .1);
   stroke-width: .6;
   transition: fill .16s ease, stroke .16s ease;
 }
@@ -276,11 +276,18 @@ a {
 }
 
 .map-country.status-autocratic {
-  fill: rgba(35, 35, 32, .94);
+  fill: url("#ddi-map-autocratic");
+  stroke: rgba(244, 244, 236, .56);
 }
 
 .map-country.status-not-assessed {
-  fill: rgba(145, 145, 145, .28);
+  fill: rgba(145, 145, 145, .22);
+  stroke: rgba(220, 220, 214, .32);
+}
+
+#ddi-map-autocratic path {
+  stroke: rgba(244, 244, 236, .46);
+  stroke-width: 1.2;
 }
 
 .map-country-link:hover .map-country,
@@ -432,6 +439,17 @@ a {
   display: inline-block;
   height: 13px;
   width: 13px;
+}
+
+.legend-swatch.status-autocratic {
+  background:
+    repeating-linear-gradient(135deg, #070707 0 4px, rgba(244, 244, 236, .7) 4px 5px, #070707 5px 8px);
+  border-color: rgba(244, 244, 236, .9);
+}
+
+.legend-swatch.status-not-assessed {
+  background: rgba(145, 145, 145, .22);
+  border-color: rgba(220, 220, 214, .32);
 }
 
 .movement-board {
