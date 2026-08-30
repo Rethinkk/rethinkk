@@ -29,6 +29,8 @@ export type CountryMetadata = {
   longitude: number;
 };
 
+import reviewData from "../data/democracy-direction-2026-review.json" with { type: "json" };
+
 export type SourceReference = {
   id: string;
   organisation: string;
@@ -100,10 +102,25 @@ export type DemocracyDirectionEdition = {
 export const countryMetadata: CountryMetadata[] = [
   { countryName: "Netherlands", slug: "netherlands", iso2: "NL", iso3: "NLD", region: "Europe", latitude: 52.1, longitude: 5.3 },
   { countryName: "Germany", slug: "germany", iso2: "DE", iso3: "DEU", region: "Europe", latitude: 51.2, longitude: 10.4 },
+  { countryName: "Austria", slug: "austria", iso2: "AT", iso3: "AUT", region: "Europe", latitude: 47.5, longitude: 14.5 },
+  { countryName: "Italy", slug: "italy", iso2: "IT", iso3: "ITA", region: "Europe", latitude: 41.9, longitude: 12.6 },
+  { countryName: "France", slug: "france", iso2: "FR", iso3: "FRA", region: "Europe", latitude: 46.2, longitude: 2.2 },
   { countryName: "United States", slug: "united-states", iso2: "US", iso3: "USA", region: "North America", latitude: 39.8, longitude: -98.6 },
+  { countryName: "India", slug: "india", iso2: "IN", iso3: "IND", region: "Asia", latitude: 20.6, longitude: 78.9 },
+  { countryName: "Israel", slug: "israel", iso2: "IL", iso3: "ISR", region: "Middle East", latitude: 31, longitude: 35 },
+  { countryName: "Brazil", slug: "brazil", iso2: "BR", iso3: "BRA", region: "Latin America & Caribbean", latitude: -14.2, longitude: -51.9 },
+  { countryName: "Serbia", slug: "serbia", iso2: "RS", iso3: "SRB", region: "Europe", latitude: 44, longitude: 20.9 },
+  { countryName: "Tunisia", slug: "tunisia", iso2: "TN", iso3: "TUN", region: "Africa", latitude: 34, longitude: 9.5 },
   { countryName: "Hungary", slug: "hungary", iso2: "HU", iso3: "HUN", region: "Europe", latitude: 47.2, longitude: 19.5 },
   { countryName: "Poland", slug: "poland", iso2: "PL", iso3: "POL", region: "Europe", latitude: 52, longitude: 19.1 },
-  { countryName: "Georgia", slug: "georgia", iso2: "GE", iso3: "GEO", region: "Asia", latitude: 42.3, longitude: 43.4 }
+  { countryName: "Georgia", slug: "georgia", iso2: "GE", iso3: "GEO", region: "Asia", latitude: 42.3, longitude: 43.4 },
+  { countryName: "Sweden", slug: "sweden", iso2: "SE", iso3: "SWE", region: "Europe", latitude: 60.1, longitude: 18.6 },
+  { countryName: "Slovenia", slug: "slovenia", iso2: "SI", iso3: "SVN", region: "Europe", latitude: 46.2, longitude: 14.9 },
+  { countryName: "Turkey", slug: "turkey", iso2: "TR", iso3: "TUR", region: "Middle East", latitude: 39, longitude: 35.2 },
+  { countryName: "Russia", slug: "russia", iso2: "RU", iso3: "RUS", region: "Europe", latitude: 61.5, longitude: 105.3 },
+  { countryName: "Venezuela", slug: "venezuela", iso2: "VE", iso3: "VEN", region: "Latin America & Caribbean", latitude: 6.4, longitude: -66.6 },
+  { countryName: "Iran", slug: "iran", iso2: "IR", iso3: "IRN", region: "Middle East", latitude: 32.4, longitude: 53.7 },
+  { countryName: "Nicaragua", slug: "nicaragua", iso2: "NI", iso3: "NIC", region: "Latin America & Caribbean", latitude: 12.9, longitude: -85.2 }
 ];
 
 export function getCountryMetadata(iso3: string) {
@@ -164,30 +181,52 @@ const sourceLibrary: Record<string, SourceReference> = {
   }
 };
 
+type ImportedSource = Omit<SourceReference, "id" | "accessedAt"> & Partial<Pick<SourceReference, "id" | "accessedAt">>;
+
 type AnnualAssessmentInput = Omit<
   CountryAssessment,
-  "countryName" | "slug" | "iso2" | "region" | "latitude" | "longitude" | "indexEditionId" | "year" | "sources" | "reviewedAt" | "previousYearStatus" | "previousYearScore" | "scoreChange"
-> & { sourceIds: string[] };
+  "id" | "countryName" | "slug" | "iso2" | "region" | "latitude" | "longitude" | "indexEditionId" | "year" | "sources" | "reviewedAt" | "previousYearStatus" | "previousYearScore" | "scoreChange"
+> & {
+  id?: string;
+  year?: number;
+  reviewedAt?: string;
+  sourceIds?: string[];
+  sources?: ImportedSource[];
+};
 
 function assessment(partial: AnnualAssessmentInput): CountryAssessment {
   const metadata = getCountryMetadata(partial.iso3);
   if (!metadata) throw new Error(`Missing country metadata for ${partial.iso3}`);
+  const year = partial.year || 2026;
   return {
     ...partial,
+    id: partial.id || `${metadata.iso3.toLowerCase()}-${year}`,
     countryName: metadata.countryName,
     slug: metadata.slug,
     iso2: metadata.iso2,
     region: metadata.region,
     latitude: metadata.latitude,
     longitude: metadata.longitude,
-    indexEditionId: "ddi-2026",
-    year: 2026,
+    indexEditionId: `ddi-${year}`,
+    year,
     previousYearStatus: null,
     previousYearScore: null,
     scoreChange: null,
-    reviewedAt: "2026-08-29",
-    sources: partial.sourceIds.map((id) => sourceLibrary[id])
+    reviewedAt: partial.reviewedAt || "2026-08-29",
+    sources: partial.sources ? partial.sources.map(normalizeSource) : (partial.sourceIds || []).map((id) => sourceLibrary[id])
   };
+}
+
+function normalizeSource(source: ImportedSource): SourceReference {
+  return {
+    ...source,
+    id: source.id || slugify(`${source.organisation}-${source.title}`),
+    accessedAt: source.accessedAt || "2026-08-30"
+  };
+}
+
+function slugify(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
@@ -203,167 +242,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
     developmentLabel: "Development data - not published research",
     introduction:
       "The Democracy Direction Index separates institutional status, institutional direction and velocity of change. A strong democracy can deteriorate; a weaker democracy can improve. The product is designed to track movement, not to flatten politics into a league table.",
-    assessments: [
-      assessment({
-        id: "ddi-2026-nld",
-        iso3: "NLD",
-        status: "resilient",
-        direction: "stable",
-        velocity: "limited",
-        overallInstitutionalScore: 21,
-        judicialIndependence: 5,
-        mediaFreedom: 4,
-        electoralIntegrity: 4,
-        civicSpace: 4,
-        checksAndBalances: 4,
-        judicialIndependenceRationale: "Courts are treated as institutionally independent in this development record.",
-        mediaFreedomRationale: "Pluralism remains strong, while pressure on public debate and media economics warrants monitoring.",
-        electoralIntegrityRationale: "Election administration remains reliable in this development record.",
-        civicSpaceRationale: "Civic space remains open, with trust and administrative responsiveness as relevant watchpoints.",
-        checksAndBalancesRationale: "Checks remain functional, though coalition fragmentation can slow institutional accountability.",
-        confidence: "medium",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Institutions remain broadly resilient, with visible pressure around trust, formation politics and administrative capacity.",
-        trajectoryAnalysis: "The Dutch democratic system is not moving through a dramatic institutional rupture. The more relevant observation is slower: high baseline resilience is being tested by administrative fragmentation, low-trust political cycles and pressure on the state's capacity to execute decisions cleanly. Direction is therefore stable, but not inert.",
-        whatChanged: "Development record: used to test how stable institutional systems are displayed without presenting stasis as absence of pressure.",
-        assessment: "RETHINKK classifies this seed record as resilient and stable. The score supports the assessment but does not automatically determine it.",
-        relatedContent: ["think-accountability"],
-        sourceIds: ["vdem", "idea", "rsf"]
-      }),
-      assessment({
-        id: "ddi-2026-deu",
-        iso3: "DEU",
-        status: "resilient",
-        direction: "stable",
-        velocity: "limited",
-        overallInstitutionalScore: 22,
-        judicialIndependence: 5,
-        mediaFreedom: 4,
-        electoralIntegrity: 5,
-        civicSpace: 4,
-        checksAndBalances: 4,
-        judicialIndependenceRationale: "Judicial independence is modelled as highly resilient in this development record.",
-        mediaFreedomRationale: "Media pluralism remains strong, with structural pressure points tracked separately from status.",
-        electoralIntegrityRationale: "Electoral administration is represented as highly resilient.",
-        civicSpaceRationale: "Civic space remains open while political strain is monitored.",
-        checksAndBalancesRationale: "Federal structure and institutional review mechanisms continue to provide checks.",
-        confidence: "medium",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Resilient institutions with pressure points that require monitoring rather than alarm.",
-        trajectoryAnalysis: "Germany remains institutionally strong, but the direction question is about strain rather than collapse. The system still absorbs political pressure through courts, federal structure and administrative norms. The current movement is limited: pressure is visible, but institutional correction mechanisms remain active.",
-        whatChanged: "Development record: included to test a resilient democracy with limited movement and high institutional capacity.",
-        assessment: "The direction is stable because the illustrative record does not assign a material institutional shift during the review period.",
-        relatedContent: ["think-europe-small", "think-confidence"],
-        sourceIds: ["vdem", "freedomHouse", "idea"]
-      }),
-      assessment({
-        id: "ddi-2026-usa",
-        iso3: "USA",
-        status: "erosion",
-        direction: "deteriorating",
-        velocity: "rapid",
-        overallInstitutionalScore: 18,
-        judicialIndependence: 4,
-        mediaFreedom: 4,
-        electoralIntegrity: 3,
-        civicSpace: 4,
-        checksAndBalances: 3,
-        judicialIndependenceRationale: "Judicial institutions retain significant capacity, while politicisation risks are part of the trajectory analysis.",
-        mediaFreedomRationale: "Media freedom remains structurally strong, but trust and fragmentation are relevant contextual pressures.",
-        electoralIntegrityRationale: "Electoral integrity is assessed under pressure because electoral trust and administration are contested.",
-        civicSpaceRationale: "Civic space remains broad, though polarisation affects institutional operating conditions.",
-        checksAndBalancesRationale: "Checks remain meaningful but are increasingly contested as norms and procedures.",
-        confidence: "medium",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Included as the primary demonstration case for the distinction between institutional strength and deteriorating direction.",
-        trajectoryAnalysis: "The United States illustrates the central RETHINKK distinction: a country can retain deep institutional capacity while moving in a concerning direction. The observation is not that democratic institutions have disappeared, but that electoral trust, checks and institutional restraint are increasingly contested as operating norms rather than merely policy disagreements.",
-        whatChanged: "Development record: models a country where strong remaining institutions can still move in a negative direction.",
-        assessment: "This seed assessment is labelled institutional erosion with rapid deterioration to demonstrate the core thesis. It is not a final RETHINKK research judgement.",
-        sourceIds: ["vdem", "freedomHouse", "electionAuthorities"]
-      }),
-      assessment({
-        id: "ddi-2026-hun",
-        iso3: "HUN",
-        status: "erosion",
-        direction: "deteriorating",
-        velocity: "normal",
-        overallInstitutionalScore: 12,
-        judicialIndependence: 2,
-        mediaFreedom: 2,
-        electoralIntegrity: 3,
-        civicSpace: 2,
-        checksAndBalances: 3,
-        judicialIndependenceRationale: "Judicial independence is modelled as weak under sustained institutional pressure.",
-        mediaFreedomRationale: "Media freedom is scored low to represent limited pluralism in the development dataset.",
-        electoralIntegrityRationale: "Electoral integrity remains assessed as under pressure rather than absent.",
-        civicSpaceRationale: "Civic space is represented as weak due to cumulative constraints.",
-        checksAndBalancesRationale: "Checks and balances are present but materially strained.",
-        confidence: "medium",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Development record for sustained institutional pressure across multiple dimensions.",
-        trajectoryAnalysis: "Hungary is used here as a development case for prolonged institutional narrowing. The direction is deteriorating because pressure is represented as cumulative: media pluralism, checks on executive authority and independent institutional space are not treated as isolated incidents, but as mutually reinforcing movement.",
-        whatChanged: "Development record: used to test how the interface handles an erosion classification with normal deterioration velocity.",
-        assessment: "Direction and status remain independent: the low score supports the status, while velocity describes the current rate of movement.",
-        sourceIds: ["vdem", "freedomHouse", "rsf"]
-      }),
-      assessment({
-        id: "ddi-2026-pol",
-        iso3: "POL",
-        status: "erosion",
-        direction: "improving",
-        velocity: "normal",
-        overallInstitutionalScore: 16,
-        judicialIndependence: 3,
-        mediaFreedom: 3,
-        electoralIntegrity: 4,
-        civicSpace: 3,
-        checksAndBalances: 3,
-        judicialIndependenceRationale: "Judicial independence remains under pressure but is the key area for potential recovery.",
-        mediaFreedomRationale: "Media freedom is assessed as under pressure while direction may improve.",
-        electoralIntegrityRationale: "Electoral integrity remains comparatively stronger in this seed record.",
-        civicSpaceRationale: "Civic space is under pressure but not closed.",
-        checksAndBalancesRationale: "Checks and balances are strained, with recovery potential reflected in direction.",
-        confidence: "medium",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Development record for a pressured institutional status that may be improving.",
-        trajectoryAnalysis: "Poland demonstrates why status and direction must remain separate. The record can still sit under institutional erosion while the direction turns positive if judicial, media or accountability institutions begin recovering autonomy. Improvement does not erase the status; it marks movement within it.",
-        whatChanged: "Development record: included to show that institutional erosion and improvement can coexist in the same annual assessment.",
-        assessment: "The status remains erosion while the trajectory is improving. This is the conceptual separation the index is built to preserve.",
-        relatedContent: ["think-accountability"],
-        sourceIds: ["vdem", "idea", "rsf"]
-      }),
-      assessment({
-        id: "ddi-2026-geo",
-        iso3: "GEO",
-        status: "erosion",
-        direction: "deteriorating",
-        velocity: "rapid",
-        overallInstitutionalScore: 14,
-        judicialIndependence: 3,
-        mediaFreedom: 3,
-        electoralIntegrity: 3,
-        civicSpace: 2,
-        checksAndBalances: 3,
-        judicialIndependenceRationale: "Judicial independence is represented as under pressure in a contested institutional environment.",
-        mediaFreedomRationale: "Media freedom is scored as under pressure, with trajectory more important than the absolute number.",
-        electoralIntegrityRationale: "Electoral integrity remains under pressure in this development record.",
-        civicSpaceRationale: "Civic space is weak in the seed data because rapid deterioration is being modelled.",
-        checksAndBalancesRationale: "Checks and balances are assessed as present but strained.",
-        confidence: "low",
-        assessmentStatus: "published",
-        reviewedBy: "RETHINKK Research",
-        shortRationale: "Development record for rapid movement in a contested institutional environment.",
-        trajectoryAnalysis: "Georgia is included as a rapid-movement case: the signal is not only institutional condition, but acceleration. When civic space, institutional independence and political contestation shift quickly, the index should make speed visible instead of hiding it behind a single annual score.",
-        whatChanged: "Development record: used to test confidence labelling and rapid deterioration outside Western Europe and North America.",
-        assessment: "The low confidence label concerns evidence certainty in this seed record. It does not describe democratic quality.",
-        sourceIds: ["vdem", "freedomHouse", "rsf"]
-      })
-    ]
+    assessments: (reviewData.assessments as AnnualAssessmentInput[]).map((item) => assessment(item))
   }
 ];
 
@@ -378,7 +257,11 @@ export function getEdition(year: number) {
 }
 
 export function getCountryAssessment(year: number, slug: string) {
-  return getEdition(year)?.assessments.find((country) => country.slug === slug && country.assessmentStatus === "published");
+  return getEdition(year)?.assessments.find((country) => country.slug === slug && isVisibleAssessment(country));
+}
+
+export function isVisibleAssessment(country: CountryAssessment) {
+  return country.assessmentStatus === "published" || country.assessmentStatus === "review";
 }
 
 export function getDirectionSymbol(direction: Direction, velocity: Velocity) {
@@ -436,7 +319,7 @@ export function getPreviousCountryAssessment(country: CountryAssessment) {
 export function deriveHistoricalComparison(country: CountryAssessment, editions = democracyDirectionEditions) {
   const previous = editions
     .find((edition) => edition.status === "published" && edition.year === country.year - 1)
-    ?.assessments.find((assessment) => assessment.iso3 === country.iso3 && assessment.assessmentStatus === "published");
+    ?.assessments.find((assessment) => assessment.iso3 === country.iso3 && isVisibleAssessment(assessment));
   return {
     previousYearStatus: previous?.status || null,
     previousYearScore: previous?.overallInstitutionalScore ?? null,
@@ -462,7 +345,7 @@ export function serializeEdition(edition: DemocracyDirectionEdition) {
     methodologyVersion: edition.methodologyVersion,
     developmentLabel: edition.developmentLabel,
     assessments: edition.assessments
-      .filter((country) => country.assessmentStatus === "published")
+      .filter(isVisibleAssessment)
       .map((country) => {
         const comparison = deriveHistoricalComparison(country);
         return {

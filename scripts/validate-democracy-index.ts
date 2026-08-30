@@ -7,6 +7,7 @@ import {
   groupCountriesByDirection,
   serializeEdition,
   deriveHistoricalComparison,
+  isVisibleAssessment,
   validateAssessment
 } from "../lib/democracy-index.ts";
 import { parseDemocracyImport, sampleDemocracyCsv } from "../lib/democracy-import.ts";
@@ -32,7 +33,8 @@ assert.equal(grouped.deteriorating[0].velocity, "rapid", "rapid movement should 
 assert.ok(grouped.improving.some((country) => country.slug === "poland"), "improving countries should be grouped");
 
 const serialized = serializeEdition(edition);
-assert.equal(serialized.assessments.length, edition.assessments.filter((country) => country.assessmentStatus === "published").length);
+assert.equal(edition.assessments.length, 21, "review import should contain 21 country assessments");
+assert.equal(serialized.assessments.length, edition.assessments.filter(isVisibleAssessment).length);
 assert.ok(serialized.assessments.every((country) => "sources" in country), "serialized output should include evidence sources");
 assert.ok(serialized.assessments.every((country) => "mediaFreedomRationale" in country), "serialized output should include dimension rationales");
 

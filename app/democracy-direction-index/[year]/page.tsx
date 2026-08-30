@@ -11,7 +11,7 @@ import {
   WorldStatusMap
 } from "@/components/democracy-index";
 import { PageActions, Section } from "@/components/site";
-import { democracyDirectionEditions, getEdition } from "@/lib/democracy-index";
+import { democracyDirectionEditions, getEdition, isVisibleAssessment } from "@/lib/democracy-index";
 
 export function generateStaticParams() {
   return democracyDirectionEditions
@@ -33,7 +33,7 @@ export default async function DemocracyDirectionEditionPage({ params }: { params
   const edition = getEdition(Number(year));
   if (!edition) notFound();
 
-  const countries = edition.assessments.filter((country) => country.assessmentStatus === "published");
+  const countries = edition.assessments.filter(isVisibleAssessment);
 
   return (
     <>

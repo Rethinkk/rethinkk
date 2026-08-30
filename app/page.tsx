@@ -4,7 +4,7 @@ import { IndexPanel } from "@/components/index-panel";
 import { ArticleCard, Section } from "@/components/site";
 import { activeRanked, categoryPath, publicationPath, published } from "@/lib/queries";
 import { categories, settings } from "@/lib/content";
-import { getLatestPublishedEdition } from "@/lib/democracy-index";
+import { getLatestPublishedEdition, isVisibleAssessment } from "@/lib/democracy-index";
 
 export default function HomePage() {
   const ranked = activeRanked();
@@ -13,6 +13,7 @@ export default function HomePage() {
   const data = activeRanked("data")[0];
   const index = activeRanked("index")[0];
   const democracyIndex = getLatestPublishedEdition();
+  const visibleIndexAssessments = democracyIndex?.assessments.filter(isVisibleAssessment) || [];
 
   return (
     <>
@@ -75,7 +76,7 @@ export default function HomePage() {
             <p className="lede">{democracyIndex?.subtitle || "Democracy is not a status. It is a direction."}</p>
             <Link className="text-link" href={democracyIndex ? `/index/democracy-direction/${democracyIndex.year}` : publicationPath(index)}>Explore the index -&gt;</Link>
           </div>
-          <IndexPanel index={index} />
+          <IndexPanel assessments={visibleIndexAssessments} />
         </div>
       </Section>
 

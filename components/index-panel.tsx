@@ -1,7 +1,7 @@
-import { Publication } from "@/lib/content";
+import { CountryAssessment } from "@/lib/democracy-index";
 
-export function IndexPanel({ index }: { index: Publication }) {
-  const counts = (index.countries || []).reduce<Record<string, number>>((all, country) => {
+export function IndexPanel({ assessments }: { assessments: CountryAssessment[] }) {
+  const counts = assessments.reduce<Record<string, number>>((all, country) => {
     all[country.direction] = (all[country.direction] || 0) + 1;
     return all;
   }, {});
@@ -16,13 +16,13 @@ export function IndexPanel({ index }: { index: Publication }) {
           <div className="status-cell"><span className="status-symbol">→</span><div className="kicker muted">Stable {counts.stable || 0}</div></div>
         </div>
       </div>
-      {(index.countries || []).slice(0, 4).map((country) => (
-        <div key={country.isoCode}>
+      {assessments.slice(0, 4).map((country) => (
+        <div key={country.iso3}>
           <div className="metric-row">
-            <span>{country.country}</span>
-            <span className="muted">{country.institutionalScore} / {country.direction}</span>
+            <span>{country.countryName}</span>
+            <span className="muted">{country.overallInstitutionalScore}/25 / {country.direction}</span>
           </div>
-          <div className="bar"><span style={{ width: `${country.institutionalScore}%` }} /></div>
+          <div className="bar"><span style={{ width: `${((country.overallInstitutionalScore || 0) / 25) * 100}%` }} /></div>
         </div>
       ))}
     </div>

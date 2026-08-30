@@ -10,13 +10,13 @@ import {
   InstitutionScore
 } from "@/components/democracy-index";
 import { ArticleCard, PageActions, Section } from "@/components/site";
-import { democracyDirectionEditions, getCountryAssessment } from "@/lib/democracy-index";
+import { democracyDirectionEditions, getCountryAssessment, isVisibleAssessment } from "@/lib/democracy-index";
 import { publications } from "@/lib/content";
 
 export function generateStaticParams() {
   return democracyDirectionEditions.flatMap((edition) =>
     edition.assessments
-      .filter((country) => country.assessmentStatus === "published")
+      .filter(isVisibleAssessment)
       .map((country) => ({ year: String(edition.year), country: country.slug }))
   );
 }

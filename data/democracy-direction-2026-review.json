@@ -1,0 +1,1259 @@
+{
+  "assessments": [
+    {
+      "iso3": "NLD",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 21,
+      "judicialIndependence": 5,
+      "judicialIndependenceRationale": "Judicial independence remains strong and courts retain effective institutional autonomy.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Media pluralism and legal protections remain strong, with economic pressure and trust as secondary concerns.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Election administration and political competition remain reliable and open.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic organisations, assembly and expression remain broadly protected.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Checks and balances remain functional despite fragmented coalition politics and administrative strain.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Institutions remain highly resilient; current political strain has not translated into material institutional erosion.",
+      "trajectoryAnalysis": "The Dutch system is moving sideways rather than backward. Polarisation, coalition fragmentation and implementation problems deserve monitoring, but courts, elections, media pluralism and civic space remain robust.",
+      "whatChanged": "No major institutional rupture is identified. Freedom House continues to rate the Netherlands among the strongest democracies, with an independent judiciary and very high political-rights and civil-liberties scores.",
+      "assessment": "RETHINKK classifies the Netherlands as a resilient democracy with a stable, low-velocity trajectory. Political turbulence is not treated as institutional erosion unless it changes the functioning or independence of democratic institutions.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Netherlands",
+          "url": "https://freedomhouse.org/country/netherlands/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "DEU",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 22,
+      "judicialIndependence": 5,
+      "judicialIndependenceRationale": "Courts remain strongly independent and constitutionally protected.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Independent and plural media remain established, though intimidation and polarisation create pressure.",
+      "electoralIntegrity": 5,
+      "electoralIntegrityRationale": "Election administration is free, competitive and institutionally robust.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic space is broad and active, with strong associational rights.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Federalism, parliament, courts and constitutional safeguards provide effective checks.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Germany retains strong democratic safeguards despite a more polarised political environment.",
+      "trajectoryAnalysis": "Germany's constitutional architecture remains resilient. The rise of anti-system and populist forces raises political risk, but RETHINKK does not equate electoral popularity with institutional erosion absent material weakening of institutions.",
+      "whatChanged": "No material 2026 evidence justifies reclassifying Germany as institutionally eroding. Freedom House continues to score electoral process and political rights at very high levels.",
+      "assessment": "RETHINKK classifies Germany as resilient and stable. The relevant distinction is between political pressure on the system and actual institutional damage.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Germany",
+          "url": "https://freedomhouse.org/country/germany/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "AUT",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "improving",
+      "velocity": "limited",
+      "overallInstitutionalScore": 22,
+      "judicialIndependence": 5,
+      "judicialIndependenceRationale": "Judicial independence remains strong in law and practice.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Media are broadly free and independent, though ownership and political influence warrant continued scrutiny.",
+      "electoralIntegrity": 5,
+      "electoralIntegrityRationale": "Electoral laws and administration remain fair and impartial.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic and associational freedoms remain strongly protected.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Checks remain strong, with transparency improved by the new freedom-of-information framework.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Austria's democratic institutions remain strong, with a modest positive signal from transparency reform.",
+      "trajectoryAnalysis": "The direction is marginally positive rather than transformative. The new freedom-of-information regime strengthens transparency while core judicial and electoral institutions remain robust.",
+      "whatChanged": "Freedom House raised Austria's score after implementation of a Freedom of Information Act that replaced a presumption of secrecy with a right of access.",
+      "assessment": "RETHINKK classifies Austria as resilient with limited improvement. The improvement reflects an institutional reform, not a judgment about party politics.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Austria",
+          "url": "https://freedomhouse.org/country/austria/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "ITA",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "normal",
+      "overallInstitutionalScore": 18,
+      "judicialIndependence": 4,
+      "judicialIndependenceRationale": "The judiciary remains substantially independent, despite political tensions around judicial reform.",
+      "mediaFreedom": 3,
+      "mediaFreedomRationale": "Media pluralism persists, but political influence over public broadcasting and pressures on journalists weaken the environment.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Elections remain competitive and credibly administered.",
+      "civicSpace": 3,
+      "civicSpaceRationale": "Civic rights are generally protected but pressure around protest, migration and minority rights lowers resilience.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Checks remain functional, though executive-parliamentary tensions and institutional reform efforts require monitoring.",
+      "confidence": "medium",
+      "assessmentStatus": "review",
+      "shortRationale": "Italy remains an electoral democracy, but evidence points to weakening in media freedom and civil-liberties protections.",
+      "trajectoryAnalysis": "The trajectory is negative but not one of democratic collapse. The concern is cumulative: pressure on media independence, restrictions affecting protest and migrants, and a measurable decline in external democracy assessments.",
+      "whatChanged": "Freedom House's 2026 score fell from 89 to 87. V-Dem identifies Italy among the newer autocratizing countries in Western Europe and North America.",
+      "assessment": "RETHINKK classifies Italy as experiencing institutional erosion with normal-speed deterioration. Competitive elections and functioning courts remain important counterweights.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Italy",
+          "url": "https://freedomhouse.org/country/italy/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "FRA",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 20,
+      "judicialIndependence": 4,
+      "judicialIndependenceRationale": "Judicial institutions remain independent and capable of constraining government.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Media pluralism is broad, though concentration and threats to journalists remain relevant.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Elections remain competitive with credible administration.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic freedoms remain substantial, although protest policing and emergency powers are recurring concerns.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Parliament, courts and constitutional institutions continue to provide meaningful checks.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "France retains strong democratic institutions despite recurring pressure on civil liberties and executive power.",
+      "trajectoryAnalysis": "The system is stable. Emergency powers, policing controversies and political fragmentation remain genuine watchpoints, but no current evidence supports a shift into systemic institutional erosion.",
+      "whatChanged": "Freedom House continues to rate France Free with strong political rights and civil liberties, while noting repeated constraints on privacy, assembly and movement in security contexts.",
+      "assessment": "RETHINKK classifies France as resilient and stable, with limited negative pressure rather than a clear deteriorating institutional trajectory.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - France",
+          "url": "https://freedomhouse.org/country/france/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "USA",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "rapid",
+      "overallInstitutionalScore": 18,
+      "judicialIndependence": 4,
+      "judicialIndependenceRationale": "The judiciary remains institutionally independent, but pressure surrounding compliance, appointments and executive reach creates elevated risk.",
+      "mediaFreedom": 3,
+      "mediaFreedomRationale": "Formal press freedom remains strong, while political attacks, access pressure and institutional targeting weaken the environment.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Elections remain competitive and administratively functional, despite continued conflict over rules and legitimacy.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic society remains highly active and legally protected, though rights enforcement is increasingly contested.",
+      "checksAndBalances": 3,
+      "checksAndBalancesRationale": "Congressional oversight, administrative independence and other checks have weakened relative to the country's historical baseline.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "The United States retains competitive elections and independent institutions, but the speed of pressure on checks, oversight and media independence is exceptional.",
+      "trajectoryAnalysis": "The direction is clearly negative and unusually fast for a long-established democracy. Institutional resilience remains substantial, which is why the country is classified as erosion rather than autocratic.",
+      "whatChanged": "Freedom House scores the United States 81/100 and describes significant impairment of federal oversight and governance. V-Dem's 2026 report calls the recent democratic decline in the United States unprecedented and identifies it as an autocratizing country.",
+      "assessment": "RETHINKK classifies the United States as experiencing institutional erosion with rapid deterioration. The assessment reflects actual pressure on institutional independence and oversight, not simply political polarisation.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - United States",
+          "url": "https://freedomhouse.org/country/united-states/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "IND",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "normal",
+      "overallInstitutionalScore": 14,
+      "judicialIndependence": 3,
+      "judicialIndependenceRationale": "Courts retain formal independence but face concerns about deference, appointments and uneven protection of rights.",
+      "mediaFreedom": 2,
+      "mediaFreedomRationale": "Independent journalism operates under significant legal, political and economic pressure.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "National elections remain competitive and consequential, supporting a relatively stronger electoral score.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "Civil-society organisations and dissent face legal and administrative restrictions.",
+      "checksAndBalances": 3,
+      "checksAndBalancesRationale": "Checks exist but executive-party dominance reduces their practical strength.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "India remains electorally competitive, but media, civic space and institutional independence are under sustained pressure.",
+      "trajectoryAnalysis": "The trajectory remains negative. Elections continue to matter and opposition forces can win power, but executive dominance and constraints on media and civil society lower institutional resilience.",
+      "whatChanged": "Freedom House rates India Partly Free at 62/100, down from 63, while V-Dem continues to place India within the broader global autocratization trend.",
+      "assessment": "RETHINKK classifies India as institutional erosion with normal-speed deterioration: electoral competition remains meaningful, but liberal-democratic safeguards have weakened.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - India",
+          "url": "https://freedomhouse.org/country/india/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "ISR",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "limited",
+      "overallInstitutionalScore": 16,
+      "judicialIndependence": 3,
+      "judicialIndependenceRationale": "Judicial independence remains meaningful but has been at the centre of sustained political attempts to alter institutional balance.",
+      "mediaFreedom": 3,
+      "mediaFreedomRationale": "Media remain plural, but wartime restrictions, political pressure and ownership concentration weaken the environment.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Elections are competitive and capable of changing governing coalitions.",
+      "civicSpace": 3,
+      "civicSpaceRationale": "Civic mobilisation is strong, while rights protections are uneven and security measures create pressure.",
+      "checksAndBalances": 3,
+      "checksAndBalancesRationale": "Checks remain functional but the balance between executive, legislature and judiciary is under persistent strain.",
+      "confidence": "medium",
+      "assessmentStatus": "review",
+      "shortRationale": "Israel retains competitive elections and an active civic sphere, while institutional conflict over judicial and executive power remains unresolved.",
+      "trajectoryAnalysis": "The democratic trajectory is negative but not uniformly so. Strong electoral competition and civic mobilisation coexist with pressure on judicial independence, media conditions and checks on executive authority.",
+      "whatChanged": "Freedom House rates Israel Free at 73/100, while explicitly assessing the West Bank and Gaza separately. The country's domestic institutional disputes continue to centre on executive-judicial balance and civil liberties.",
+      "assessment": "RETHINKK classifies Israel proper as institutional erosion with limited deterioration. This assessment does not incorporate the separately assessed political-rights conditions in the West Bank and Gaza into Israel's domestic score.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Israel",
+          "url": "https://freedomhouse.org/country/israel/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "POL",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "improving",
+      "velocity": "normal",
+      "overallInstitutionalScore": 21,
+      "judicialIndependence": 4,
+      "judicialIndependenceRationale": "Judicial independence is recovering but legacy appointments and legal conflicts prevent a top score.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Media pluralism has improved, including reduced governing-party control over state information structures.",
+      "electoralIntegrity": 5,
+      "electoralIntegrityRationale": "Electoral competition is strong and produced a peaceful transfer of power.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic space is broad and has recovered from prior government pressure.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Checks are being rebuilt, though constitutional and presidential constraints complicate restoration.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Poland is restoring institutional independence after the democratic damage of the PiS era.",
+      "trajectoryAnalysis": "The direction is positive, but restoration is slower than electoral turnover. Rebuilding judicial independence and state-media governance is institutionally difficult because earlier changes remain embedded in law and appointments.",
+      "whatChanged": "Freedom House notes that the post-2023 government has sought to repair and strengthen state institutions. V-Dem identifies Poland as one of the democratizing countries in Eastern Europe.",
+      "assessment": "RETHINKK classifies Poland as resilient and improving. The classification recognises that some institutional damage remains while the direction of travel has changed materially.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Poland",
+          "url": "https://freedomhouse.org/country/poland/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "BRA",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "improving",
+      "velocity": "limited",
+      "overallInstitutionalScore": 18,
+      "judicialIndependence": 4,
+      "judicialIndependenceRationale": "Courts remain independent and politically consequential, though politicisation concerns persist.",
+      "mediaFreedom": 3,
+      "mediaFreedomRationale": "Journalists operate in a vibrant environment but face harassment and violence.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "Elections remain competitive and meaningful with functioning administration.",
+      "civicSpace": 3,
+      "civicSpaceRationale": "Civic space is active, but violence against activists and minorities lowers resilience.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Institutions have demonstrated capacity to constrain anti-democratic challenges, though corruption remains significant.",
+      "confidence": "medium",
+      "assessmentStatus": "review",
+      "shortRationale": "Brazil's democratic institutions have shown resilience and modest recovery after severe stress around the 2022 electoral cycle.",
+      "trajectoryAnalysis": "The trajectory is mildly positive. Courts, elections and political competition remain robust, while political violence, threats to journalists and civic activists, and corruption continue to constrain institutional quality.",
+      "whatChanged": "Freedom House rates Brazil Free at 73/100, up from 72, and highlights competitive elections alongside persistent violence and corruption.",
+      "assessment": "RETHINKK classifies Brazil as resilient with limited improvement. The system has demonstrated capacity to enforce electoral outcomes and institutional accountability.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Brazil",
+          "url": "https://freedomhouse.org/country/brazil/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "SRB",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "rapid",
+      "overallInstitutionalScore": 12,
+      "judicialIndependence": 2,
+      "judicialIndependenceRationale": "Judicial independence is weakened by political influence and limited accountability.",
+      "mediaFreedom": 2,
+      "mediaFreedomRationale": "Independent media face sustained political, economic and legal pressure.",
+      "electoralIntegrity": 3,
+      "electoralIntegrityRationale": "Elections remain multiparty but unequal conditions reduce integrity.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "Protesters, educators and civic actors faced intimidation and coercive pressure.",
+      "checksAndBalances": 3,
+      "checksAndBalancesRationale": "Formal checks remain but ruling-party dominance reduces their practical effectiveness.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Serbia's ruling structure continues to weaken media independence, opposition space and civil liberties.",
+      "trajectoryAnalysis": "The direction is sharply negative. Competitive institutions remain formally present, but pressure on protesters, journalists, opposition actors and civil society has intensified.",
+      "whatChanged": "Freedom House lowered Serbia to 53/100 from 56 and describes continuing legal and extralegal pressure on independent media, opposition and civil society. V-Dem also identifies Serbia as autocratizing.",
+      "assessment": "RETHINKK classifies Serbia as institutional erosion with rapid deterioration. Formal elections alone no longer offset the cumulative weakening of the surrounding institutional environment.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Serbia",
+          "url": "https://freedomhouse.org/country/serbia/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "TUN",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "normal",
+      "overallInstitutionalScore": 10,
+      "judicialIndependence": 2,
+      "judicialIndependenceRationale": "Judicial independence has been materially weakened by executive intervention.",
+      "mediaFreedom": 2,
+      "mediaFreedomRationale": "Journalists face harassment, prosecution and imprisonment.",
+      "electoralIntegrity": 2,
+      "electoralIntegrityRationale": "Electoral institutions have lost independence and competitive conditions have degraded.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "Civic groups and protest remain present but face escalating state pressure.",
+      "checksAndBalances": 2,
+      "checksAndBalancesRationale": "Executive power has displaced many of the institutional checks built after 2011.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Tunisia's post-2011 democratic institutions have been substantially dismantled through executive concentration and repression.",
+      "trajectoryAnalysis": "The trajectory remains negative, although much of the major institutional break occurred earlier. The current phase is consolidation of executive dominance rather than a single new rupture.",
+      "whatChanged": "Freedom House lowered Tunisia to 42/100 and documents continued weakening of the judiciary, electoral commission, information institutions, media freedom and opposition rights.",
+      "assessment": "RETHINKK classifies Tunisia as severe institutional erosion with continuing deterioration. It remains distinct from fully closed autocracies because civic activity and protest have not been entirely extinguished.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Tunisia",
+          "url": "https://freedomhouse.org/country/tunisia/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "GEO",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "deteriorating",
+      "velocity": "rapid",
+      "overallInstitutionalScore": 11,
+      "judicialIndependence": 2,
+      "judicialIndependenceRationale": "Executive and legislative interference in courts remains a substantial problem.",
+      "mediaFreedom": 2,
+      "mediaFreedomRationale": "Journalists face intimidation and violence, weakening independent media.",
+      "electoralIntegrity": 3,
+      "electoralIntegrityRationale": "Regular elections continue, but political pressure and unequal conditions reduce confidence.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "New restrictions, surveillance fears and attacks on dissent have narrowed civic space.",
+      "checksAndBalances": 2,
+      "checksAndBalancesRationale": "Oligarchic and ruling-party influence materially weaken independent checks.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Georgia is undergoing rapid institutional deterioration across courts, media, civic space and political competition.",
+      "trajectoryAnalysis": "The downward movement is broad rather than sector-specific. The combination of oligarchic influence, pressure on opposition and journalists, and restrictive legislation points to accelerating erosion.",
+      "whatChanged": "Freedom House cut Georgia's score from 55 to 51 and details intimidation, violence, judicial interference and new restrictions on expression. V-Dem identifies Georgia among autocratizing countries.",
+      "assessment": "RETHINKK classifies Georgia as institutional erosion with rapid deterioration. Competitive politics still exist, but the institutional environment around them is weakening quickly.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Georgia",
+          "url": "https://freedomhouse.org/country/georgia/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "HUN",
+      "year": 2026,
+      "status": "erosion",
+      "direction": "improving",
+      "velocity": "rapid",
+      "overallInstitutionalScore": 13,
+      "judicialIndependence": 3,
+      "judicialIndependenceRationale": "The judiciary inherits serious political distortions, but early restoration measures justify an improving score.",
+      "mediaFreedom": 2,
+      "mediaFreedomRationale": "Media pluralism remains structurally distorted by the inherited ownership and state-media landscape; repair is only beginning.",
+      "electoralIntegrity": 4,
+      "electoralIntegrityRationale": "The 2026 election produced a genuine and decisive transfer of power, materially strengthening the electoral assessment.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "Civic and academic space remain affected by legacy restrictions, though the direction has shifted toward reopening.",
+      "checksAndBalances": 2,
+      "checksAndBalancesRationale": "Checks and balances remain weak because many Orbán-era structures are embedded institutionally, but restoration has begun.",
+      "confidence": "medium",
+      "assessmentStatus": "review",
+      "shortRationale": "Hungary remains institutionally damaged, but the 2026 transfer of power has reversed the country's direction sharply.",
+      "trajectoryAnalysis": "The baseline remains weak after sixteen years of Fidesz institutional capture. However, the April election produced a decisive transfer of power and the new government has begun rule-of-law, anti-corruption and institutional reforms. Direction therefore changes before Status does.",
+      "whatChanged": "Freedom House and V-Dem document the inherited 2025 institutional damage. In April 2026 TISZA won a supermajority and ended Viktor Orbán's 16-year rule; subsequent reforms contributed to the EU releasing previously frozen funds.",
+      "assessment": "RETHINKK classifies Hungary as institutional erosion but rapidly improving. The result demonstrates the central logic of the index: a country can remain institutionally weak while moving decisively in a democratic direction.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Hungary",
+          "url": "https://freedomhouse.org/country/hungary/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "National Election Office of Hungary",
+          "title": "2026 Parliamentary Election - National Results",
+          "url": "https://vtr.valasztas.hu/ogy2026/orszagos-listak?filter=orszagos-eredmenyek%7C&tab=partlistak",
+          "publicationDate": "2026-05-07",
+          "sourceType": "official",
+          "note": "Official final election results confirming the TISZA victory and transfer of parliamentary power.",
+          "supports": [
+            "electoralIntegrity",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "Reuters",
+          "title": "Magyar's parliamentary majority in Hungary increases after final count",
+          "url": "https://www.reuters.com/world/magyars-parliamentary-majority-hungary-increases-after-final-count-2026-04-18/",
+          "publicationDate": "2026-04-18",
+          "sourceType": "media",
+          "note": "Confirms the election outcome, end of Orbán's 16-year rule and the new government's reform mandate.",
+          "supports": [
+            "electoralIntegrity",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "Reuters",
+          "title": "EU Commission agrees to unlock €16.4 billion for Hungary",
+          "url": "https://www.reuters.com/business/eu-agrees-unlock-billions-funds-hungary-von-der-leyen-2026-05-29/",
+          "publicationDate": "2026-05-29",
+          "sourceType": "media",
+          "note": "Reports EU recognition of reforms linked to rule of law, anti-corruption and academic freedom.",
+          "supports": [
+            "judicialIndependence",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "SWE",
+      "year": 2026,
+      "status": "not_assessed",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": null,
+      "judicialIndependence": null,
+      "judicialIndependenceRationale": null,
+      "mediaFreedom": null,
+      "mediaFreedomRationale": null,
+      "electoralIntegrity": null,
+      "electoralIntegrityRationale": null,
+      "civicSpace": null,
+      "civicSpaceRationale": null,
+      "checksAndBalances": null,
+      "checksAndBalancesRationale": null,
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "No current institutional-erosion signal is strong enough to place Sweden in active RETHINKK assessment for 2026.",
+      "trajectoryAnalysis": "Sweden remains a high-resilience democracy. Because the DDI is designed to focus analytical attention on meaningful institutional movement, Sweden is shown as not assessed rather than assigned a substantive status score.",
+      "whatChanged": "Freedom House continues to rate Sweden at 99/100 with free and fair elections, strong civil liberties and rule of law.",
+      "assessment": "RETHINKK leaves Sweden outside the active 2026 assessment set. Grey means not assessed, not neutral and not a lower democratic rating.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Sweden",
+          "url": "https://freedomhouse.org/country/sweden/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "SVN",
+      "year": 2026,
+      "status": "resilient",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 22,
+      "judicialIndependence": 5,
+      "judicialIndependenceRationale": "Courts remain broadly independent.",
+      "mediaFreedom": 4,
+      "mediaFreedomRationale": "Media freedom is strong overall, with political and ownership pressures still relevant.",
+      "electoralIntegrity": 5,
+      "electoralIntegrityRationale": "Electoral competition and administration remain highly robust.",
+      "civicSpace": 4,
+      "civicSpaceRationale": "Civic rights and associations remain broadly protected.",
+      "checksAndBalances": 4,
+      "checksAndBalancesRationale": "Checks remain effective, though corruption and political pressure warrant continued monitoring.",
+      "confidence": "medium",
+      "assessmentStatus": "review",
+      "shortRationale": "Slovenia remains institutionally resilient, though external measures give mixed signals about the recent direction of change.",
+      "trajectoryAnalysis": "The current classification is stable with low velocity. Freedom House shows improvement while V-Dem flags Slovenia within a broader autocratization set, creating genuine source divergence that warrants monitoring rather than a strong directional call.",
+      "whatChanged": "Freedom House scores Slovenia 97/100, up from 96, while V-Dem's 2026 regional analysis includes Slovenia among Eastern European autocratizers.",
+      "assessment": "RETHINKK classifies Slovenia as resilient and stable with medium confidence because the strongest cross-national sources disagree on direction.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Slovenia",
+          "url": "https://freedomhouse.org/country/slovenia/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "TUR",
+      "year": 2026,
+      "status": "autocratic",
+      "direction": "deteriorating",
+      "velocity": "normal",
+      "overallInstitutionalScore": 9,
+      "judicialIndependence": 2,
+      "judicialIndependenceRationale": "Courts are heavily influenced by executive power and politically sensitive prosecutions.",
+      "mediaFreedom": 1,
+      "mediaFreedomRationale": "Independent media operate under severe legal, economic and political pressure.",
+      "electoralIntegrity": 2,
+      "electoralIntegrityRationale": "Elections retain competitive elements but the playing field is structurally unequal.",
+      "civicSpace": 2,
+      "civicSpaceRationale": "Civic actors and opposition organisations face prosecution, detention and administrative pressure.",
+      "checksAndBalances": 2,
+      "checksAndBalancesRationale": "Executive concentration has weakened parliamentary and institutional checks.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Turkey's competitive elements continue to be constrained by executive dominance, repression of opponents and weak media freedom.",
+      "trajectoryAnalysis": "The direction remains negative. Municipal opposition success has not produced institutional opening; instead, authorities intensified investigations and arrests against opposition representatives.",
+      "whatChanged": "Freedom House rates Turkey Not Free at 32/100, down from 33, and documents intensified repression following ruling-party municipal losses.",
+      "assessment": "RETHINKK classifies Turkey as autocratic and deteriorating. Elections retain some political significance, but the institutional environment is too unequal and coercive to qualify as resilient competition.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Turkey",
+          "url": "https://freedomhouse.org/country/turkey/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "RUS",
+      "year": 2026,
+      "status": "autocratic",
+      "direction": "deteriorating",
+      "velocity": "limited",
+      "overallInstitutionalScore": 5,
+      "judicialIndependence": 1,
+      "judicialIndependenceRationale": "Courts are subservient to executive and security structures in politically relevant cases.",
+      "mediaFreedom": 1,
+      "mediaFreedomRationale": "National media are controlled or heavily censored; independent outlets face blocking and criminalisation.",
+      "electoralIntegrity": 1,
+      "electoralIntegrityRationale": "Genuine opposition is excluded and elections are systematically manipulated.",
+      "civicSpace": 1,
+      "civicSpaceRationale": "Civic organisations and dissent are subject to extensive repression and foreign-agent laws.",
+      "checksAndBalances": 1,
+      "checksAndBalancesRationale": "Parliament and other formal institutions do not provide meaningful checks on presidential power.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Russia is a consolidated authoritarian system with virtually no effective democratic checks.",
+      "trajectoryAnalysis": "Further deterioration is constrained by the already extremely low institutional baseline. Repression, electoral exclusion and information control nevertheless continued to intensify.",
+      "whatChanged": "Freedom House rates Russia 12/100 and documents controlled media, subservient courts, manipulated elections and escalating repression linked to the war in Ukraine.",
+      "assessment": "RETHINKK classifies Russia as autocratic with limited further deterioration. Limited velocity here reflects a floor effect, not stability or improvement.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Russia",
+          "url": "https://freedomhouse.org/country/russia/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "VEN",
+      "year": 2026,
+      "status": "autocratic",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 5,
+      "judicialIndependence": 1,
+      "judicialIndependenceRationale": "Judicial independence is effectively absent in politically significant cases.",
+      "mediaFreedom": 1,
+      "mediaFreedomRationale": "Independent media and expression face severe restriction.",
+      "electoralIntegrity": 1,
+      "electoralIntegrityRationale": "Elections do not provide a genuinely level or representative route to power.",
+      "civicSpace": 1,
+      "civicSpaceRationale": "Opposition and civil society face prosecution and coercion.",
+      "checksAndBalances": 1,
+      "checksAndBalancesRationale": "State institutions do not provide meaningful checks on ruling-party authority.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Venezuela remains a closed authoritarian system in which representative democratic institutions no longer function effectively.",
+      "trajectoryAnalysis": "The country remains near the institutional floor. The 2026 classification is stable at an autocratic baseline rather than implying political calm or legitimacy.",
+      "whatChanged": "Freedom House rates Venezuela 13/100 and describes virtually all channels for political dissent as closed, with flawed elections and state control over institutions.",
+      "assessment": "RETHINKK classifies Venezuela as autocratic and stable at a severely degraded institutional baseline.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Venezuela",
+          "url": "https://freedomhouse.org/country/venezuela/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "IRN",
+      "year": 2026,
+      "status": "autocratic",
+      "direction": "deteriorating",
+      "velocity": "limited",
+      "overallInstitutionalScore": 5,
+      "judicialIndependence": 1,
+      "judicialIndependenceRationale": "The judiciary is deeply embedded in the regime's security and ideological structure.",
+      "mediaFreedom": 1,
+      "mediaFreedomRationale": "Media freedom is severely restricted through censorship, arrests and internet controls.",
+      "electoralIntegrity": 1,
+      "electoralIntegrityRationale": "Candidate vetting and unelected oversight prevent genuinely democratic electoral competition.",
+      "civicSpace": 1,
+      "civicSpaceRationale": "Civic dissent and minority rights face extensive coercion and repression.",
+      "checksAndBalances": 1,
+      "checksAndBalancesRationale": "Ultimate power rests in unelected institutions beyond effective democratic checks.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Iran remains a closed authoritarian system dominated by unelected clerical and security institutions.",
+      "trajectoryAnalysis": "The institutional baseline is already extremely low, but repression, censorship and arbitrary detention continue. The direction is therefore negative with a limited floor-effect velocity.",
+      "whatChanged": "Freedom House rates Iran 10/100, down from 11, and records severe restrictions on media, political competition, due process and civic rights.",
+      "assessment": "RETHINKK classifies Iran as autocratic with limited deterioration. Regular elections do not offset the Guardian Council's control over candidacy or the supremacy of unelected institutions.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Iran",
+          "url": "https://freedomhouse.org/country/iran/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    },
+    {
+      "iso3": "NIC",
+      "year": 2026,
+      "status": "autocratic",
+      "direction": "stable",
+      "velocity": "limited",
+      "overallInstitutionalScore": 5,
+      "judicialIndependence": 1,
+      "judicialIndependenceRationale": "Courts lack independence from the Ortega-Murillo governing structure.",
+      "mediaFreedom": 1,
+      "mediaFreedomRationale": "Independent media have been closed, exiled or severely constrained.",
+      "electoralIntegrity": 1,
+      "electoralIntegrityRationale": "Elections no longer provide meaningful competitive accountability.",
+      "civicSpace": 1,
+      "civicSpaceRationale": "Civic organisations and opposition activity face severe repression.",
+      "checksAndBalances": 1,
+      "checksAndBalancesRationale": "Formal branches of government have been consolidated under ruling-party control.",
+      "confidence": "high",
+      "assessmentStatus": "review",
+      "shortRationale": "Nicaragua remains a consolidated authoritarian system with all major state institutions under regime control.",
+      "trajectoryAnalysis": "The democratic trajectory remains at the institutional floor. Repression continues, but the primary 2026 signal is consolidation rather than a new step-change.",
+      "whatChanged": "Freedom House rates Nicaragua 14/100 and describes the consolidation of all branches of government, collapse of rule of law and severe repression of opposition and civil society.",
+      "assessment": "RETHINKK classifies Nicaragua as autocratic and stable at a severely degraded baseline.",
+      "reviewedBy": "RETHINKK Research",
+      "reviewedAt": "2026-08-30",
+      "sources": [
+        {
+          "organisation": "Freedom House",
+          "title": "Freedom in the World 2026 - Nicaragua",
+          "url": "https://freedomhouse.org/country/nicaragua/freedom-world/2026",
+          "publicationDate": "2026-03-19",
+          "sourceType": "research",
+          "note": "Country-level evidence on political rights, civil liberties and institutional conditions.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        },
+        {
+          "organisation": "V-Dem Institute",
+          "title": "Democracy Report 2026: Unraveling The Democratic Era?",
+          "url": "https://www.v-dem.net/documents/75/V-Dem_Institute_Democracy_Report_2026_lowres.pdf",
+          "publicationDate": "2026-03-17",
+          "sourceType": "research",
+          "note": "Cross-country evidence input; final status, direction and velocity remain RETHINKK assessments.",
+          "supports": [
+            "judicialIndependence",
+            "mediaFreedom",
+            "electoralIntegrity",
+            "civicSpace",
+            "checksAndBalances"
+          ]
+        }
+      ]
+    }
+  ]
+}
