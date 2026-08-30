@@ -91,7 +91,7 @@ export function DemocracyImportDesk({ year = 2026 }: { year?: number }) {
             <span>Status</span>
             <span>Movement</span>
             <span>Score</span>
-            <span>Review</span>
+            <span>Trajectory</span>
           </div>
           {preview.accepted.map((country) => <ImportCountryRow country={country} key={country.id} />)}
         </div>
@@ -122,7 +122,7 @@ function ImportCountryRow({ country }: { country: CountryAssessment }) {
       <span>{getStatusLabel(country.status)}</span>
       <span><strong>{getDirectionSymbol(country.direction, country.velocity)}</strong> {getMovementLabel(country.direction, country.velocity)}</span>
       <span>{country.overallInstitutionalScore ?? "na"} / 25</span>
-      <span>{country.assessmentStatus} / {country.confidence}</span>
+      <span>{country.trajectoryAnalysis}<small>{country.assessmentStatus} / {country.confidence}</small></span>
     </div>
   );
 }

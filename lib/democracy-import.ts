@@ -39,9 +39,9 @@ const sampleSource: SourceReference = {
   note: "Replace with structured source references before publication."
 };
 
-export const sampleDemocracyCsv = `country,iso2,iso3,region,year,status,direction,velocity,overall_score,judicial_independence,media_freedom,electoral_integrity,civic_space,checks_balances,confidence,assessment_status,short_rationale,what_changed,assessment
-Netherlands,NL,NLD,Europe,2026,resilient,stable,limited,21,5,4,4,4,4,medium,review,"Institutions remain resilient.","Development review note.","RETHINKK assessment note."
-United States,US,USA,North America,2026,erosion,deteriorating,rapid,18,4,4,3,4,3,medium,review,"Strong institutions can still deteriorate.","Development review note.","RETHINKK assessment note."`;
+export const sampleDemocracyCsv = `country,iso2,iso3,region,year,status,direction,velocity,overall_score,judicial_independence,media_freedom,electoral_integrity,civic_space,checks_balances,confidence,assessment_status,short_rationale,trajectory_analysis,what_changed,assessment
+Netherlands,NL,NLD,Europe,2026,resilient,stable,limited,21,5,4,4,4,4,medium,review,"Institutions remain resilient.","Movement is stable, but institutional capacity and trust require monitoring.","Development review note.","RETHINKK assessment note."
+United States,US,USA,North America,2026,erosion,deteriorating,rapid,18,4,4,3,4,3,medium,review,"Strong institutions can still deteriorate.","The direction signal concerns contested norms around electoral trust and institutional restraint.","Development review note.","RETHINKK assessment note."`;
 
 export function parseDemocracyImport(input: string, format?: ImportFormat, editionYear = 2026): ImportPreview {
   const trimmed = input.trim();
@@ -125,6 +125,7 @@ function normalizeRecord(raw: RawRecord, editionYear: number) {
   const region = enumValue(raw, errors, regions, "region") || "Europe";
   const overallInstitutionalScore = readNumber(raw, "overall_score", "overallInstitutionalScore");
   const shortRationale = requiredString(raw, errors, "short_rationale", "shortRationale");
+  const trajectoryAnalysis = readString(raw, "trajectory_analysis", "trajectoryAnalysis") || "Imported trajectory observation pending editorial review.";
   const whatChanged = readString(raw, "what_changed", "whatChanged") || "Imported working note pending editorial review.";
   const assessmentText = readString(raw, "assessment") || "Imported assessment pending RETHINKK review.";
 
@@ -160,6 +161,7 @@ function normalizeRecord(raw: RawRecord, editionYear: number) {
     latitude: readNumber(raw, "latitude") ?? 0,
     longitude: readNumber(raw, "longitude") ?? 0,
     shortRationale,
+    trajectoryAnalysis,
     whatChanged,
     assessment: assessmentText,
     sources: assessmentStatus === "published" ? [sampleSource] : []
@@ -227,6 +229,7 @@ function toCsv(assessments: CountryAssessment[]) {
     "confidence",
     "assessment_status",
     "short_rationale",
+    "trajectory_analysis",
     "what_changed",
     "assessment"
   ];
@@ -248,6 +251,7 @@ function toCsv(assessments: CountryAssessment[]) {
     country.confidence,
     country.assessmentStatus,
     country.shortRationale,
+    country.trajectoryAnalysis,
     country.whatChanged,
     country.assessment
   ]);

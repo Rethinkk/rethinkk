@@ -51,6 +51,7 @@ export type CountryAssessment = {
   latitude: number;
   longitude: number;
   shortRationale: string;
+  trajectoryAnalysis: string;
   whatChanged: string;
   assessment: string;
   sources: SourceReference[];
@@ -166,6 +167,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 52.1,
         longitude: 5.3,
         shortRationale: "Institutions remain broadly resilient, with visible pressure around trust, formation politics and administrative capacity.",
+        trajectoryAnalysis: "The Dutch democratic system is not moving through a dramatic institutional rupture. The more relevant observation is slower: high baseline resilience is being tested by administrative fragmentation, low-trust political cycles and pressure on the state's capacity to execute decisions cleanly. Direction is therefore stable, but not inert.",
         whatChanged: "Development record: used to test how stable institutional systems are displayed without presenting stasis as absence of pressure.",
         assessment: "RETHINKK classifies this seed record as resilient and stable. The score supports the assessment but does not automatically determine it.",
         relatedContent: ["think-accountability"],
@@ -196,6 +198,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 51.2,
         longitude: 10.4,
         shortRationale: "Resilient institutions with pressure points that require monitoring rather than alarm.",
+        trajectoryAnalysis: "Germany remains institutionally strong, but the direction question is about strain rather than collapse. The system still absorbs political pressure through courts, federal structure and administrative norms. The current movement is limited: pressure is visible, but institutional correction mechanisms remain active.",
         whatChanged: "Development record: included to test a resilient democracy with limited movement and high institutional capacity.",
         assessment: "The direction is stable because the illustrative record does not assign a material institutional shift during the review period.",
         relatedContent: ["think-europe-small", "think-confidence"],
@@ -226,6 +229,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 39.8,
         longitude: -98.6,
         shortRationale: "Included as the primary demonstration case for the distinction between institutional strength and deteriorating direction.",
+        trajectoryAnalysis: "The United States illustrates the central RETHINKK distinction: a country can retain deep institutional capacity while moving in a concerning direction. The observation is not that democratic institutions have disappeared, but that electoral trust, checks and institutional restraint are increasingly contested as operating norms rather than merely policy disagreements.",
         whatChanged: "Development record: models a country where strong remaining institutions can still move in a negative direction.",
         assessment: "This seed assessment is labelled institutional erosion with rapid deterioration to demonstrate the core thesis. It is not a final RETHINKK research judgement.",
         sourceIds: ["vdem", "freedomHouse", "electionAuthorities"]
@@ -255,6 +259,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 47.2,
         longitude: 19.5,
         shortRationale: "Development record for sustained institutional pressure across multiple dimensions.",
+        trajectoryAnalysis: "Hungary is used here as a development case for prolonged institutional narrowing. The direction is deteriorating because pressure is represented as cumulative: media pluralism, checks on executive authority and independent institutional space are not treated as isolated incidents, but as mutually reinforcing movement.",
         whatChanged: "Development record: used to test how the interface handles an erosion classification with normal deterioration velocity.",
         assessment: "Direction and status remain independent: the low score supports the status, while velocity describes the current rate of movement.",
         sourceIds: ["vdem", "freedomHouse", "rsf"]
@@ -284,6 +289,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 52,
         longitude: 19.1,
         shortRationale: "Development record for a pressured institutional status that may be improving.",
+        trajectoryAnalysis: "Poland demonstrates why status and direction must remain separate. The record can still sit under institutional erosion while the direction turns positive if judicial, media or accountability institutions begin recovering autonomy. Improvement does not erase the status; it marks movement within it.",
         whatChanged: "Development record: included to show that institutional erosion and improvement can coexist in the same annual assessment.",
         assessment: "The status remains erosion while the trajectory is improving. This is the conceptual separation the index is built to preserve.",
         relatedContent: ["think-accountability"],
@@ -314,6 +320,7 @@ export const democracyDirectionEditions: DemocracyDirectionEdition[] = [
         latitude: 42.3,
         longitude: 43.4,
         shortRationale: "Development record for rapid movement in a contested institutional environment.",
+        trajectoryAnalysis: "Georgia is included as a rapid-movement case: the signal is not only institutional condition, but acceleration. When civic space, institutional independence and political contestation shift quickly, the index should make speed visible instead of hiding it behind a single annual score.",
         whatChanged: "Development record: used to test confidence labelling and rapid deterioration outside Western Europe and North America.",
         assessment: "The low confidence label concerns evidence certainty in this seed record. It does not describe democratic quality.",
         sourceIds: ["vdem", "freedomHouse", "rsf"]
@@ -415,7 +422,8 @@ export function serializeEdition(edition: DemocracyDirectionEdition) {
         velocity: country.velocity,
         overallInstitutionalScore: country.overallInstitutionalScore,
         confidence: country.confidence,
-        shortRationale: country.shortRationale
+        shortRationale: country.shortRationale,
+        trajectoryAnalysis: country.trajectoryAnalysis
       }))
   };
 }
@@ -437,6 +445,7 @@ export function validateAssessment(country: CountryAssessment) {
   }
   if (country.year !== Number(country.indexEditionId.replace("ddi-", ""))) errors.push("assessment year must match edition year");
   if (country.assessmentStatus === "published" && !country.shortRationale) errors.push("published assessment requires rationale");
+  if (country.assessmentStatus === "published" && !country.trajectoryAnalysis) errors.push("published assessment requires trajectory analysis");
   if (country.assessmentStatus === "published" && country.sources.length === 0) errors.push("published assessment requires evidence");
   return errors;
 }

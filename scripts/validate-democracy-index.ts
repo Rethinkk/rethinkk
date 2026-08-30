@@ -55,5 +55,7 @@ assert.ok(importPreview.normalizedJson.includes("\"countryName\": \"Netherlands\
 const invalidImport = parseDemocracyImport("country,iso2,iso3,year,status,direction,velocity,confidence,short_rationale\nTest,TT,TST,2026,wrong,sideways,fast,maybe,", "csv", 2026);
 assert.equal(invalidImport.accepted.length, 0, "invalid import should not be accepted");
 assert.ok(invalidImport.rejected[0].errors.length >= 4, "invalid import should explain validation failures");
+assert.ok(edition.assessments.every((country) => country.trajectoryAnalysis.length > 40), "published records require descriptive trajectory analysis");
+assert.ok(importPreview.normalizedJson.includes("trajectoryAnalysis"), "normalized JSON should include trajectory analysis");
 
 console.log("Democracy Direction Index validation passed.");

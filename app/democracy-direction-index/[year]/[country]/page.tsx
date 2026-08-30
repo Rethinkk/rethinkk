@@ -53,6 +53,9 @@ export default async function CountryAssessmentPage({ params }: { params: Promis
 
         <ConfidenceIndicator country={assessment} />
 
+        <AssessmentSection title="Direction analysis">
+          <p>{assessment.trajectoryAnalysis}</p>
+        </AssessmentSection>
         <AssessmentSection title="What changed">
           <p>{assessment.whatChanged}</p>
         </AssessmentSection>
