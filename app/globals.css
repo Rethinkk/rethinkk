@@ -441,6 +441,11 @@ a {
   width: 13px;
 }
 
+.legend-swatch.status-resilient {
+  background: rgba(244, 244, 236, .68);
+  border-color: rgba(244, 244, 236, .82);
+}
+
 .legend-swatch.status-autocratic {
   background:
     repeating-linear-gradient(135deg, #070707 0 4px, rgba(244, 244, 236, .7) 4px 5px, #070707 5px 8px);
