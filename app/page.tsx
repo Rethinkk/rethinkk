@@ -84,14 +84,14 @@ export default function HomePage() {
         <div className="section-inner split-grid">
           <div>
             <div className="kicker yellow">Data</div>
-            <h2 className="display-title">Less noise.<br />More <span className="yellow">context.</span></h2>
+            <h2 className="display-title">The numbers are falling.<br />The debate is not.</h2>
             <p className="copy">{data.hypothesis}</p>
             <Link className="text-link" href={publicationPath(data)}>Explore data -&gt;</Link>
           </div>
           <div className="panel">
             <div className="status-row">
               <div>
-                <div className="kicker muted">Example data note</div>
+                <div className="kicker muted">Data</div>
                 <p className="lede">{data.title}</p>
               </div>
               <div className="kicker yellow">Structured data</div>

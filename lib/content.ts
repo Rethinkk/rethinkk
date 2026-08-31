@@ -7,6 +7,8 @@ export type Publication = {
   status: "draft" | "review" | "scheduled" | "published" | "archived";
   title: string;
   subtitle?: string;
+  seoTitle?: string;
+  seoDescription?: string;
   excerpt: string;
   category: string;
   tags: string[];
@@ -174,30 +176,32 @@ export const publications: Publication[] = [
   },
   {
     id: "data-migration-europe",
-    slug: "europe-migration-2019-2026",
+    slug: "migration-to-europe",
     type: "data",
     status: "published",
-    title: "Migration to Europe, 2019-2026",
-    subtitle: "An illustrative data note on direction, context and interpretation.",
-    hypothesis: "Claims about migration become clearer when trend, route and legal category are separated.",
-    excerpt: "A compact charting note showing why one number rarely explains the whole migration debate.",
+    title: "The numbers are falling. The debate is not.",
+    subtitle: "Asylum applications, irregular border crossings, temporary protection and total migration are not the same measure.",
+    seoTitle: "Migration to Europe: The Numbers Are Falling. The Debate Is Not. | RETHINKK",
+    seoDescription: "RETHINKK examines European asylum, irregular border crossings and temporary protection data to separate migration trends from the political debate surrounding them.",
+    hypothesis: "First-time asylum applications to the EU have fallen sharply since their 2023 peak. Irregular border crossings are down too. But neither figure measures migration as a whole.",
+    excerpt: "A RETHINKK Data article separating asylum, irregular border crossings and temporary protection in the European migration debate.",
     category: "Migration & Society",
     tags: ["migration", "Europe", "data"],
     author: "RETHINKK Data",
-    publicationDate: "2026-08-24",
+    publicationDate: "2026-08-31",
     editorialWeight: 82,
+    readingMinutes: 8,
     dataset: [
-      { year: 2019, value: 118 },
-      { year: 2020, value: 76 },
-      { year: 2021, value: 88 },
-      { year: 2022, value: 104 },
-      { year: 2023, value: 132 },
-      { year: 2024, value: 126 },
-      { year: 2025, value: 119 },
-      { year: 2026, value: 113 }
+      { year: 2019, value: 628900 },
+      { year: 2020, value: 415200 },
+      { year: 2021, value: 536000 },
+      { year: 2022, value: 873700 },
+      { year: 2023, value: 1049500 },
+      { year: 2024, value: 912000 },
+      { year: 2025, value: 669400 }
     ],
-    methodology: "Sample development dataset for interface design. Replace with sourced production data before publication.",
-    sources: ["src-unhcr", "src-eurostat"],
+    methodology: "RETHINKK distinguishes between asylum applications, detected irregular border crossings, temporary protection and broader migration statistics. 2026 annual asylum data are incomplete at the publication date and are therefore presented only as a monthly signal.",
+    sources: ["src-eurostat-asylum", "src-eurostat-may-2026", "src-emn-2025", "src-euaa-trends"],
     relatedContent: ["think-dehumanising", "think-europe-small"]
   },
   {
@@ -243,6 +247,10 @@ export const publications: Publication[] = [
 
 export const sources = [
   { id: "src-eurostat", organisation: "Eurostat", title: "European statistical datasets", sourceType: "official-data" },
+  { id: "src-eurostat-asylum", organisation: "Eurostat", title: "Annual asylum statistics / first-time asylum applicants", sourceType: "official-data" },
+  { id: "src-eurostat-may-2026", organisation: "Eurostat", title: "First-time asylum applications - May 2026", sourceType: "official-data" },
+  { id: "src-emn-2025", organisation: "European Migration Network / European Commission", title: "Asylum and Migration Overview 2025", sourceType: "official-data" },
+  { id: "src-euaa-trends", organisation: "European Union Agency for Asylum", title: "Latest Asylum Trends - Annual Analysis", sourceType: "official-data" },
   { id: "src-oecd", organisation: "OECD", title: "Policy and tax residency references", sourceType: "research-institute" },
   { id: "src-unhcr", organisation: "UNHCR", title: "Forced displacement and migration context", sourceType: "official-data" },
   { id: "src-vdem", organisation: "V-Dem Institute", title: "Democracy and institutional indicators", sourceType: "research-institute" }

@@ -1,4 +1,5 @@
 import { DataChart } from "@/components/charts";
+import { MigrationDataArticle } from "@/components/migration-data-article";
 import { ArticleCard, PageActions, Section } from "@/components/site";
 import { Publication, publications, sources } from "@/lib/content";
 
@@ -9,6 +10,7 @@ export function PublicationPage({ item }: { item: Publication }) {
   const related = (item.relatedContent || [])
     .map((id) => publications.find((publication) => publication.id === id))
     .filter(Boolean) as Publication[];
+  const isMigrationDataArticle = item.id === "data-migration-europe";
 
   return (
     <Section>
@@ -19,7 +21,9 @@ export function PublicationPage({ item }: { item: Publication }) {
         <p className="lede">{item.subtitle || item.excerpt}</p>
         <div className="meta muted">{item.author} / {item.publicationDate}</div>
 
-        {item.type === "data" && item.dataset && (
+        {isMigrationDataArticle ? (
+          <MigrationDataArticle />
+        ) : item.type === "data" && item.dataset && (
           <div className="panel article-panel">
             <DataChart dataset={item.dataset} />
             <p className="copy">{item.methodology}</p>
@@ -47,22 +51,24 @@ export function PublicationPage({ item }: { item: Publication }) {
           </div>
         )}
 
-        {item.sections ? (
-          <div className="article-body">
-            <div className="evidence-grid">
-              {Object.entries(item.sections).map(([key, value]) => (
-                <section className="evidence-block" key={key}>
-                  <h3>{key}</h3>
-                  <p>{value}</p>
-                </section>
-              ))}
+        {!isMigrationDataArticle && (
+          item.sections ? (
+            <div className="article-body">
+              <div className="evidence-grid">
+                {Object.entries(item.sections).map(([key, value]) => (
+                  <section className="evidence-block" key={key}>
+                    <h3>{key}</h3>
+                    <p>{value}</p>
+                  </section>
+                ))}
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="article-body"><p>{item.excerpt}</p></div>
+          ) : (
+            <div className="article-body"><p>{item.excerpt}</p></div>
+          )
         )}
 
-        {itemSources.length > 0 && (
+        {!isMigrationDataArticle && itemSources.length > 0 && (
           <>
             <h2 className="display-title source-title">Sources</h2>
             <ul className="source-list">

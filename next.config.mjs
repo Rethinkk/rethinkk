@@ -1,4 +1,13 @@
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/data/europe-migration-2019-2026",
+        destination: "/data/migration-to-europe",
+        permanent: true
+      }
+    ];
+  },
   async rewrites() {
     return [
       {
