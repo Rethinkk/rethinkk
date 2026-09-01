@@ -82,30 +82,6 @@ export const publications: Publication[] = [
     relatedContent: ["think-confidence", "data-migration-europe"]
   },
   {
-    id: "think-dehumanising",
-    slug: "dehumanising",
-    type: "thinking",
-    status: "published",
-    title: "Dehumanising",
-    subtitle: "When migration becomes the explanation for everything, people disappear behind the argument.",
-    excerpt: "A sharper distinction between evidence, perception and political convenience is overdue.",
-    category: "Migration & Society",
-    tags: ["migration", "language", "society"],
-    author: "RETHINKK",
-    publicationDate: "2026-08-25",
-    heroPriority: 2,
-    editorialWeight: 86,
-    readingMinutes: 5,
-    sections: {
-      data: "Migration patterns differ widely by route, country, legal status and time period.",
-      facts: "Public arguments often compress distinct phenomena into one emotional category.",
-      analysis: "That compression makes the policy debate less accurate and less humane.",
-      assessment: "The language of the debate is itself a research object."
-    },
-    sources: ["src-unhcr"],
-    relatedContent: ["data-migration-europe"]
-  },
-  {
     id: "think-accountability",
     slug: "power-without-accountability",
     type: "thinking",
@@ -166,6 +142,7 @@ export const publications: Publication[] = [
     tags: ["migration", "Europe", "data"],
     author: "RETHINKK Data",
     publicationDate: "2026-08-31",
+    hideFromArchive: true,
     editorialWeight: 82,
     readingMinutes: 8,
     dataset: [
@@ -179,7 +156,7 @@ export const publications: Publication[] = [
     ],
     methodology: "RETHINKK distinguishes between asylum applications, detected irregular border crossings, temporary protection and broader migration statistics. 2026 annual asylum data are incomplete at the publication date and are therefore presented only as a monthly signal.",
     sources: ["src-eurostat-asylum", "src-eurostat-may-2026", "src-emn-2025", "src-euaa-trends"],
-    relatedContent: ["think-dehumanising", "think-europe-small"]
+    relatedContent: ["think-europe-small"]
   },
   {
     id: "data-wealth-taxation-event",
