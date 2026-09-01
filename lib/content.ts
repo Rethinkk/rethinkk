@@ -16,6 +16,7 @@ export type Publication = {
   publicationDate: string;
   heroPriority?: number;
   featuredUntil?: string;
+  hideFromArchive?: boolean;
   editorialWeight: number;
   readingMinutes?: number;
   sections?: Record<"data" | "facts" | "analysis" | "assessment", string>;
@@ -196,6 +197,7 @@ export const publications: Publication[] = [
     author: "RETHINKK",
     publicationDate: "2026-09-01",
     heroPriority: 3,
+    hideFromArchive: true,
     editorialWeight: 84,
     readingMinutes: 12,
     sources: [
