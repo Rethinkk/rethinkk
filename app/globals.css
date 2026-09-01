@@ -392,6 +392,280 @@ a {
   overflow-wrap: anywhere;
 }
 
+.wealth-article .research-chart {
+  display: grid;
+  gap: 18px;
+}
+
+.wealth-person-grid,
+.tax-event-grid,
+.paired-statements,
+.false-claims {
+  display: grid;
+  gap: 16px;
+}
+
+.wealth-person-grid,
+.paired-statements {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wealth-person-grid article,
+.tax-event-grid article,
+.paired-statements strong,
+.false-claims span {
+  border: 1px solid var(--rethinkk-rule);
+  padding: 20px;
+}
+
+.wealth-person-grid span,
+.tax-event-grid h3,
+.tax-event-grid span,
+.tax-event-grid em,
+.false-claims strong {
+  color: var(--rethinkk-yellow);
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: .14em;
+  line-height: 1.45;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wealth-person-grid strong {
+  color: var(--rethinkk-yellow);
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 6vw, 74px);
+  font-weight: 400;
+  line-height: .92;
+  margin-top: 14px;
+}
+
+.wealth-person-grid p,
+.tax-event-grid p,
+.tax-event-grid em,
+.ownership-chart p,
+.wealth-tax-countries p {
+  color: #d7d7d2;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 12px 0 0;
+}
+
+.wealth-table,
+.instrument-table {
+  border-top: 1px solid var(--rethinkk-rule);
+}
+
+.wealth-table-head,
+.wealth-table-row {
+  align-items: center;
+  border-bottom: 1px solid var(--rethinkk-rule);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(150px, 1fr) minmax(100px, .65fr) minmax(100px, .65fr);
+  padding: 14px 0;
+}
+
+.wealth-table span,
+.wealth-table strong,
+.instrument-table strong,
+.instrument-table span,
+.false-claims span,
+.paired-statements strong {
+  color: #d7d7d2;
+  font-size: 13px;
+  letter-spacing: .08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.wealth-table-head strong,
+.wealth-table-row strong:last-child,
+.paired-statements strong:first-child {
+  color: var(--rethinkk-yellow);
+}
+
+.stacked-row,
+.burden-row,
+.norway-row,
+.country-count-row,
+.ownership-meter {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 120px minmax(0, 1fr) 130px;
+}
+
+.stacked-row > span,
+.burden-row > span,
+.norway-row > span,
+.country-count-row > span,
+.ownership-meter > span,
+.burden-row strong,
+.country-count-row strong,
+.ownership-meter strong {
+  color: #d7d7d2;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.stacked-track,
+.burden-row div,
+.country-count-row div,
+.ownership-meter div {
+  background: rgba(145, 145, 145, .18);
+  display: flex;
+  height: 18px;
+  min-width: 0;
+}
+
+.stacked-track i,
+.burden-row i,
+.country-count-row i,
+.ownership-meter i {
+  display: block;
+  height: 100%;
+}
+
+.stack-deposits {
+  background: rgba(215, 215, 210, .44);
+}
+
+.stack-housing {
+  background: rgba(145, 145, 145, .42);
+}
+
+.stack-ownership,
+.ownership-meter i,
+.burden-row i,
+.country-count-row i,
+.emigrant-bar {
+  background: var(--rethinkk-yellow);
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.chart-legend span {
+  align-items: center;
+  color: var(--rethinkk-grey);
+  display: inline-flex;
+  font-size: 11px;
+  gap: 8px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.chart-legend i {
+  display: inline-block;
+  height: 10px;
+  width: 26px;
+}
+
+.burden-row strong,
+.country-count-row strong,
+.ownership-meter strong {
+  color: var(--rethinkk-yellow);
+}
+
+.norway-bars {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.norway-bars i {
+  align-items: center;
+  display: flex;
+  height: 18px;
+  min-width: 28px;
+}
+
+.norway-bars b {
+  color: var(--rethinkk-black);
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 7px;
+}
+
+.immigrant-bar {
+  background: rgba(215, 215, 210, .62);
+}
+
+.tax-event-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tax-event-grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.tax-event-grid span {
+  display: block;
+  margin-top: auto;
+}
+
+.tax-event-grid em {
+  display: block;
+}
+
+.instrument-head,
+.instrument-row {
+  border-bottom: 1px solid var(--rethinkk-rule);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(130px, .85fr) repeat(3, minmax(0, 1fr));
+  padding: 14px 0;
+}
+
+.instrument-head strong,
+.instrument-row strong {
+  color: var(--rethinkk-yellow);
+}
+
+.behaviour-chain {
+  display: grid;
+  gap: 10px;
+}
+
+.behaviour-step {
+  align-items: center;
+  border-top: 1px solid var(--rethinkk-rule);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 58px minmax(0, 1fr);
+  padding-top: 12px;
+}
+
+.behaviour-step span {
+  color: var(--rethinkk-grey);
+  font-family: var(--font-serif);
+  font-size: 30px;
+}
+
+.behaviour-step strong {
+  color: #d7d7d2;
+  font-size: 14px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.false-claims {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wealth-final h2 {
+  max-width: 980px;
+}
+
 .archive-search {
   max-width: 520px;
 }
@@ -1296,6 +1570,10 @@ a {
   .latest-signal,
   .stat-card-grid,
   .assessment-statements,
+  .wealth-person-grid,
+  .paired-statements,
+  .tax-event-grid,
+  .false-claims,
   .data-sources li {
     grid-template-columns: 1fr;
   }
@@ -1306,6 +1584,44 @@ a {
 
   .research-chart svg {
     min-width: 560px;
+  }
+
+  .wealth-article .research-chart {
+    overflow-x: visible;
+  }
+
+  .wealth-article .research-chart svg {
+    min-width: 0;
+  }
+
+  .wealth-table-head {
+    display: none;
+  }
+
+  .wealth-table-row,
+  .instrument-row,
+  .stacked-row,
+  .burden-row,
+  .norway-row,
+  .country-count-row,
+  .ownership-meter {
+    grid-template-columns: 1fr;
+  }
+
+  .instrument-head {
+    display: none;
+  }
+
+  .instrument-row {
+    gap: 8px;
+    padding: 18px 0;
+  }
+
+  .stacked-track,
+  .burden-row div,
+  .country-count-row div,
+  .ownership-meter div {
+    width: 100%;
   }
 
   .distribution-row {

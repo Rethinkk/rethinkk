@@ -205,6 +205,38 @@ export const publications: Publication[] = [
     relatedContent: ["think-dehumanising", "think-europe-small"]
   },
   {
+    id: "data-wealth-taxation-event",
+    slug: "wealth-is-value-taxation-requires-an-event",
+    type: "data",
+    status: "draft",
+    title: "Wealth Is Value. Taxation Requires an Event.",
+    subtitle: "The political debate is usually about how much wealthy people should pay. Tax design begins one question earlier: what exactly are we taxing?",
+    seoTitle: "Wealth Is Value: How Wealth Taxation Actually Works | RETHINKK",
+    seoDescription: "Wealth, income, liquidity and capital gains are not the same thing. RETHINKK examines what happens when governments tax ownership, returns, gains and transfers, and how taxpayers respond.",
+    hypothesis: "Wealth is economic value, but taxation requires a taxable event. The design question comes before the percentage.",
+    excerpt: "A RETHINKK Data article on wealth, liquidity, taxable events and the behavioural consequences of taxing capital.",
+    category: "Economics & Wealth",
+    tags: ["wealth", "tax", "capital", "data"],
+    author: "RETHINKK",
+    publicationDate: "2026",
+    editorialWeight: 84,
+    readingMinutes: 12,
+    sources: [
+      "src-ecb-dwa",
+      "src-ecb-wealth-research",
+      "src-imf-wealth-tax",
+      "src-oecd-wealth-tax",
+      "src-oecd-household-savings",
+      "src-oecd-inheritance",
+      "src-ec-wealth-tax-2026",
+      "src-hmrc-domicile",
+      "src-agenzia-new-residents",
+      "src-norway-wealth-migration",
+      "src-swiss-wealth-tax"
+    ],
+    relatedContent: ["think-183-day"]
+  },
+  {
     id: "index-ddi-2026",
     slug: "democracy-direction-2026",
     type: "index",
@@ -253,5 +285,16 @@ export const sources = [
   { id: "src-euaa-trends", organisation: "European Union Agency for Asylum", title: "Latest Asylum Trends - Annual Analysis", sourceType: "official-data" },
   { id: "src-oecd", organisation: "OECD", title: "Policy and tax residency references", sourceType: "research-institute" },
   { id: "src-unhcr", organisation: "UNHCR", title: "Forced displacement and migration context", sourceType: "official-data" },
-  { id: "src-vdem", organisation: "V-Dem Institute", title: "Democracy and institutional indicators", sourceType: "research-institute" }
+  { id: "src-vdem", organisation: "V-Dem Institute", title: "Democracy and institutional indicators", sourceType: "research-institute" },
+  { id: "src-ecb-dwa", organisation: "European Central Bank", title: "Distributional Wealth Accounts", sourceType: "official-data" },
+  { id: "src-ecb-wealth-research", organisation: "European Central Bank", title: "Economic Bulletin research using Distributional Wealth Accounts", sourceType: "official-data" },
+  { id: "src-imf-wealth-tax", organisation: "International Monetary Fund", title: "How to Tax Wealth, 2024", sourceType: "research-institute" },
+  { id: "src-oecd-wealth-tax", organisation: "OECD", title: "The Role and Design of Net Wealth Taxes in the OECD, 2018", sourceType: "research-institute" },
+  { id: "src-oecd-household-savings", organisation: "OECD", title: "Taxation of Household Savings, 2018", sourceType: "research-institute" },
+  { id: "src-oecd-inheritance", organisation: "OECD", title: "Inheritance Taxation in OECD Countries, 2021", sourceType: "research-institute" },
+  { id: "src-ec-wealth-tax-2026", organisation: "European Commission", title: "Wealth taxation, including net wealth, capital and exit taxes, 2026", sourceType: "official-data" },
+  { id: "src-hmrc-domicile", organisation: "HM Revenue & Customs", title: "Evaluation of the change to UK deemed domicile policy, 2017", sourceType: "official-data" },
+  { id: "src-agenzia-new-residents", organisation: "Agenzia delle Entrate", title: "New-resident substitute tax information, 2026", sourceType: "official-data" },
+  { id: "src-norway-wealth-migration", organisation: "Norwegian Government", title: "Official data on high-wealth migration", sourceType: "official-data" },
+  { id: "src-swiss-wealth-tax", organisation: "American Economic Journal: Economic Policy", title: "Behavioral Responses to Wealth Taxes: Evidence from Switzerland", sourceType: "peer-reviewed-research" }
 ];
