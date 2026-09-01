@@ -105,30 +105,6 @@ export const publications: Publication[] = [
     relatedContent: ["data-migration-europe"]
   },
   {
-    id: "think-183-day",
-    slug: "the-183-day-myth",
-    type: "thinking",
-    status: "published",
-    title: "The 183-day myth",
-    subtitle: "A familiar number. A much less familiar rule.",
-    excerpt: "Tax residency is often discussed as a countdown. The reality is usually more factual and less theatrical.",
-    category: "Economics & Wealth",
-    tags: ["tax", "wealth", "residency"],
-    author: "RETHINKK",
-    publicationDate: "2026-08-21",
-    heroPriority: 3,
-    editorialWeight: 80,
-    readingMinutes: 6,
-    sections: {
-      data: "Residency tests vary by jurisdiction and treaty.",
-      facts: "The number of days is only one part of a broader factual assessment.",
-      analysis: "The myth survives because simple thresholds are easier to repeat than legal context.",
-      assessment: "A precise question deserves a precise framework."
-    },
-    sources: ["src-oecd"],
-    relatedContent: []
-  },
-  {
     id: "think-accountability",
     slug: "power-without-accountability",
     type: "thinking",
@@ -208,7 +184,7 @@ export const publications: Publication[] = [
     id: "data-wealth-taxation-event",
     slug: "wealth-is-value-taxation-requires-an-event",
     type: "data",
-    status: "draft",
+    status: "published",
     title: "Wealth Is Value. Taxation Requires an Event.",
     subtitle: "The political debate is usually about how much wealthy people should pay. Tax design begins one question earlier: what exactly are we taxing?",
     seoTitle: "Wealth Is Value: How Wealth Taxation Actually Works | RETHINKK",
@@ -218,7 +194,8 @@ export const publications: Publication[] = [
     category: "Economics & Wealth",
     tags: ["wealth", "tax", "capital", "data"],
     author: "RETHINKK",
-    publicationDate: "2026",
+    publicationDate: "2026-09-01",
+    heroPriority: 3,
     editorialWeight: 84,
     readingMinutes: 12,
     sources: [
@@ -234,7 +211,7 @@ export const publications: Publication[] = [
       "src-norway-wealth-migration",
       "src-swiss-wealth-tax"
     ],
-    relatedContent: ["think-183-day"]
+    relatedContent: []
   },
   {
     id: "index-ddi-2026",
