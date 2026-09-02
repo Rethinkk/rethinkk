@@ -29,7 +29,7 @@ export const professionalFields = [
   "Government / policy",
   "Other"
 ];
-export const workArrangements = ["Permanent employee", "Temporary employee", "Zero-hours / on-call", "Established freelancer / self-employed", "Business owner", "Contractor through agency", "Student", "Retired", "Not working", "Other"];
+export const workArrangements = ["Permanent employee", "Temporary employee", "Zero-hours / on-call", "Established freelancer / self-employed", "Business owner", "Contractor through agency", "AI annotation / training worker", "Student", "Retired", "Not working", "Other"];
 export const startReasons = [
   "Curiosity about AI",
   "Flexible working hours",
