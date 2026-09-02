@@ -32,6 +32,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <p><span>We don't shout.</span> <strong>We present.</strong></p>
+      <p className="footer-legal">RETHINKK is an initiative and trade name of Global Citizens B.V.</p>
       <p className="footer-domain">rethinkk.org</p>
     </footer>
   );

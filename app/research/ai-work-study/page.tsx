@@ -20,6 +20,7 @@ export default function AiWorkStudyPage() {
         <aside className="privacy-note">
           <h2>Privacy principle</h2>
           <p>Designed with GDPR data-minimisation and privacy principles in mind. You can complete the study anonymously. Contact details are requested only if you choose to be approached for a follow-up interview.</p>
+          <p>The AI Work Study is conducted by RTHNK, an initiative and trade name of Global Citizens B.V., in cooperation with Tysma | Lems International Tax Consultants.</p>
         </aside>
       </div>
     </Section>
