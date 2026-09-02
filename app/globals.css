@@ -789,6 +789,18 @@ a {
   padding-left: 20px;
 }
 
+.survey-confirmation,
+.survey-error {
+  border-left: 4px solid var(--rethinkk-yellow);
+  color: #d7d7d2;
+  line-height: 1.5;
+  padding-left: 14px;
+}
+
+.survey-error {
+  flex: 1 0 100%;
+}
+
 .survey-checklist {
   border-top: 1px solid var(--rethinkk-rule);
   list-style: none;
@@ -977,6 +989,40 @@ a {
 .research-desk h2 {
   font-size: clamp(30px, 4vw, 48px);
   line-height: 1;
+}
+
+.research-admin-row {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 28px 0;
+}
+
+.research-admin-row label {
+  display: grid;
+  gap: 8px;
+}
+
+.research-admin-row span {
+  color: var(--rethinkk-grey);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.research-admin-row input {
+  background: #070707;
+  border: 1px solid var(--rethinkk-rule);
+  color: var(--rethinkk-white);
+  min-height: 44px;
+  padding: 10px 12px;
+}
+
+.export-button-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .research-desk-grid article,
@@ -1937,6 +1983,7 @@ a {
   .survey-two-col,
   .research-desk-grid,
   .schema-grid,
+  .research-admin-row,
   .matrix-row,
   .data-sources li {
     grid-template-columns: 1fr;

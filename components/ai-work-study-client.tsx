@@ -34,7 +34,6 @@ import {
 type Answers = Record<string, string | string[] | Record<string, string> | boolean | number | null>;
 
 const storageKey = "rthnk-ai-work-study-draft";
-const submissionsKey = "rthnk-ai-work-study-submissions";
 
 const steps = [
   "Introduction",
@@ -144,6 +143,9 @@ export function AiWorkStudyClient() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>(() => emptyAnswers());
   const [complete, setComplete] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [submitNotice, setSubmitNotice] = useState("");
   const progress = Math.round(((step + 1) / steps.length) * 100);
   const contactAllowed = String(answers.interview_permission || "No") !== "No";
 
@@ -202,13 +204,38 @@ export function AiWorkStudyClient() {
     setStep((current) => Math.max(current - 1, 0));
   }
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setSubmitting(true);
+    setSubmitError("");
+    setSubmitNotice("");
     const payload = buildPayload(answers);
-    const previous = JSON.parse(window.localStorage.getItem(submissionsKey) || "[]") as unknown[];
-    window.localStorage.setItem(submissionsKey, JSON.stringify([...previous, payload]));
-    window.localStorage.removeItem(storageKey);
-    setComplete(true);
+    try {
+      const response = await fetch("/api/research/ai-work-study", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json() as { message?: string; email?: { sent?: boolean; skipped?: boolean; reason?: string } };
+      if (!response.ok) throw new Error(result.message || "Your response could not be stored.");
+
+      if (result.email?.sent) {
+        setSubmitNotice("Your response has been stored. A confirmation email has been sent from research@rethinkk.org.");
+      } else if (contactAllowed && result.email?.reason === "missing_resend_api_key") {
+        setSubmitNotice("Your response has been stored. Confirmation email is not active yet.");
+      } else if (contactAllowed) {
+        setSubmitNotice("Your response has been stored. RTHNK may contact you from research@rethinkk.org.");
+      } else {
+        setSubmitNotice("Your anonymous response has been stored.");
+      }
+
+      window.localStorage.removeItem(storageKey);
+      setComplete(true);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Your response could not be stored.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function reset() {
@@ -216,6 +243,8 @@ export function AiWorkStudyClient() {
     setAnswers(emptyAnswers());
     setStep(0);
     setComplete(false);
+    setSubmitError("");
+    setSubmitNotice("");
   }
 
   const screen = useMemo(() => renderStep(step, answers, setValue, toggleValue, setMatrixValue, contactAllowed), [answers, contactAllowed, step]);
@@ -233,6 +262,7 @@ export function AiWorkStudyClient() {
               <p>Your response will help RTHNK understand how paid AI training and evaluation work is changing professional life.</p>
               <p>We are interested in the full picture, including flexibility and opportunity as well as uncertainty and economic dependency.</p>
               <p>This research is conducted by RTHNK in cooperation with Tysma | Lems International Tax Consultants.</p>
+              {submitNotice && <p className="survey-confirmation">{submitNotice}</p>}
               <p>Findings will be published by RTHNK once sufficient responses have been collected and analysed.</p>
             </>
           )}
@@ -255,12 +285,13 @@ export function AiWorkStudyClient() {
       </div>
       {screen}
       <div className="survey-actions">
+        {submitError && <p className="survey-error" role="alert">{submitError}</p>}
         <button className="ghost-btn" type="button" onClick={back} disabled={step === 0}>Back</button>
         <button className="ghost-btn" type="button" onClick={() => window.localStorage.setItem(storageKey, JSON.stringify({ step, answers, complete }))}>Save and continue later</button>
         {step < steps.length - 1 ? (
           <button className="solid-btn" type="button" onClick={next} disabled={step === 1 && !hasConsent}>{step === 0 ? "Start the study" : "Next"}</button>
         ) : (
-          <button className="solid-btn" type="submit">Submit response</button>
+          <button className="solid-btn" type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Submit response"}</button>
         )}
       </div>
     </form>

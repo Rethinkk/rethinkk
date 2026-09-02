@@ -1,38 +1,75 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { researchTables } from "@/lib/ai-work-study";
 
-const submissionsKey = "rthnk-ai-work-study-submissions";
+type Summary = {
+  response_count: number;
+  dependency_groups: Record<string, number>;
+  latest_submission_at: string | null;
+};
+
+const exportSets = [
+  { dataset: "full", format: "csv", label: "Anonymous responses CSV" },
+  { dataset: "full", format: "json", label: "Anonymous responses JSON" },
+  { dataset: "contacts", format: "csv", label: "Interview contacts CSV" },
+  { dataset: "open_text", format: "csv", label: "Open-text responses CSV" }
+];
 
 export function AiWorkStudyDesk() {
-  const [refresh, setRefresh] = useState(0);
-  const submissions = useMemo(() => {
-    if (typeof window === "undefined") return [];
+  const [token, setToken] = useState("");
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  async function loadSummary() {
+    setLoading(true);
+    setMessage("");
     try {
-      return JSON.parse(window.localStorage.getItem(submissionsKey) || "[]") as Array<Record<string, unknown>>;
-    } catch {
-      return [];
+      const response = await fetch("/api/research/ai-work-study/export?dataset=summary", {
+        headers: { Authorization: `Bearer ${token}` },
+        cache: "no-store"
+      });
+      const result = await response.json() as { data?: Summary; message?: string };
+      if (!response.ok || !result.data) throw new Error(result.message || "Could not load research summary.");
+      setSummary(result.data);
+      setMessage("Research summary loaded.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Could not load research summary.");
+    } finally {
+      setLoading(false);
     }
-  }, [refresh]);
-
-  const dependencyCounts = submissions.reduce<Record<string, number>>((acc, item) => {
-    const response = item.survey_responses as Record<string, unknown> | undefined;
-    const score = Number(response?.economic_dependency_score || 0);
-    const group = score === 1 ? "Group A" : score >= 2 && score <= 3 ? "Group B" : score >= 4 ? "Group C" : "Uncoded";
-    acc[group] = (acc[group] || 0) + 1;
-    return acc;
-  }, {});
-
-  function exportJson() {
-    const blob = new Blob([JSON.stringify(submissions, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "rthnk-ai-work-study-local-export.json";
-    link.click();
-    URL.revokeObjectURL(url);
   }
+
+  async function downloadExport(dataset: string, format: string) {
+    setLoading(true);
+    setMessage("");
+    try {
+      const response = await fetch(`/api/research/ai-work-study/export?dataset=${dataset}&format=${format}`, {
+        headers: { Authorization: `Bearer ${token}` },
+        cache: "no-store"
+      });
+      if (!response.ok) {
+        const result = await response.json().catch(() => null) as { message?: string } | null;
+        throw new Error(result?.message || "Could not create export.");
+      }
+
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `rthnk-ai-work-study-${dataset}.${format}`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setMessage("Export created.");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Could not create export.");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  const groups = summary?.dependency_groups || { "Group A": 0, "Group B": 0, "Group C": 0, Uncoded: 0 };
 
   return (
     <section className="research-desk panel">
@@ -41,9 +78,19 @@ export function AiWorkStudyDesk() {
           <div className="kicker yellow">RTHNK Research</div>
           <h2>The AI Work Study</h2>
         </div>
-        <span className="kicker muted">{submissions.length} local responses</span>
+        <span className="kicker muted">{summary ? `${summary.response_count} stored responses` : "Central storage"}</span>
       </div>
       <p className="copy">Research by RTHNK, in cooperation with Tysma | Lems International Tax Consultants. RTHNK remains the editorial owner of the study.</p>
+
+      <div className="research-admin-row">
+        <label>
+          <span>Research desk token</span>
+          <input type="password" value={token} onChange={(event) => setToken(event.currentTarget.value)} placeholder="RESEARCH_ADMIN_TOKEN" />
+        </label>
+        <button className="solid-btn" type="button" onClick={loadSummary} disabled={!token || loading}>{loading ? "Loading..." : "Load summary"}</button>
+      </div>
+      {message && <p className="source-note">{message}</p>}
+
       <div className="research-desk-grid">
         <article>
           <h3>Segmentation</h3>
@@ -52,18 +99,22 @@ export function AiWorkStudyDesk() {
           <p>Group C: dependency score 4-5</p>
           <div className="mini-bars">
             {["Group A", "Group B", "Group C", "Uncoded"].map((group) => (
-              <span key={group}><i style={{ width: `${Math.max(8, (dependencyCounts[group] || 0) * 18)}px` }} />{group}: {dependencyCounts[group] || 0}</span>
+              <span key={group}><i style={{ width: `${Math.max(8, (groups[group] || 0) * 18)}px` }} />{group}: {groups[group] || 0}</span>
             ))}
           </div>
         </article>
         <article>
           <h3>Export sets</h3>
-          <p>Anonymous full research dataset</p>
-          <p>Interview contact list</p>
-          <p>Open-text responses</p>
-          <p>Coded response summary</p>
+          <div className="export-button-grid">
+            {exportSets.map((set) => (
+              <button className="ghost-btn" type="button" key={`${set.dataset}-${set.format}`} onClick={() => downloadExport(set.dataset, set.format)} disabled={!token || loading}>
+                {set.label}
+              </button>
+            ))}
+          </div>
         </article>
       </div>
+
       <div className="schema-grid">
         {Object.entries(researchTables).map(([table, fields]) => (
           <article key={table}>
@@ -72,11 +123,8 @@ export function AiWorkStudyDesk() {
           </article>
         ))}
       </div>
-      <div className="button-row">
-        <button className="ghost-btn" type="button" onClick={() => setRefresh((value) => value + 1)}>Refresh local responses</button>
-        <button className="solid-btn" type="button" onClick={exportJson} disabled={!submissions.length}>Export local JSON</button>
-      </div>
-      <p className="source-note">Production storage still needs to be connected before public recruitment. Contact data must remain separate from the anonymous research table.</p>
+
+      <p className="source-note">Anonymous survey responses are stored separately from interview contact details. Confirmation emails are sent from research@rethinkk.org when the email provider is configured.</p>
     </section>
   );
 }
