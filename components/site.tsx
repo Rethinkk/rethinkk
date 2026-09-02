@@ -8,6 +8,7 @@ export function SiteHeader() {
     ["Thinking", "/thinking"],
     ["Data", "/data"],
     ["Indices", "/indices"],
+    ["Research", "/research"],
     ["Archive", "/archive"],
     ["Authors", "/authors"],
     ["About", "/about"]
