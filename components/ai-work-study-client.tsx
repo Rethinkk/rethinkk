@@ -221,10 +221,10 @@ export function AiWorkStudyClient() {
 
       if (result.email?.sent) {
         setSubmitNotice("Your response has been stored. A confirmation email has been sent from research@rethinkk.org.");
-      } else if (contactAllowed && result.email?.reason === "missing_resend_api_key") {
-        setSubmitNotice("Your response has been stored. Confirmation email is not active yet.");
+      } else if (contactAllowed && result.email?.skipped) {
+        setSubmitNotice("Your response has been stored. No confirmation email was sent because no follow-up email address was available.");
       } else if (contactAllowed) {
-        setSubmitNotice("Your response has been stored. RTHNK may contact you from research@rethinkk.org.");
+        setSubmitNotice("Your response has been stored. The confirmation email could not be sent yet.");
       } else {
         setSubmitNotice("Your anonymous response has been stored.");
       }

@@ -70,7 +70,8 @@ async function sendConfirmationEmail(contact: StoredContactRecord | null) {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "User-Agent": "RTHNK Research/1.0"
     },
     body: JSON.stringify({
       from,
@@ -91,7 +92,12 @@ async function sendConfirmationEmail(contact: StoredContactRecord | null) {
     cache: "no-store"
   });
 
+  const responseText = await response.text();
   if (!response.ok) {
+    console.warn("RTHNK research confirmation email failed", {
+      status: response.status,
+      response: responseText
+    });
     return { sent: false, skipped: false, reason: `email_provider_${response.status}` };
   }
 
