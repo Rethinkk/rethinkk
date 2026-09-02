@@ -17,7 +17,7 @@ export default function ResearchPage() {
         <p className="lede">Research projects are built as structured intake flows, not campaign pages.</p>
         <div className="research-list">
           <article className="research-project">
-            <div className="kicker muted">In collaboration with Tysma | Lems</div>
+            <div className="kicker muted">In cooperation with Tysma | Lems International Tax Consultants</div>
             <h2>{aiWorkStudy.title}</h2>
             <p>{aiWorkStudy.subtitle}</p>
             <span>{aiWorkStudy.estimate}</span>

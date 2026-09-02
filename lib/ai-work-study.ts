@@ -2,7 +2,7 @@ export const aiWorkStudy = {
   slug: "ai-work-study",
   title: "The AI Work Study",
   subtitle: "How is paid AI training changing professional work?",
-  collaborationLine: "Research by RTHNK, in collaboration with Tysma | Lems",
+  collaborationLine: "Research by RTHNK, in cooperation with Tysma | Lems International Tax Consultants",
   estimate: "8-12 minutes",
   researchQuestion: "How does paid AI training, annotation and evaluation affect the professional, economic and social position of the people performing it?"
 };

@@ -232,7 +232,7 @@ export function AiWorkStudyClient() {
             <>
               <p>Your response will help RTHNK understand how paid AI training and evaluation work is changing professional life.</p>
               <p>We are interested in the full picture, including flexibility and opportunity as well as uncertainty and economic dependency.</p>
-              <p>This research is conducted by RTHNK in collaboration with Tysma | Lems.</p>
+              <p>This research is conducted by RTHNK in cooperation with Tysma | Lems International Tax Consultants.</p>
               <p>Findings will be published by RTHNK once sufficient responses have been collected and analysed.</p>
             </>
           )}

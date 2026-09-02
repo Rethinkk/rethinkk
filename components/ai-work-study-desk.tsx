@@ -43,7 +43,7 @@ export function AiWorkStudyDesk() {
         </div>
         <span className="kicker muted">{submissions.length} local responses</span>
       </div>
-      <p className="copy">Research by RTHNK, in collaboration with Tysma | Lems. RTHNK remains the editorial owner of the study.</p>
+      <p className="copy">Research by RTHNK, in cooperation with Tysma | Lems International Tax Consultants. RTHNK remains the editorial owner of the study.</p>
       <div className="research-desk-grid">
         <article>
           <h3>Segmentation</h3>

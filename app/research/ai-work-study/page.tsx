@@ -14,7 +14,7 @@ export default function AiWorkStudyPage() {
         <PageActions />
         <div className="research-lockup">
           <span>RTHNK Research</span>
-          <strong>in collaboration with Tysma | Lems</strong>
+          <strong>in cooperation with Tysma | Lems International Tax Consultants</strong>
         </div>
         <AiWorkStudyClient />
         <aside className="privacy-note">
