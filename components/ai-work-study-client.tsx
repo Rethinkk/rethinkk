@@ -26,6 +26,7 @@ import {
   proofOptions,
   rateControl,
   startReasons,
+  surveyCountries,
   transitionChanges,
   workloadHorizon,
   workArrangements
@@ -53,8 +54,6 @@ const steps = [
   "Follow-up",
   "Review"
 ];
-
-const countries = ["Netherlands", "Belgium", "Germany", "France", "Italy", "Spain", "United Kingdom", "United States", "Canada", "Australia", "Other"];
 
 function createAnonymousId() {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
@@ -357,7 +356,7 @@ function renderStep(
   if (step === 3) {
     return (
       <SurveyScreen eyebrow="Profile" title="Your professional background">
-        <FieldSelect label="Country of residence" value={String(answers.country || "")} options={countries} onChange={(value) => setValue("country", value)} />
+        <FieldSelect label="Country of residence" value={String(answers.country || "")} options={surveyCountries} onChange={(value) => setValue("country", value)} />
         <FieldSelect label="Age group" value={String(answers.age_band || "")} options={ageBands} onChange={(value) => setValue("age_band", value)} />
         <FieldSelect label="Highest completed education" value={String(answers.education || "")} options={educationLevels} onChange={(value) => setValue("education", value)} />
         <FieldSelect label="Years of professional work experience" value={String(answers.years_experience || "")} options={experienceBands} onChange={(value) => setValue("years_experience", value)} />
@@ -506,7 +505,7 @@ function renderStep(
           <div className="survey-contact-panel">
             <FieldInput label="First name" value={String(answers.first_name || "")} onChange={(value) => setValue("first_name", value)} />
             <FieldInput label="Email" type="email" value={String(answers.email || "")} onChange={(value) => setValue("email", value)} />
-            <FieldInput label="Country" value={String(answers.contact_country || "")} onChange={(value) => setValue("contact_country", value)} />
+            <FieldSelect label="Country" value={String(answers.contact_country || "")} options={surveyCountries} onChange={(value) => setValue("contact_country", value)} />
             <FieldInput label="Preferred language" value={String(answers.preferred_language || "")} onChange={(value) => setValue("preferred_language", value)} />
             <FieldInput label="Optional phone number" value={String(answers.phone_optional || "")} onChange={(value) => setValue("phone_optional", value)} />
             <CheckboxGroup name="permission_topics" values={answers.permission_topics as string[]} options={permissionTopics} onToggle={toggleValue} />

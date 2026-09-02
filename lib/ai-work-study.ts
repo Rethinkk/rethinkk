@@ -1,3 +1,5 @@
+import worldCountries from "world-countries";
+
 export const aiWorkStudy = {
   slug: "ai-work-study",
   title: "The AI Work Study",
@@ -6,6 +8,15 @@ export const aiWorkStudy = {
   estimate: "8-12 minutes",
   researchQuestion: "How does paid AI training, annotation and evaluation affect the professional, economic and social position of the people performing it?"
 };
+
+export const surveyCountries = [
+  ...worldCountries
+    .map((country) => country.name.common)
+    .filter((name) => !["Antarctica"].includes(name))
+    .sort((a, b) => a.localeCompare(b)),
+  "Prefer not to say",
+  "Other / not listed"
+];
 
 export const ageBands = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"];
 export const educationLevels = ["Secondary school", "Vocational", "Bachelor", "Master", "Professional degree", "PhD / doctorate", "Other", "Prefer not to say"];
