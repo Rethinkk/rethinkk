@@ -3,20 +3,20 @@
 import { useMemo, useState } from "react";
 
 const monthlyRows = [
-  { month: "2015-01", issue: "housing", count: 1, total: 2, share: 50, prominence: 5, urgency: 1, frames: "construction, housing_shortage, youth_access" },
-  { month: "2015-01", issue: "migration", count: 1, total: 2, share: 50, prominence: 5, urgency: 1, frames: "asylum, humanitarian" },
-  { month: "2015-01", issue: "climate", count: 0, total: 2, share: 0, prominence: null, urgency: null, frames: "none" },
-  { month: "2015-02", issue: "housing", count: 1, total: 2, share: 50, prominence: 3, urgency: 0, frames: "construction, nitrogen_environmental_constraints" },
-  { month: "2015-02", issue: "climate", count: 1, total: 2, share: 50, prominence: 5, urgency: 0, frames: "costs, emissions, energy_transition" },
-  { month: "2015-03", issue: "migration", count: 1, total: 2, share: 50, prominence: 4, urgency: 0, frames: "integration, public_services" }
+  { month: "2015-01", issue: "housing", researchCountry: "NL", count: 1, total: 2, share: 50, prominence: 5, urgency: 1, position: "increase_supply", actor: "government", editorial: "no", event: "policy_announcement", frames: "construction, housing_shortage, youth_access" },
+  { month: "2015-01", issue: "migration", researchCountry: "NL", count: 1, total: 2, share: 50, prominence: 5, urgency: 1, position: "less_restrictive", actor: "government", editorial: "no", event: "migration_event", frames: "asylum, humanitarian" },
+  { month: "2015-01", issue: "climate", researchCountry: "NL", count: 0, total: 2, share: 0, prominence: null, urgency: null, position: "unclear", actor: "unclear", editorial: "no", event: "none", frames: "none" },
+  { month: "2015-02", issue: "housing", researchCountry: "NL", count: 1, total: 2, share: 50, prominence: 3, urgency: 0, position: "unclear", actor: "government", editorial: "no", event: "policy_announcement", frames: "construction, nitrogen_environmental_constraints" },
+  { month: "2015-02", issue: "climate", researchCountry: "NL", count: 1, total: 2, share: 50, prominence: 5, urgency: 0, position: "accelerate_action", actor: "expert", editorial: "no", event: "none", frames: "costs, emissions, energy_transition" },
+  { month: "2015-03", issue: "migration", researchCountry: "NL", count: 1, total: 2, share: 50, prominence: 4, urgency: 0, position: "unclear", actor: "government", editorial: "no", event: "none", frames: "integration, public_services" }
 ];
 
 const auditRecords: Record<string, string[]> = {
-  "2015-01:housing": ["nl-2015-01-001 / Sample Courant / Woningtekort loopt op in grote steden"],
-  "2015-01:migration": ["nl-2015-01-002 / Sample Dagblad / Kabinet praat over opvang asielzoekers"],
-  "2015-02:housing": ["nl-2015-02-002 / Sample Courant / Stikstof vertraagt nieuwbouwprojecten"],
-  "2015-02:climate": ["nl-2015-02-001 / Sample Nieuws / Klimaatbeleid raakt energierekening huishoudens"],
-  "2015-03:migration": ["nl-2015-03-001 / Sample Dagblad / Migratie zet volgens raad druk op voorzieningen"]
+  "2015-01:housing": ["nl-2015-01-001 / source_country NL / geographic_focus NL / research_country NL / no editorial position"],
+  "2015-01:migration": ["nl-2015-01-002 / source_country NL / geographic_focus NL / research_country NL / quoted actor position only"],
+  "2015-02:housing": ["nl-2015-02-002 / source_country NL / geographic_focus NL / research_country NL / event-linked attention"],
+  "2015-02:climate": ["nl-2015-02-001 / source_country NL / geographic_focus NL / research_country NL / expert-attributed position"],
+  "2015-03:migration": ["nl-2015-03-001 / source_country NL / geographic_focus NL / research_country NL / public-services frame"]
 };
 
 export function AgendaResearchDesk() {
@@ -33,7 +33,7 @@ export function AgendaResearchDesk() {
       <div className="kicker yellow">RETHINKK agenda research</div>
       <h2>Who Decides What Matters?</h2>
       <p className="copy">
-        Internal research instrument for reconstructing monthly media attention before public interpretation. This module stays in the CMS desk and is not linked from the public site.
+        Internal research instrument for reconstructing monthly media attention before public interpretation. Topic, position, actor attribution and editorial voice are coded separately.
       </p>
 
       <div className="research-admin-row">
@@ -52,7 +52,7 @@ export function AgendaResearchDesk() {
       <div className="research-desk-grid">
         <article>
           <h3>Monthly panel</h3>
-          <p>country x year_month x issue</p>
+          <p>research_country x year_month x issue</p>
           <div className="mini-bars">
             <span><i style={{ width: "130px" }} /> Media coded</span>
             <span><i style={{ width: "42px" }} /> Reality pending</span>
@@ -63,18 +63,18 @@ export function AgendaResearchDesk() {
         <article>
           <h3>Blind coding</h3>
           <p>Article text, publication metadata and fixed coding manual only.</p>
-          <p>Stored: coding model, model version, prompt version and timestamp.</p>
+          <p>Stored: model, prompt, source reference, methodology version, quality flags and timestamp.</p>
         </article>
       </div>
 
       <div className="schema-grid">
         <article>
           <h3>Import contract</h3>
-          <p>document_id / publication_date / outlet / country / title / body / section / author / source_type / archive reference</p>
+          <p>document_id / publication_date / outlet / source_country / geographic_focus / research_country / title / body / section / source reference</p>
         </article>
         <article>
-          <h3>Validation</h3>
-          <p>Gold-standard human coding target: 300-500 articles, compared with accuracy, precision, recall, F1, confusion matrix and agreement measures.</p>
+          <h3>Denominator quality</h3>
+          <p>Shares require denominator definition, coverage, source completeness and coverage notes before cross-time comparison.</p>
         </article>
       </div>
 
@@ -84,7 +84,7 @@ export function AgendaResearchDesk() {
           return (
             <button className="matrix-row" key={key} type="button" onClick={() => setSelectedKey(key)}>
               <span>{row.month} / {row.issue}</span>
-              <span>{row.count}/{row.total} articles / {row.share}% share / prominence {row.prominence ?? "-"} / urgency {row.urgency ?? "-"} / {row.frames}</span>
+              <span>{row.researchCountry} / {row.count}/{row.total} articles / {row.share}% share / position {row.position} / actor {row.actor} / editorial {row.editorial} / event {row.event}</span>
             </button>
           );
         })}
@@ -93,6 +93,7 @@ export function AgendaResearchDesk() {
       <div className="survey-review">
         <span>Audit trail for {selectedKey}</span>
         {audit.map((item) => <strong key={item}>{item}</strong>)}
+        <span>POSITION != SALIENCE / source country is not geographic focus</span>
       </div>
     </section>
   );
