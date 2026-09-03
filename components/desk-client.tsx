@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { categories } from "@/lib/content";
 import { getLatestPublishedEdition } from "@/lib/democracy-index";
 import { AiWorkStudyDesk } from "@/components/ai-work-study-desk";
+import { AgendaResearchDesk } from "@/components/agenda-research-desk";
 import { DemocracyImportDesk } from "@/components/democracy-import-desk";
 
 export function DeskClient() {
@@ -70,6 +71,7 @@ export function DeskClient() {
           <div className="button-row"><button className="ghost-btn" type="button" onClick={() => setAuthenticated(false)}>Sign out</button></div>
         </div>
       </div>
+      <AgendaResearchDesk />
       <AiWorkStudyDesk />
       <DemocracyImportDesk year={democracyEdition?.year || 2026} />
     </div>

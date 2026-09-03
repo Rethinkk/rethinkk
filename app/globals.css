@@ -1033,12 +1033,29 @@ a {
   text-transform: uppercase;
 }
 
-.research-admin-row input {
+.research-admin-row input,
+.research-admin-row select {
   background: #070707;
   border: 1px solid var(--rethinkk-rule);
   color: var(--rethinkk-white);
   min-height: 44px;
   padding: 10px 12px;
+}
+
+button.matrix-row {
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+button.matrix-row:hover span:first-child,
+button.matrix-row:focus span:first-child {
+  color: var(--rethinkk-yellow);
 }
 
 .export-button-grid {
