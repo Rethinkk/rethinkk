@@ -16,7 +16,7 @@ export async function wallacePublications(): Promise<Publication[]> {
         excerpt: `${a.leader.country} · ${a.leader.office}. Read the six-dimension assessment and supporting evidence.`,
         category: "Power & Politics",
         tags: [
-          "Wallace Index",
+          "The Wallace Index",
           a.leader.name,
           a.leader.country,
           a.leader.office,
@@ -44,7 +44,7 @@ export async function wallacePublications(): Promise<Publication[]> {
           title: n.title,
           excerpt: n.body.slice(0, 220),
           category: "Power & Politics",
-          tags: ["Wallace Index", "Research note"],
+          tags: ["The Wallace Index", "Research note"],
           author: "RETHINKK Research",
           publicationDate: n.publishedAt?.toISOString().slice(0, 10) || "",
           editorialWeight: 60,

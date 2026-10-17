@@ -1,4 +1,4 @@
-name: Wallace Index checks
+name: The Wallace Index checks
 permissions:
   contents: read
 on:

@@ -5,7 +5,7 @@ import { EditorialDesk } from "@/components/wallace-index/desk";
 import "@/app/wallace-index/wallace.css";
 export const dynamic = "force-dynamic";
 export const metadata = {
-  title: "Wallace Index research desk | RETHINKK",
+  title: "The Wallace Index research desk | RETHINKK",
   robots: { index: false, follow: false },
 };
 export default async function DeskPage() {
@@ -17,7 +17,7 @@ export default async function DeskPage() {
   )
     return (
       <div className="wi">
-        <h1>Wallace Index research desk</h1>
+        <h1>The Wallace Index research desk</h1>
         <p>
           The secure research desk requires a configured PostgreSQL database,
           GitHub OAuth application and authorised editorial accounts. It is
@@ -61,7 +61,7 @@ export default async function DeskPage() {
           <button>Sign out</button>
         </form>
       </div>
-      <h1>Wallace Index research desk</h1>
+      <h1>The Wallace Index research desk</h1>
       <EditorialDesk initial={JSON.parse(JSON.stringify(data))} />
     </div>
   );

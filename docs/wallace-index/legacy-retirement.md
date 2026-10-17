@@ -1,4 +1,4 @@
-# Wallace Index legacy retirement report
+# The Wallace Index legacy retirement report
 
 17 October 2026 · Phase 1 inspection · Retirement not authorised or completed
 
@@ -10,7 +10,7 @@
 
 | Material | Disposition for the native chapter |
 | --- | --- |
-| Wallace Index name and six dimensions in HTML | Retain as conceptual provenance; authoritative definitions come from the approved versioned methodology |
+| The Wallace Index name and six dimensions in HTML | Retain as conceptual provenance; authoritative definitions come from the approved versioned methodology |
 | Paired horizontal comparison bars | Retain the design idea; implement accessible React bars with a common 0–3 scale and accompanying values/table |
 | Yellow, black and restrained layout | Use the actual main-site tokens and typography, rather than importing the legacy stylesheet |
 | Legacy numerical leader profiles | Do not import as research: no rationale, citations, approval or assessment period is supplied |

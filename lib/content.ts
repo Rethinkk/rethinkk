@@ -59,7 +59,7 @@ export const publications: Publication[] = [
   {
     id: "wallace-index-chapter", slug: "wallace-index", type: "index", status: "published",
     title: "The Wallace Index", excerpt: "A qualitative research framework examining political leadership through people, process, policy, crisis, humility and service. Editorial assessments require evidence, review and approval.",
-    category: "Power & Politics", tags: ["leadership", "Wallace Index", "methodology"], author: "RETHINKK Research", publicationDate: "2026-10-17", editorialWeight: 50
+    category: "Power & Politics", tags: ["leadership", "The Wallace Index", "methodology"], author: "RETHINKK Research", publicationDate: "2026-10-17", editorialWeight: 50
   },
   {
     id: "think-europe-small",

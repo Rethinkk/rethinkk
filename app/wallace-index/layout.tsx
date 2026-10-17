@@ -7,7 +7,7 @@ export default function WallaceLayout({
 }) {
   return (
     <div className="wi" lang="en-GB">
-      <nav className="wi-nav" aria-label="Wallace Index chapter">
+      <nav className="wi-nav" aria-label="The Wallace Index chapter">
         {[
           ["Overview", ""],
           ["Explore", "explore"],
