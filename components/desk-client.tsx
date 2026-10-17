@@ -45,6 +45,7 @@ export function DeskClient() {
 
   return (
     <div className="desk-stack">
+      <div className="panel"><a className="text-link" href="/desk/wallace-index">Wallace Index — secure research and publishing desk -&gt;</a><p className="copy">Uses separate server-side authentication and editorial permissions.</p></div>
       <div className="desk-grid desk-login-grid">
         <form className="panel">
           <div className="field"><label htmlFor="desk-title">Title</label><input id="desk-title" defaultValue="A new institutional question" /></div>

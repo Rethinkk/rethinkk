@@ -1,0 +1,6 @@
+# Shared transitive security fixes, verified by build and regression checks.
+overrides:
+  postcss: ^8.5.23
+  source-map-js: ^1.2.2
+  sharp: ^0.35.5
+  deepmerge-ts: ^8.0.0

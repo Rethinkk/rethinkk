@@ -1,0 +1,159 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model WallaceUser {
+  id String @id // github:<immutable provider account ID>
+  name String
+  roles String[]
+  disabled Boolean @default(false)
+  createdAt DateTime @default(now())
+}
+model WallaceLeader {
+  id String @id @default(uuid())
+  slug String @unique
+  name String
+  country String
+  office String
+  officeStart String
+  officeEnd String
+  biography String
+  archived Boolean @default(false)
+  assessments WallaceAssessment[]
+  updatedAt DateTime @updatedAt
+}
+model WallaceMethodology {
+  id String @id @default(uuid())
+  version String @unique
+  data Json
+  approved Boolean @default(false)
+  approvedBy String?
+  approvedAt DateTime?
+  assessments WallaceAssessment[]
+  editions WallaceEdition[]
+}
+model WallaceSource {
+  id String @id @default(uuid())
+  fingerprint String @unique
+  predecessorId String?
+  data Json
+  createdAt DateTime @default(now())
+  evidence WallaceEvidence[]
+  checks WallaceSourceCheck[]
+}
+model WallaceAssessment {
+  id String @id @default(uuid())
+  leaderId String
+  leader WallaceLeader @relation(fields: [leaderId], references: [id], onDelete: Restrict)
+  methodologyId String
+  methodology WallaceMethodology @relation(fields: [methodologyId], references: [id], onDelete: Restrict)
+  version Int
+  predecessorId String? @unique
+  predecessor WallaceAssessment? @relation("Revision", fields: [predecessorId], references: [id], onDelete: Restrict)
+  successor WallaceAssessment? @relation("Revision")
+  correctionReason String @default("")
+  periodStart String
+  periodEnd String
+  context String
+  status String @default("draft")
+  authorId String
+  reviewerId String?
+  reviewDecision String @default("pending")
+  reviewNotes String @default("")
+  approvedBy String?
+  reassessOn String
+  updatedAt DateTime @updatedAt
+  scores WallaceDimensionScore[]
+  evidence WallaceEvidence[]
+  editions WallaceEditionAssessment[]
+  @@unique([leaderId, version])
+}
+model WallaceDimensionScore {
+  assessmentId String
+  dimension String
+  score Int?
+  rationale String
+  sufficiency String
+  reviewerNotes String @default("")
+  assessment WallaceAssessment @relation(fields: [assessmentId], references: [id], onDelete: Restrict)
+  evidence WallaceEvidence[]
+  @@id([assessmentId, dimension])
+}
+model WallaceEvidence {
+  id String @id @default(uuid())
+  assessmentId String
+  dimension String
+  sourceId String
+  claim String
+  context String
+  relation String
+  assessment WallaceAssessment @relation(fields: [assessmentId], references: [id], onDelete: Restrict)
+  dimensionScore WallaceDimensionScore @relation(fields: [assessmentId, dimension], references: [assessmentId, dimension], onDelete: Restrict)
+  source WallaceSource @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+}
+model WallaceEdition {
+  id String @id @default(uuid())
+  slug String @unique
+  title String
+  methodologyId String
+  methodology WallaceMethodology @relation(fields: [methodologyId], references: [id], onDelete: Restrict)
+  publishedAt DateTime @default(now())
+  releaseNotes String
+  snapshot Json
+  checksum String
+  assessments WallaceEditionAssessment[]
+}
+model WallaceEditionAssessment {
+  editionId String
+  assessmentId String
+  leaderId String
+  edition WallaceEdition @relation(fields: [editionId], references: [id], onDelete: Restrict)
+  assessment WallaceAssessment @relation(fields: [assessmentId], references: [id], onDelete: Restrict)
+  @@id([editionId, assessmentId])
+  @@unique([editionId, leaderId])
+}
+model WallaceAuditEvent {
+  id String @id @default(uuid())
+  actor String
+  action String
+  reference String
+  metadata Json
+  createdAt DateTime @default(now())
+}
+model WallaceReview {
+  id String @id @default(uuid())
+  assessmentId String
+  actor String
+  decision String
+  notes String
+  createdAt DateTime @default(now())
+}
+model WallaceContent {
+  id String @id @default(uuid())
+  slug String
+  version Int
+  title String
+  body String
+  kind String
+  status String @default("draft")
+  publishedAt DateTime?
+  @@unique([slug, version])
+}
+model WallaceContribution {
+  id String @id @default(uuid())
+  reference String
+  text String
+  contact String?
+  status String @default("pending")
+  createdAt DateTime @default(now())
+}
+model WallaceSourceCheck {
+  id String @id @default(uuid())
+  sourceId String
+  source WallaceSource @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+  result String
+  checkedAt DateTime @default(now())
+}

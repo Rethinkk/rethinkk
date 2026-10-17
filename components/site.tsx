@@ -8,6 +8,7 @@ export function SiteHeader() {
     ["Thinking", "/thinking"],
     ["Data", "/data"],
     ["Indices", "/indices"],
+    ["Wallace Index", "/wallace-index"],
     ["Research", "/research"],
     ["Archive", "/archive"],
     ["Authors", "/authors"],

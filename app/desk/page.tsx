@@ -9,6 +9,7 @@ export default function DeskPage() {
         <div className="kicker yellow">Editorial desk</div>
         <h1 className="page-title">Private publishing desk.</h1>
         <p className="lede desk-note">The public site is the publication. The desk is the internal layer for drafts, sources, homepage prominence and publishing control.</p>
+        <p><a className="text-link" href="/desk/wallace-index">Open the secure Wallace Index research desk -&gt;</a></p>
         <DeskClient />
       </div>
     </Section>

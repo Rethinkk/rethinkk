@@ -1,0 +1,49 @@
+name: Wallace Index checks
+permissions:
+  contents: read
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "prisma/**"
+      - "tests/**"
+      - "scripts/**"
+      - "*config*"
+      - "auth.ts"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/wallace-index.yml"
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: wallace_test
+          POSTGRES_PASSWORD: local-ci-test-only
+          POSTGRES_DB: wallace_test
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - run: pnpm test && pnpm test:wallace && pnpm lint && pnpm exec tsc --noEmit
+      - run: pnpm db:migrate && pnpm test:wallace:db
+        env:
+          DATABASE_URL: postgresql://wallace_test:local-ci-test-only@localhost:5432/wallace_test
+          WALLACE_TEST_DATABASE: "1"
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:wallace:browser
+      - run: pnpm audit --prod --audit-level=high

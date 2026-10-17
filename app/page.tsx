@@ -47,6 +47,15 @@ export default function HomePage() {
 
       <Section compact>
         <div className="section-inner">
+          <div className="kicker yellow">RETHINKK Research / New chapter</div>
+          <h2>The Wallace Index</h2>
+          <p className="copy">Leadership examined through six dimensions. A qualitative framework with transparent evidence, independent review and dated editions.</p>
+          <Link className="text-link" href="/wallace-index">Explore the research chapter -&gt;</Link>
+        </div>
+      </Section>
+
+      <Section compact>
+        <div className="section-inner">
           <div className="section-head">
             <div>
               <div className="kicker yellow">Fields</div>
