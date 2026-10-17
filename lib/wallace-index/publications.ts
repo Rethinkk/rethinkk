@@ -1,6 +1,7 @@
 import { Publication } from "@/lib/content";
 import { db } from "./db";
 import { catalogue } from "./catalogue";
+import { researchProfiles } from "./research";
 export async function wallacePublications(): Promise<Publication[]> {
   const cat = await catalogue();
   const latest = cat.editions[0];
@@ -26,6 +27,29 @@ export async function wallacePublications(): Promise<Publication[]> {
         editorialWeight: 60,
         relatedContent: [],
       });
+  for (const p of researchProfiles) {
+    if (latest?.assessments.some((a) => a.leader.slug === p.id)) continue;
+    items.push({
+      id: `wallace-leader-${p.id}`,
+      slug: `wallace-profile-${p.id}`,
+      type: "research",
+      status: "published", // Public discovery entry; not an approved Assessment.
+      title: `Research draft: ${p.name} — The Wallace Index`,
+      excerpt: `${p.country} · ${p.office}. Qualitative research draft with evidence and counterevidence. No editorial scores assigned; independent review pending.`,
+      category: "Power & Politics",
+      tags: [
+        "The Wallace Index",
+        "Research draft",
+        p.name,
+        p.country,
+        p.office,
+      ],
+      author: "RETHINKK Research",
+      publicationDate: "2026-10-17",
+      editorialWeight: 50,
+      relatedContent: [],
+    });
+  }
   if (process.env.DATABASE_URL)
     try {
       const notes = await db.wallaceContent.findMany({

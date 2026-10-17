@@ -9,7 +9,7 @@
     "test": "node --experimental-strip-types scripts/validate-democracy-index.ts",
     "start": "next start",
     "lint": "eslint lib/wallace-index components/wallace-index app/wallace-index app/api/wallace-index app/desk/wallace-index auth.ts scripts/wallace-*.ts",
-    "test:wallace": "node --import tsx tests/wallace-index/model.test.ts",
+    "test:wallace": "node --import tsx --test tests/wallace-index/*.test.ts",
     "test:wallace:browser": "playwright test",
     "test:wallace:db": "node --import tsx tests/wallace-index/database.integration.ts",
     "db:generate": "prisma generate",

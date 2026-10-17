@@ -55,7 +55,13 @@ function valid(v: unknown): v is Visitor {
     )
   );
 }
-export function VisitorTool({ edition }: { edition: Edition }) {
+export function VisitorTool({
+  edition,
+  researchLeaders = [],
+}: {
+  edition: Edition;
+  researchLeaders?: { id: string; name: string }[];
+}) {
   const [data, setData] = useState<Visitor>(initial);
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState("");
@@ -136,7 +142,7 @@ export function VisitorTool({ edition }: { edition: Edition }) {
       </div>
       <div className="wi-filters">
         <label>
-          Choose a published profile
+          Choose a leader profile
           <select
             value={data.officialId}
             onChange={(e) => {
@@ -147,11 +153,25 @@ export function VisitorTool({ edition }: { edition: Edition }) {
                 ...data,
                 officialId: e.target.value,
                 editionId: edition.id,
-                name: a?.leader.name || "",
+                name:
+                  a?.leader.name ||
+                  researchLeaders.find(
+                    (p) => `research:${p.id}` === e.target.value,
+                  )?.name ||
+                  "",
               });
             }}
           >
             <option value="">Temporary custom profile</option>
+            {researchLeaders
+              .filter(
+                (p) => !edition.assessments.some((a) => a.leader.slug === p.id),
+              )
+              .map((p) => (
+                <option key={p.id} value={`research:${p.id}`}>
+                  {p.name} — research draft; no official score
+                </option>
+              ))}
             {edition.assessments.map((a) => (
               <option key={a.id} value={a.id}>
                 {a.leader.name}
@@ -303,8 +323,9 @@ export function VisitorTool({ edition }: { edition: Edition }) {
         </table>
         {data.officialId && !official && (
           <p>
-            The original published comparison is not in this edition. Select its
-            edition to compare; your work is preserved.
+            {data.officialId.startsWith("research:")
+              ? "This research profile has no official editorial score to compare. Your assessment remains independent."
+              : "The original published comparison is not in this edition. Select its edition to compare; your work is preserved."}
           </p>
         )}
         <div className="wi-actions wi-no-print">

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-test("Native chapter, empty official index and existing DDI route", async ({
+test("Native chapter, research profiles and existing DDI route", async ({
   page,
 }) => {
   await page.goto("/wallace-index");
@@ -12,8 +12,12 @@ test("Native chapter, empty official index and existing DDI route", async ({
     .click();
   await expect(
     page.getByRole("heading", {
-      name: "No editorial assessments published yet",
+      name: "Explore the evidence.",
     }),
+  ).toBeVisible();
+  await expect(page.locator(".wi-card")).toHaveCount(5);
+  await expect(
+    page.getByText("Research profiles — no editorial scores"),
   ).toBeVisible();
   await page.goto("/index/democracy-direction");
   await expect(page).toHaveURL(/index\/democracy-direction/);
@@ -82,6 +86,10 @@ for (const width of [320, 768, 1280])
     await page.setViewportSize({ width, height: 900 });
     for (const path of [
       "/wallace-index",
+      "/wallace-index/explore",
+      "/wallace-index/leaders/olaf-scholz",
+      "/wallace-index/compare?research=1&leaders=olaf-scholz,barack-obama",
+      "/wallace-index/sources/GS_OS02?research=1",
       "/wallace-index/explore?demo=1",
       "/wallace-index/assess",
       "/wallace-index/methodology",
@@ -111,4 +119,50 @@ test("Unauthenticated editorial requests and cross-origin writes are rejected", 
     data: { action: "edition.publish" },
   });
   expect(post.status()).toBe(403);
+});
+
+test("Research filters, Scholz caveat, claim provenance and independent visitor selection", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/wallace-index/explore");
+  await page.getByLabel("Leader name").fill("Scholz");
+  await expect(page.locator(".wi-card")).toHaveCount(1);
+  await expect(page.locator(".wi-card")).toContainText(
+    "not a finding of misconduct",
+  );
+  await page.getByLabel("Leader name").clear();
+  await page.getByLabel("Compare Olaf Scholz").check();
+  await page.getByLabel("Compare Barack Obama").check();
+  await page.getByRole("link", { name: "Compare selected (2)" }).click();
+  await expect(page.getByRole("table")).toContainText(
+    "not a finding of misconduct",
+  );
+  await page.getByRole("link", { name: "Olaf Scholz", exact: true }).click();
+  await expect(page.locator("#service")).toContainText(
+    "Insufficient evidence — not assessed",
+  );
+  await expect(
+    page.getByRole("heading", { name: "Concept assessment" }),
+  ).toHaveCount(6);
+  await page.locator("#service").getByRole("link").first().click();
+  await expect(
+    page.getByRole("heading", { name: "Linked profiles and claims" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Original publication", { exact: true }),
+  ).toBeVisible();
+  const response = await request.get("/api/wallace-index/research");
+  expect(response.ok()).toBeTruthy();
+  const data = await response.json();
+  expect(data.profiles).toHaveLength(5);
+  expect(data.officialScoresAssigned).toBe(false);
+  expect(data.independentReviewCompleted).toBe(false);
+  await page.goto("/wallace-index/assess");
+  await page
+    .getByLabel("Choose a leader profile")
+    .selectOption("research:olaf-scholz");
+  await expect(page.getByLabel("Leader or temporary profile name")).toHaveValue(
+    "Olaf Scholz",
+  );
 });

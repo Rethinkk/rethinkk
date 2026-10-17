@@ -6,6 +6,14 @@ import { proposedMethodology } from "@/lib/wallace-index/methodology";
 import { Explorer, Comparison } from "@/components/wallace-index/explorer";
 import { VisitorTool } from "@/components/wallace-index/visitor";
 import { ContributionForm } from "@/components/wallace-index/contribution";
+import { researchProfiles } from "@/lib/wallace-index/research";
+import { ResearchExplorer } from "@/components/wallace-index/research-explorer";
+import {
+  ResearchNotice,
+  ResearchProfileView,
+  ResearchComparison,
+  ResearchSources,
+} from "@/components/wallace-index/research-profile";
 import { publicNotes } from "@/lib/wallace-index/publications";
 export const dynamic = "force-dynamic";
 export const metadata = {
@@ -19,6 +27,7 @@ type Search = {
   demo?: string;
   leaders?: string;
   assessment?: string;
+  research?: string;
 };
 function Heading({
   kicker,
@@ -94,6 +103,7 @@ export default async function WallacePage({
     : cat.editions[0];
   const method = edition?.methodology || proposedMethodology;
   const demo = edition?.demonstration;
+  const useResearch = !demo && !q.edition && (q.research === "1" || !edition);
   const empty = (
     <div className="wi-empty">
       <h2>No editorial assessments published yet</h2>
@@ -193,6 +203,23 @@ export default async function WallacePage({
               </Link>
             </div>
           </section>
+          {!demo && (
+            <section className="wi-section">
+              <h2>Five leadership research profiles</h2>
+              <ResearchNotice />
+              <p>
+                Boris Johnson, Keir Starmer, Andy Burnham, Barack Obama and Olaf
+                Scholz: six-dimension concept assessments with supporting
+                evidence, counterevidence and explicit uncertainties.
+              </p>
+              <Link
+                className="text-link"
+                href="/wallace-index/explore?research=1"
+              >
+                Read and compare the research profiles →
+              </Link>
+            </section>
+          )}
           {edition ? (
             <section className="wi-section">
               <h2>Latest comparative assessment</h2>
@@ -200,9 +227,7 @@ export default async function WallacePage({
                 {edition.title} →
               </Link>
             </section>
-          ) : (
-            empty
-          )}
+          ) : null}
           {!!notes.length && (
             <section className="wi-section">
               <h2>Research notes and updates</h2>
@@ -243,7 +268,23 @@ export default async function WallacePage({
             current={edition}
             route={route}
           />
-          {edition ? (
+          {!demo && edition && (
+            <p>
+              <Link href={`/wallace-index/${route}?research=1`}>
+                Browse qualitative research drafts →
+              </Link>
+            </p>
+          )}
+          {useResearch ? (
+            <>
+              <ResearchNotice />
+              {route === "compare" && q.leaders ? (
+                <ResearchComparison ids={q.leaders.split(",")} />
+              ) : (
+                <ResearchExplorer profiles={researchProfiles} />
+              )}
+            </>
+          ) : edition ? (
             <>
               {route === "compare" && q.leaders ? (
                 <Comparison edition={edition} ids={q.leaders.split(",")} />
@@ -271,6 +312,18 @@ export default async function WallacePage({
       )}
       {route === "leaders" &&
         (() => {
+          const research =
+            !demo &&
+            !q.edition &&
+            !q.assessment &&
+            researchProfiles.find((p) => p.id === path[1]);
+          if (
+            research &&
+            (useResearch ||
+              q.research === "1" ||
+              !edition?.assessments.some((a) => a.leader.slug === path[1]))
+          )
+            return <ResearchProfileView profile={research} />;
           const a = edition?.assessments.find(
             (a) =>
               a.leader.slug === path[1] &&
@@ -476,6 +529,11 @@ export default async function WallacePage({
             route="assess"
           />
           <VisitorTool
+            researchLeaders={
+              !demo
+                ? researchProfiles.map((p) => ({ id: p.id, name: p.name }))
+                : []
+            }
             edition={
               edition || {
                 id: "unpublished",
@@ -507,77 +565,81 @@ export default async function WallacePage({
             current={edition}
             route="sources"
           />
-          {edition
-            ? (() => {
-                const sources = [
-                  ...new Map(
-                    edition.assessments
-                      .flatMap((a) => a.sources)
-                      .map((s) => [s.id, s]),
-                  ).values(),
-                ].filter((s) => !path[1] || s.id === path[1]);
-                return sources.length ? (
-                  sources.map((s) => (
-                    <article className="wi-card wi-section" key={s.id}>
-                      <p className="wi-kicker">Source {s.id}</p>
-                      <h2>{s.title}</h2>
-                      <dl className="wi-metadata">
-                        {[
-                          ["Author / issuing institution", s.author],
-                          ["Publisher", s.publisher],
-                          ["Original publication date", s.publishedDate],
-                          ["Type", s.type],
-                          ["Stable reference", s.reference],
-                          ["Date accessed", s.accessedDate],
-                          ["Language", s.language],
-                          ["Factual summary", s.summary],
-                          ["Provenance", s.provenance],
-                          ["Reliability", s.reliability],
-                          ["Relevance", s.relevance],
-                          ["Archival reference", s.archive || "Not available"],
-                        ].map(([k, v]) => (
-                          <div key={k}>
-                            <dt>{k}</dt>
-                            <dd>
-                              {k === "Stable reference" &&
-                              /^https?:\/\//.test(v) ? (
-                                <a href={v} rel="noreferrer">
-                                  {v}
-                                </a>
-                              ) : (
-                                v
-                              )}
-                            </dd>
-                          </div>
-                        ))}
-                      </dl>
-                      <h3>Supported and contextualised claims</h3>
-                      <ul>
-                        {edition.assessments.flatMap((a) =>
-                          a.evidence
-                            .filter((e) => e.sourceId === s.id)
-                            .map((e, i) => (
-                              <li key={`${a.id}-${i}`}>
-                                <Link
-                                  href={`/wallace-index/leaders/${a.leader.slug}?edition=${edition.slug}${demo ? "&demo=1" : ""}#${e.dimension}`}
-                                >
-                                  {a.leader.name} · {label(e.dimension)}
-                                </Link>
-                                <p>
-                                  {label(e.relation)}: {e.claim}
-                                </p>
-                                <p>{e.context}</p>
-                              </li>
-                            )),
-                        )}
-                      </ul>
-                    </article>
-                  ))
-                ) : (
-                  <p>No source matches this reference.</p>
-                );
-              })()
-            : empty}
+          {useResearch ? (
+            <ResearchSources id={path[1]} />
+          ) : edition ? (
+            (() => {
+              const sources = [
+                ...new Map(
+                  edition.assessments
+                    .flatMap((a) => a.sources)
+                    .map((s) => [s.id, s]),
+                ).values(),
+              ].filter((s) => !path[1] || s.id === path[1]);
+              return sources.length ? (
+                sources.map((s) => (
+                  <article className="wi-card wi-section" key={s.id}>
+                    <p className="wi-kicker">Source {s.id}</p>
+                    <h2>{s.title}</h2>
+                    <dl className="wi-metadata">
+                      {[
+                        ["Author / issuing institution", s.author],
+                        ["Publisher", s.publisher],
+                        ["Original publication date", s.publishedDate],
+                        ["Type", s.type],
+                        ["Stable reference", s.reference],
+                        ["Date accessed", s.accessedDate],
+                        ["Language", s.language],
+                        ["Factual summary", s.summary],
+                        ["Provenance", s.provenance],
+                        ["Reliability", s.reliability],
+                        ["Relevance", s.relevance],
+                        ["Archival reference", s.archive || "Not available"],
+                      ].map(([k, v]) => (
+                        <div key={k}>
+                          <dt>{k}</dt>
+                          <dd>
+                            {k === "Stable reference" &&
+                            /^https?:\/\//.test(v) ? (
+                              <a href={v} rel="noreferrer">
+                                {v}
+                              </a>
+                            ) : (
+                              v
+                            )}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <h3>Supported and contextualised claims</h3>
+                    <ul>
+                      {edition.assessments.flatMap((a) =>
+                        a.evidence
+                          .filter((e) => e.sourceId === s.id)
+                          .map((e, i) => (
+                            <li key={`${a.id}-${i}`}>
+                              <Link
+                                href={`/wallace-index/leaders/${a.leader.slug}?edition=${edition.slug}${demo ? "&demo=1" : ""}#${e.dimension}`}
+                              >
+                                {a.leader.name} · {label(e.dimension)}
+                              </Link>
+                              <p>
+                                {label(e.relation)}: {e.claim}
+                              </p>
+                              <p>{e.context}</p>
+                            </li>
+                          )),
+                      )}
+                    </ul>
+                  </article>
+                ))
+              ) : (
+                <p>No source matches this reference.</p>
+              );
+            })()
+          ) : (
+            empty
+          )}
         </>
       )}
       {route === "editions" && (
