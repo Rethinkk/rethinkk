@@ -1,29 +1,51 @@
 {
   "name": "rethinkk",
   "private": true,
+  "packageManager": "pnpm@11.25.0",
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "test": "node --experimental-strip-types scripts/validate-democracy-index.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint lib/wallace-index components/wallace-index app/wallace-index app/api/wallace-index app/desk/wallace-index auth.ts scripts/wallace-*.ts",
+    "test:wallace": "node --import tsx --test tests/wallace-index/*.test.ts",
+    "test:wallace:browser": "playwright test",
+    "test:wallace:db": "node --import tsx tests/wallace-index/database.integration.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "wallace:bootstrap": "tsx scripts/wallace-bootstrap.ts",
+    "wallace:export": "tsx scripts/wallace-export.ts",
+    "wallace:restore": "tsx scripts/wallace-restore.ts",
+    "wallace:maintenance": "tsx scripts/wallace-maintenance.ts"
   },
   "dependencies": {
+    "@prisma/client": "6.19.3",
     "d3-geo": "^3.1.1",
-    "next": "^15.5.0",
+    "ipaddr.js": "^2.5.0",
+    "next": "^15.5.27",
+    "next-auth": "5.0.0-beta.32",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2",
-    "world-countries": "^5.1.0"
+    "world-countries": "^5.1.0",
+    "zod": "^3.25.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.0",
     "@types/d3-geo": "^3.1.1",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@types/topojson-client": "^3.1.5",
-    "typescript": "^5.9.0"
+    "embedded-postgres": "18.4.0-beta.17",
+    "eslint": "^9.39.0",
+    "prettier": "^3.9.10",
+    "prisma": "6.19.3",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.46.0"
   }
 }

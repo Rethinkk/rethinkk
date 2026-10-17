@@ -1,0 +1,1655 @@
+{
+  "schema_version": "research-packet-1",
+  "title": "The Wallace Index — renewed research batch 01",
+  "created_on": "2026-10-17",
+  "evidence_cut_off": "2026-10-17",
+  "status": "unreviewed_research_only",
+  "legacy_scores_used": false,
+  "official_publication": false,
+  "limitations": "Initial evidence packet; not exhaustive term coverage, independently reviewed assessment or byte-for-byte archive of publications.",
+  "leaders": [
+    {
+      "id": "boris-johnson",
+      "name": "Boris Johnson",
+      "country": "United Kingdom",
+      "office": "Prime Minister",
+      "assessment_period": {
+        "start": "2019-07-24",
+        "end": "2022-09-06",
+        "status": "working_scope_requires_editorial_verification",
+        "source_ids": [
+          "BJ01"
+        ],
+        "context": "Direct premiership chronology recorded; later evidence must concern in-period conduct."
+      },
+      "status": "evidence_collection",
+      "methodology_version": "1.0 — proposed",
+      "methodology_approved": false,
+      "assigned_researcher": null,
+      "assigned_reviewer": null,
+      "publisher_approval": null,
+      "dimension_scores": [
+        {
+          "dimension": "People",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ04"
+          ],
+          "research_synthesis": "The pandemic findings identify citizen impacts that merit investigation; they do not establish a general pattern of personal listening.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Trace decisions affecting care homes and vulnerable groups; obtain citizen evidence, contemporary advice and documented responses.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Process",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ02",
+            "BJ03"
+          ],
+          "research_synthesis": "The judicial decision and parliamentary finding supply specific adverse institutional evidence. Scope and attribution differ and must remain explicit.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Read the full privileges evidence and representations, Commons disposition, and Johnson’s response to the prorogation judgement; identify relevant compliance as well as failures.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Policy",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ04",
+            "BJ05"
+          ],
+          "research_synthesis": "The record includes a stated Ukraine-support direction and contrasting pandemic performance. Announcements and collective outcomes are not a complete policy assessment.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Compare objectives, resources and delivery across the whole term, including Brexit commitments and explained changes; assess coherence without ideological preference.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Crisis",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ04",
+            "BJ05"
+          ],
+          "research_synthesis": "These sources concern different crises and permit examination of both strengths and weaknesses, subject to individual attribution.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Review contemporaneous decision records, uncertainty communication and independent inquiry findings; verify assistance delivery and alternatives available at the time.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Humility",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ03"
+          ],
+          "research_synthesis": "The Committee’s account raises questions about acknowledgement and correction; some reviewed conduct falls after the assessment period.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Extract only in-period conduct, obtain original corrections and contrary examples, and inspect acceptance of scrutiny without inferring personality.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Service",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BJ03",
+            "BJ05"
+          ],
+          "research_synthesis": "Public-duty statements and parliamentary scrutiny are relevant, but neither Ukraine policy nor an adverse finding establishes a general motive.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Review formal interests findings, conflicts management and duty-related decisions with responses; obtain evidence of foregone personal advantage where available.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        }
+      ],
+      "total": null
+    },
+    {
+      "id": "keir-starmer",
+      "name": "Keir Starmer",
+      "country": "United Kingdom",
+      "office": "Prime Minister",
+      "assessment_period": {
+        "start": "2024-07-05",
+        "end": "2026-07-20",
+        "status": "working_scope_requires_editorial_verification",
+        "source_ids": [
+          "KS01"
+        ],
+        "context": "Boundaries are reported by the retrieved biography; a second dated institutional check is outstanding."
+      },
+      "status": "evidence_collection",
+      "methodology_version": "1.0 — proposed",
+      "methodology_approved": false,
+      "assigned_researcher": null,
+      "assigned_reviewer": null,
+      "publisher_approval": null,
+      "dimension_scores": [
+        {
+          "dimension": "People",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS05",
+            "KS06"
+          ],
+          "research_synthesis": "The speech addresses targeted communities; the benefits announcement changes eligibility. Neither proves sustained listening or empathy.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Obtain community testimony, consultation and impact assessments, and trace the prime minister’s actual role in decisions.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Process",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS02",
+            "KS03"
+          ],
+          "research_synthesis": "There is a stated transparency reform and a dated disclosure record. A declared benefit is not itself a finding of wrongdoing.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Read the November 2024 code, subsequent enforcement and publication records, applicable interests rules, any findings and corrections; cover the full term.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Policy",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS04",
+            "KS06"
+          ],
+          "research_synthesis": "A strategy publication and subsequent benefits revision provide starting points for examining direction and adaptation.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Read the full Plan for Change; compare commitments, resources, milestones and delivery; establish why eligibility changed before interpreting consistency.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Crisis",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS05"
+          ],
+          "research_synthesis": "The disorder statement provides direct communication evidence but no independent account of decision quality or effects.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Recover operational coordination records, advice and independent policing or parliamentary review, alongside affected-community accounts and other crises.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Humility",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS06"
+          ],
+          "research_synthesis": "A government policy revision is visible. It does not establish Starmer’s personal acknowledgement of error or reasons.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Obtain his own explanation, corrections, treatment of criticism and contrary cases across the term; distinguish learning from unsupported motive claims.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Service",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "KS02",
+            "KS03"
+          ],
+          "research_synthesis": "Rules and disclosures allow questions about public duty and private benefits to be investigated without presuming improper influence.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Check conflicts management, ministerial and parliamentary disclosure regimes, independent findings and responses; seek positive and adverse documented duty decisions.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        }
+      ],
+      "total": null
+    },
+    {
+      "id": "andy-burnham",
+      "name": "Andy Burnham",
+      "country": "United Kingdom",
+      "office": "Mayor of Greater Manchester",
+      "assessment_period": {
+        "start": null,
+        "end": null,
+        "status": "working_scope_requires_editorial_verification",
+        "source_ids": [
+          "AB01"
+        ],
+        "context": "Working office selected from conversation. Exact start and end dates await dated primary records; do not include other offices."
+      },
+      "status": "evidence_collection",
+      "methodology_version": "1.0 — proposed",
+      "methodology_approved": false,
+      "assigned_researcher": null,
+      "assigned_reviewer": null,
+      "publisher_approval": null,
+      "dimension_scores": [
+        {
+          "dimension": "People",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "AB03",
+            "AB04"
+          ],
+          "research_synthesis": "The inspection and later force account identify citizen-service concerns and claimed improvements; personal responsibility is not yet established.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Obtain affected-victim accounts, mayoral scrutiny and response records, consultation evidence and verified follow-up.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Process",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "AB03",
+            "AB04"
+          ],
+          "research_synthesis": "The record contains an independent account of organisational weaknesses and a later institutional improvement announcement.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Establish statutory powers and delegation, what the mayor knew, scrutiny meetings, corrective decisions and the inspectorate’s original follow-up.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Policy",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "AB04",
+            "AB05"
+          ],
+          "research_synthesis": "The force account is relevant to corrective strategy; bus franchising remains a retrieval lead rather than admitted proof.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Recover franchising decision and consultation, financial and legal assessments, phased delivery and independent performance evaluation.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Crisis",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "AB02",
+            "AB03"
+          ],
+          "research_synthesis": "The policing inspection is available; the Arena review has not been retrieved and cannot yet support a finding.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Recover Kerslake and Arena Inquiry material, mayoral commissioning and implementation records, victim testimony and pandemic decision records.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Humility",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [],
+          "research_synthesis": "No directly sufficient evidence on acknowledgement, credit or responses to personal criticism has been collected.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Inspect recorded apologies, corrections, scrutiny appearances, allocation of credit and contrary examples; do not equate a regional public profile with ego.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Service",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [],
+          "research_synthesis": "No directly sufficient conflicts-of-interest or public-duty evidence has been collected.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Recover interests and hospitality registers, independent findings and responses, recusals and documented choices between public duty and personal advantage.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        }
+      ],
+      "total": null
+    },
+    {
+      "id": "barack-obama",
+      "name": "Barack Obama",
+      "country": "United States",
+      "office": "President",
+      "assessment_period": {
+        "start": "2009-01-20",
+        "end": "2017-01-20",
+        "status": "working_scope_requires_editorial_verification",
+        "source_ids": [
+          "BO01"
+        ],
+        "context": "Both presidential terms; legislative, state and federal agency powers must be distinguished."
+      },
+      "status": "evidence_collection",
+      "methodology_version": "1.0 — proposed",
+      "methodology_approved": false,
+      "assigned_researcher": null,
+      "assigned_reviewer": null,
+      "publisher_approval": null,
+      "dimension_scores": [
+        {
+          "dimension": "People",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO03",
+            "BO05",
+            "BO07"
+          ],
+          "research_synthesis": "The material combines empathetic public communication, privacy concerns and population-level context. These are distinct forms of evidence.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Obtain affected-community accounts and trace listening into decisions; review coverage data and distributional effects alongside civil-liberties impacts.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Process",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO02",
+            "BO03",
+            "BO04"
+          ],
+          "research_synthesis": "Audit and oversight findings qualify the administration’s own reform narrative. Each institution has a different remit.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Read PCLOB separate statements and relevant court decisions, legislation and implementation; trace presidential responsibility for oversight and responses.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Policy",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO02",
+            "BO04",
+            "BO06",
+            "BO07"
+          ],
+          "research_synthesis": "There is a legislative baseline, implementation criticism, announced surveillance reform and contextual coverage analysis.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Read the relevant statute and original data, compare delivery with commitments and justified revisions, and sample other major policy areas across both terms.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Crisis",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO02",
+            "BO05"
+          ],
+          "research_synthesis": "The health-marketplace audit and Newtown speech offer contrasting institutional and communication evidence.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Trace White House corrective decisions and advice, obtain independent records of major crises across both terms, and assess communication with contemporary uncertainty.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Humility",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO04"
+          ],
+          "research_synthesis": "Acknowledged need for continuing privacy work is recorded, but sustained personal correction is not established.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Collect explicit acknowledgements, responses to independent findings and lawful limits, contrary examples and credit to others; read implementation evidence.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Service",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "BO03"
+          ],
+          "research_synthesis": "Civil-liberties oversight concerns public duties; it is not a personal-benefit finding.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Review ethics disclosures, conflicts handling, formal findings and transition conduct, with corroboration and the administration’s responses.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        }
+      ],
+      "total": null
+    },
+    {
+      "id": "olaf-scholz",
+      "name": "Olaf Scholz",
+      "country": "Germany",
+      "office": "Federal Chancellor",
+      "assessment_period": {
+        "start": "2021-12-08",
+        "end": "2025-05-06",
+        "status": "working_scope_requires_editorial_verification",
+        "source_ids": [
+          "OS01",
+          "OS02"
+        ],
+        "context": "Include the caretaker phase; earlier finance-minister and Hamburg mayoral conduct is contextual unless an in-period act is established."
+      },
+      "status": "evidence_collection",
+      "methodology_version": "1.0 — proposed",
+      "methodology_approved": false,
+      "assigned_researcher": null,
+      "assigned_reviewer": null,
+      "publisher_approval": null,
+      "dimension_scores": [
+        {
+          "dimension": "People",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS03"
+          ],
+          "research_synthesis": "The statement refers to household pressures and relief measures. This establishes intention rather than sustained responsiveness.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Trace consultation, distributional analysis and delivery; obtain affected-community accounts including contrary evidence.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Process",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS04",
+            "OS05"
+          ],
+          "research_synthesis": "The reviewed secondary report describes a court ruling and the stated response. The inaccessible original remains a material gap.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Retrieve judgement 2 BvF 1/22 and government submissions, relevant legislation and compliance records. Do not infer personal dishonesty from invalid legislation.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Policy",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS03",
+            "OS05"
+          ],
+          "research_synthesis": "The security-policy statement and reported budget disruption support investigation of direction, resources and adaptation.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Compare defence and energy commitments with budgets, procurement, delivery and independent audit across the full chancellorship.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Crisis",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS03",
+            "OS05"
+          ],
+          "research_synthesis": "The material concerns the invasion of Ukraine, energy pressures and a budget shock. Announced resolve does not establish effective crisis leadership.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Recover contemporaneous advice and coordination, independent reviews and communication chronology, distinguishing coalition constraints and individual decisions.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Humility",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS02"
+          ],
+          "research_synthesis": "A documented handover is observable conduct; ceremonial courtesies alone do not establish consistent humility.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Examine corrections, response to the budget judgement, criticism and allocation of credit, including contrary examples and original statements.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        },
+        {
+          "dimension": "Service",
+          "score": null,
+          "proposed_rationale": null,
+          "evidence_sufficiency": "insufficient_for_assessment",
+          "source_ids": [
+            "OS02"
+          ],
+          "research_synthesis": "The transfer record is relevant to duties of office but insufficient to determine public duty over personal ambition.",
+          "synthesis_status": "new_unreviewed_editorial_interpretation",
+          "outstanding_research": "Review interests, recusals, formal findings and responses concerning in-period conduct; label earlier Hamburg and finance-minister events as context rather than scoring them automatically.",
+          "reviewer_notes": null,
+          "disagreement_records": []
+        }
+      ],
+      "total": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "BJ01",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "The Rt Hon Boris Johnson",
+      "author_or_issuing_institution": "UK Government",
+      "publisher": "GOV.UK",
+      "original_publication_date": null,
+      "source_type": "official_biography",
+      "url": "https://www.gov.uk/government/people/boris-johnson",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The biography gives the premiership as 24 July 2019 to 6 September 2022.",
+      "supported_claim_ids": [
+        "BJ01-C1"
+      ],
+      "linked_dimensions": [],
+      "reliability_and_relevance_notes": "Chronology only. Dynamic page; original publication date is not supplied.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Biography",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BJ02",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "R (Miller) v The Prime Minister; Cherry v Advocate General for Scotland",
+      "author_or_issuing_institution": "UK Supreme Court",
+      "publisher": "The National Archives",
+      "original_publication_date": "2019-09-24",
+      "source_type": "court_judgement",
+      "url": "https://caselaw.nationalarchives.gov.uk/uksc/2019/41",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The Court held the advice to prorogue Parliament unlawful and the resulting prorogation null and without effect.",
+      "supported_claim_ids": [
+        "BJ02-C1"
+      ],
+      "linked_dimensions": [
+        "Process"
+      ],
+      "reliability_and_relevance_notes": "A legal finding about the exercise of a power. Do not turn it into a finding of criminality or a general character judgement. Examine the recorded government arguments and subsequent compliance.",
+      "archival_reference": "[2019] UKSC 41; National Archives Find Case Law",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "[2019] UKSC 41, paragraphs 50, 61 and 69–70",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BJ03",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "Matter referred on 21 April 2022 (conduct of Rt Hon Boris Johnson): Final Report — Summary",
+      "author_or_issuing_institution": "House of Commons Committee of Privileges",
+      "publisher": "UK Parliament",
+      "original_publication_date": "2023-06-15",
+      "source_type": "parliamentary_finding",
+      "url": "https://publications.parliament.uk/pa/cm5803/cmselect/cmprivi/564/summary.html",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The Committee concluded that Johnson deliberately misled the House. The summary records its reasoning, his denials and his response to provisional conclusions.",
+      "supported_claim_ids": [
+        "BJ03-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Humility",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Later finding partly concerns statements during the premiership, but also later conduct. Exclude post-premiership conduct from the scored period. Read the full evidence, Johnson’s representations and the Commons decision before assessment.",
+      "archival_reference": "HC 564, session 2022–23",
+      "review_extent": "official_summary_reviewed",
+      "access_status": "retrieved",
+      "locator": "Summary, paragraphs 11–17",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BJ04",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "Coronavirus: lessons learned to date report published",
+      "author_or_issuing_institution": "Commons Science and Technology Committee and Health and Social Care Committee",
+      "publisher": "UK Parliament",
+      "original_publication_date": "2021-10-12",
+      "source_type": "parliamentary_report_announcement",
+      "url": "https://committees.parliament.uk/committee/135/science-and-technology-committee-commons/news/157991/coronavirus-lessons-learned-to-date-report-published/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The committees identified both vaccination successes and serious weaknesses in the early pandemic response, including delayed lockdown and shortcomings affecting vulnerable groups.",
+      "supported_claim_ids": [
+        "BJ04-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Policy",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "An official summary of a collective institutional response, not a personal verdict on Johnson. The underlying report, decision records and subsequent inquiry findings still require review.",
+      "archival_reference": null,
+      "review_extent": "official_summary_reviewed",
+      "access_status": "retrieved",
+      "locator": "Opening summary and principal findings",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BJ05",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "Prime Minister pledges UK’s unwavering support to Ukraine on visit to Kyiv: 9 April 2022",
+      "author_or_issuing_institution": "Prime Minister’s Office, 10 Downing Street",
+      "publisher": "GOV.UK",
+      "original_publication_date": "2022-04-09",
+      "source_type": "government_announcement",
+      "url": "https://www.gov.uk/government/news/prime-minister-pledges-uks-unwavering-support-to-ukraine-on-visit-to-kyiv-9-april-2022",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The government recorded Johnson’s Kyiv visit and announced additional military assistance and World Bank lending guarantees.",
+      "supported_claim_ids": [
+        "BJ05-C1"
+      ],
+      "linked_dimensions": [
+        "Policy",
+        "Crisis",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Primary evidence of the announcement and stated policy. Verify delivery and the leader’s decision-making independently; the release does not establish motives or effectiveness.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Paragraphs describing assistance and lending guarantees",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS01",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "The Rt Hon Sir Keir Starmer KCB KC MP",
+      "author_or_issuing_institution": "UK Government",
+      "publisher": "GOV.UK",
+      "original_publication_date": null,
+      "source_type": "official_biography",
+      "url": "https://www.gov.uk/government/people/keir-starmer",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The retrieved biography states that Starmer was Prime Minister from 5 July 2024 to 20 July 2026.",
+      "supported_claim_ids": [
+        "KS01-C1"
+      ],
+      "linked_dimensions": [],
+      "reliability_and_relevance_notes": "Dynamic page. Treat these as source-reported boundaries pending a second dated institutional check; do not silently carry forward an open-ended period.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Biography",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS02",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "New Ministerial Code to set out standards in public life and restore transparency",
+      "author_or_issuing_institution": "Cabinet Office and Independent Adviser on Ministerial Standards",
+      "publisher": "GOV.UK",
+      "original_publication_date": "2024-11-06",
+      "source_type": "government_announcement",
+      "url": "https://www.gov.uk/government/news/new-ministerial-code-to-set-out-standards-in-public-life-and-restore-transparency",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The announcement sets out monthly publication of ministerial gifts and hospitality, including values, and an independent adviser’s power to initiate investigations without a prime ministerial veto.",
+      "supported_claim_ids": [
+        "KS02-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Announced institutional rules are not evidence of consistent compliance or enforcement. Check the fixed November 2024 code and subsequent disclosures rather than a later amended code.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Gifts and hospitality rules; independent adviser powers",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS03",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "Register of Members’ Financial Interests: Starmer, Sir Keir (14 October 2024)",
+      "author_or_issuing_institution": "House of Commons",
+      "publisher": "UK Parliament",
+      "original_publication_date": "2024-10-14",
+      "source_type": "official_disclosure",
+      "url": "https://publications.parliament.uk/pa/cm/cmregmem/241014/starmer_keir.htm",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The register includes Arsenal tickets and hospitality received on 17 August 2024 and declared on 10 September 2024. Other entries concern earlier dates or periods straddling the start of the premiership.",
+      "supported_claim_ids": [
+        "KS03-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Disclosure establishes the declared benefit, not improper influence or a breach. Filter by receipt/acceptance dates, not registration date. Seek applicable rules, corrections, findings and the leader’s response.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Category 3; Arsenal entry received 17 August 2024; accommodation entry 29 May–13 July 2024",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS04",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "Plan for Change",
+      "author_or_issuing_institution": "Prime Minister’s Office, 10 Downing Street",
+      "publisher": "GOV.UK",
+      "original_publication_date": "2024-12-05",
+      "source_type": "policy_publication_record",
+      "url": "https://www.gov.uk/government/publications/plan-for-change",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The publication record identifies the Plan for Change and states it was presented to Parliament on 5 December 2024.",
+      "supported_claim_ids": [
+        "KS04-C1"
+      ],
+      "linked_dimensions": [
+        "Policy"
+      ],
+      "reliability_and_relevance_notes": "Only the publication landing page was reviewed. The 48-page attachment, resources, milestones, implementation and later revisions have not been examined.",
+      "archival_reference": "CP 1210; ISBN 978-1-5286-5291-9",
+      "review_extent": "publication_landing_page_reviewed",
+      "access_status": "retrieved",
+      "locator": "Details and document metadata: CP 1210, ISBN 978-1-5286-5291-9",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS05",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "PM statement: 4 August 2024",
+      "author_or_issuing_institution": "Keir Starmer; Prime Minister’s Office",
+      "publisher": "GOV.UK",
+      "original_publication_date": "2024-08-04",
+      "source_type": "speech_transcript",
+      "url": "https://www.gov.uk/government/speeches/pm-statement-4-august-2024",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Starmer condemned violent disorder, referred to targeted Muslim and other minority communities, and stated that the government would support the police and pursue criminal enforcement.",
+      "supported_claim_ids": [
+        "KS05-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Evidence of words delivered. Assess tone, uncertainty, proportionality, implementation and community experience separately; forceful language is not by itself a crisis score.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Speech transcript, paragraphs on targeted communities and policing",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "KS06",
+      "leader_ids": [
+        "keir-starmer"
+      ],
+      "title": "Nine million pensioners to receive Winter Fuel Payments this winter",
+      "author_or_issuing_institution": "HM Treasury; Rachel Reeves",
+      "publisher": "GOV.UK",
+      "original_publication_date": "2025-06-09",
+      "source_type": "government_announcement",
+      "url": "https://www.gov.uk/government/news/nine-million-pensioners-to-receive-winter-fuel-payments-this-winter",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The Treasury announced expanded Winter Fuel Payment eligibility in England and Wales using a £35,000 income threshold, following the narrower arrangements introduced for winter 2024/25.",
+      "supported_claim_ids": [
+        "KS06-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Policy",
+        "Humility"
+      ],
+      "reliability_and_relevance_notes": "A Treasury announcement, not proof of Starmer’s personal reasoning. Recover the original regulations, consultation, impact analysis and decision record. Revision may reflect responsiveness, inconsistency or both; do not infer motives.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Eligibility announcement and Further background",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "AB01",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Greater Manchester to vote for new Mayor",
+      "author_or_issuing_institution": "Greater Manchester Combined Authority",
+      "publisher": "GMCA",
+      "original_publication_date": null,
+      "source_type": "official_election_notice",
+      "url": "https://www.greatermanchester-ca.gov.uk/news/greater-manchester-to-vote-for-new-mayor/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Discovery lead for the end of Burnham’s mayoralty. No claim is admitted from this inaccessible page.",
+      "supported_claim_ids": [],
+      "linked_dimensions": [],
+      "reliability_and_relevance_notes": "Search results report a vacancy on 19 June 2026, but direct retrieval failed with HTTP 402. Confirm through dated election or council records before fixing the period.",
+      "archival_reference": null,
+      "review_extent": "discovery_only",
+      "access_status": "retrieval_failed_402",
+      "locator": "Election vacancy notice",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "AB02",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "The Kerslake Report",
+      "author_or_issuing_institution": "Lord Kerslake and independent review panel",
+      "publisher": "Greater Manchester Combined Authority",
+      "original_publication_date": null,
+      "source_type": "independent_review",
+      "url": "https://www.greatermanchester-ca.gov.uk/media/1271/the-kerslake-report.pdf",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Discovery lead for the independent review of preparedness and response to the Manchester Arena attack.",
+      "supported_claim_ids": [],
+      "linked_dimensions": [
+        "People",
+        "Process",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Direct retrieval failed. Do not attribute any specific report finding or personal credit to Burnham from this lead. Recover the report, commissioning record and implementation follow-up.",
+      "archival_reference": null,
+      "review_extent": "discovery_only",
+      "access_status": "retrieval_failed",
+      "locator": "Full report; family evidence and recommendations",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "AB03",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "An inspection of the service provided to victims of crime by Greater Manchester Police",
+      "author_or_issuing_institution": "HM Inspectorate of Constabulary and Fire & Rescue Services",
+      "publisher": "HMICFRS",
+      "original_publication_date": null,
+      "source_type": "independent_inspection",
+      "url": "https://assets-hmicfrs.justiceinspectorates.gov.uk/uploads/an-inspection-of-the-service-provided-to-victims-of-crime-by-greater-manchester-police.pdf",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The inspection identified serious weaknesses in victim service, crime recording, investigation and governance, while recognising some improvements and a programme of change.",
+      "supported_claim_ids": [
+        "AB03-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Process",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "The reviewed passages concern the police force. Determine the mayor’s oversight powers, knowledge, delegation and response before individual attribution. Exact publication date remains unverified.",
+      "archival_reference": null,
+      "review_extent": "report_sections_reviewed",
+      "access_status": "retrieved",
+      "locator": "Printed pages 8–12: summary, supervision and governance, causes of concern; inspection conducted September–October 2020",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "AB04",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Greater Manchester Police Most Improved Force in the Country as Chief Constable and Mayor confirm HMICFRS has removed Force from Special Measures",
+      "author_or_issuing_institution": "Greater Manchester Police",
+      "publisher": "GMP",
+      "original_publication_date": "2022-10-28",
+      "source_type": "institutional_announcement",
+      "url": "https://www.gmp.police.uk/news/greater-manchester/news/news/2022/october/greater-manchester-police-most-improved-force-in-the-country-as-chief-constable-and-mayor-confirm-hmicfrs-has-removed-force-from-special-measures/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The police force announced removal from enhanced monitoring and described improvements in call handling, recording and investigation.",
+      "supported_claim_ids": [
+        "AB04-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Process",
+        "Policy"
+      ],
+      "reliability_and_relevance_notes": "This is the force’s own account of improvement, not the inspectorate’s original determination. Retrieve that determination and mayoral scrutiny records. Do not treat increased arrests as proof of moral leadership.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Opening announcement and crime-recording/investigation passages",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "AB05",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Bus Franchising",
+      "author_or_issuing_institution": "Greater Manchester Combined Authority",
+      "publisher": "GMCA",
+      "original_publication_date": null,
+      "source_type": "policy_overview",
+      "url": "https://www.greatermanchester-ca.gov.uk/what-we-do/transport/bus-franchising/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Discovery lead for the franchising decision, consultation and delivery record.",
+      "supported_claim_ids": [],
+      "linked_dimensions": [
+        "People",
+        "Policy"
+      ],
+      "reliability_and_relevance_notes": "Direct retrieval failed with HTTP 402. Recover the original 2021 decision, consultation findings, legal record, financial assessments and subsequent performance evidence.",
+      "archival_reference": null,
+      "review_extent": "discovery_only",
+      "access_status": "retrieval_failed_402",
+      "locator": "Bus franchising overview",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO01",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "President Barack Obama",
+      "author_or_issuing_institution": "Barack Obama Presidential Library, National Archives and Records Administration",
+      "publisher": "NARA",
+      "original_publication_date": null,
+      "source_type": "archival_biography",
+      "url": "https://obamalibrary.archives.gov/obamas/president-barack-obama",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The archival biography records Obama’s inauguration on 20 January 2009 and return to private life on 20 January 2017.",
+      "supported_claim_ids": [
+        "BO01-C1"
+      ],
+      "linked_dimensions": [],
+      "reliability_and_relevance_notes": "Chronology and initial pointers only. This institutional biography is not an independent assessment of leadership.",
+      "archival_reference": "Barack Obama Presidential Library, NARA",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Political Career and Post-Presidency",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO02",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Healthcare.gov: Ineffective Planning and Oversight Practices Underscore the Need for Improved Contract Management",
+      "author_or_issuing_institution": "US Government Accountability Office",
+      "publisher": "GAO",
+      "original_publication_date": "2014-07-30",
+      "source_type": "independent_audit",
+      "url": "https://www.gao.gov/products/gao-14-694",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "GAO identified inadequate CMS planning and oversight, increased contract costs and delayed functionality. The record includes agency responses and later implementation of recommendations.",
+      "supported_claim_ids": [
+        "BO02-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Policy",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "The audit concerns CMS and contracts, not a finding of presidential personal misconduct. Separate the original audit from later updates and trace White House oversight and corrective decisions.",
+      "archival_reference": "GAO-14-694",
+      "review_extent": "official_summary_and_follow_up_reviewed",
+      "access_status": "retrieved",
+      "locator": "What GAO Found; Recommendations for Executive Action",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO03",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Report on the Telephone Records Program Conducted under Section 215 and on the Operations of the Foreign Intelligence Surveillance Court",
+      "author_or_issuing_institution": "Privacy and Civil Liberties Oversight Board",
+      "publisher": "PCLOB; copy hosted by US Senate Judiciary Committee",
+      "original_publication_date": "2014-01-23",
+      "source_type": "independent_oversight_report",
+      "url": "https://www.judiciary.senate.gov/imo/media/doc/PCLOBReport.pdf",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The Board recommended ending bulk telephone-record collection, citing legal, privacy and effectiveness concerns. The report includes separate statements by two members.",
+      "supported_claim_ids": [
+        "BO03-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Process",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "This is an oversight board’s conclusion, not a criminal judgement. Separate statements require substantive reading; assess existing court authorisations, inherited arrangements and Obama’s response.",
+      "archival_reference": "PCLOB Section 215 Report, 23 January 2014",
+      "review_extent": "report_sections_reviewed",
+      "access_status": "retrieved",
+      "locator": "Printed page 16, Recommendation 1; introduction and annex contents",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO04",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Remarks by the President on Review of Signals Intelligence",
+      "author_or_issuing_institution": "Barack Obama; Office of the Press Secretary",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2014-01-17",
+      "source_type": "speech_transcript",
+      "url": "https://obamawhitehouse.archives.gov/the-press-office/2014/01/17/remarks-president-review-signals-intelligence/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Obama set out announced intelligence reforms and further privacy work, presenting the need to balance security and civil liberties.",
+      "supported_claim_ids": [
+        "BO04-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Policy",
+        "Humility"
+      ],
+      "reliability_and_relevance_notes": "Primary account of announced policy, not independent proof of implementation. It precedes the PCLOB report; do not describe it as a response to that report.",
+      "archival_reference": "NARA archived Obama White House",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Speech, reform proposals and closing discussion of privacy review",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO05",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Remarks by the President at Sandy Hook Interfaith Prayer Vigil",
+      "author_or_issuing_institution": "Barack Obama; Office of the Press Secretary",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2012-12-16",
+      "source_type": "speech_transcript",
+      "url": "https://obamawhitehouse.archives.gov/the-press-office/2012/12/16/remarks-president-sandy-hook-interfaith-prayer-vigil",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "At the Newtown vigil Obama acknowledged bereaved families, praised responders and community support, and committed to work on preventing further shootings.",
+      "supported_claim_ids": [
+        "BO05-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Evidence of public communication at one event. Seek family perspectives and follow-up actions; eloquence does not establish consistent empathy or successful prevention.",
+      "archival_reference": "NARA archived Obama White House",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Speech at Newtown High School, passages on families and prevention",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO06",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Public Law 111–148 — Patient Protection and Affordable Care Act",
+      "author_or_issuing_institution": "111th US Congress",
+      "publisher": "US Government Publishing Office",
+      "original_publication_date": "2010-03-23",
+      "source_type": "legislative_record",
+      "url": "https://www.govinfo.gov/app/details/PLAW-111publ148",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The catalogue identifies the Patient Protection and Affordable Care Act as Public Law 111–148, dated 23 March 2010.",
+      "supported_claim_ids": [
+        "BO06-C1"
+      ],
+      "linked_dimensions": [
+        "Policy"
+      ],
+      "reliability_and_relevance_notes": "The catalogue establishes the legislative record. The statute, implementation and distributional effects have not been fully reviewed. Passing legislation is not automatically evidence of service or sound process.",
+      "archival_reference": "Public Law 111–148; 124 Stat. 119",
+      "review_extent": "publication_landing_page_reviewed",
+      "access_status": "retrieved",
+      "locator": "Content Details",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "BO07",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Obama’s Numbers October 2016 Update",
+      "author_or_issuing_institution": "Brooks Jackson",
+      "publisher": "FactCheck.org, Annenberg Public Policy Center",
+      "original_publication_date": "2016-10-09",
+      "source_type": "independent_statistical_analysis",
+      "url": "https://www.factcheck.org/2016/10/obamas-numbers-october-2016-update/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The analysis reports changes in health insurance coverage and other indicators, and warns that numerical changes do not determine presidential credit or blame.",
+      "supported_claim_ids": [
+        "BO07-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Policy"
+      ],
+      "reliability_and_relevance_notes": "Follow links to original Census and NHIS data. Definitions and measurement periods differ. Outcomes provide context rather than direct measures of the six leadership dimensions.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Analysis introduction and Health Insurance section",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "OS01",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "New Federal Government in office",
+      "author_or_issuing_institution": "German Federal Government",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2021-12-08",
+      "source_type": "official_appointment_record",
+      "url": "https://www.bundesregierung.de/breg-en/service/archive/federal-chancellor-election-1989862",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The government records Scholz’s election, appointment and oath as Federal Chancellor on 8 December 2021.",
+      "supported_claim_ids": [
+        "OS01-C1"
+      ],
+      "linked_dimensions": [],
+      "reliability_and_relevance_notes": "Chronology only. The oath does not establish fulfilment of the duties it describes.",
+      "archival_reference": "Bundesregierung official archive",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Change of government; Bundestag elects Scholz; oath",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "OS02",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "Bundeskanzler Friedrich Merz übernimmt Amtsgeschäfte",
+      "author_or_issuing_institution": "German Federal Government",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2025-05-06",
+      "source_type": "handover_record",
+      "url": "https://www.bundesregierung.de/breg-de/aktuelles/amtsuebergaber-scholz-merz-2345472",
+      "accessed_on": "2026-10-17",
+      "language": "de",
+      "factual_summary": "The official record documents the handover from Scholz to Merz on 6 May 2025 and includes their statements.",
+      "supported_claim_ids": [
+        "OS02-C1"
+      ],
+      "linked_dimensions": [
+        "Humility",
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "A documented transfer and ceremonial words are relevant but cannot alone establish consistent humility or service. Check transition decisions and the wider record.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Dated introduction and handover statements",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "OS03",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "Policy statement by Olaf Scholz, 27 February 2022 in Berlin",
+      "author_or_issuing_institution": "Olaf Scholz; German Federal Government",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2022-02-27",
+      "source_type": "speech_official_translation",
+      "url": "https://www.bundesregierung.de/breg-en/service/archive/policy-statement-by-olaf-scholz-chancellor-of-the-federal-republic-of-germany-and-member-of-the-german-bundestag-27-february-2022-in-berlin-2008378",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Scholz announced a security-policy shift following Russia’s invasion of Ukraine, including a defence fund, commitments to allies and measures on energy security and household pressures.",
+      "supported_claim_ids": [
+        "OS03-C1"
+      ],
+      "linked_dimensions": [
+        "People",
+        "Policy",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Official English translation, not independent delivery evidence. Check the German transcript for contested wording and budgets, procurement and implementation for results.",
+      "archival_reference": "Bundesregierung official archive",
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Fourth policy area: defence capability; energy security and relief package",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "OS04",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "Second Supplementary Budget Act 2021 is void",
+      "author_or_issuing_institution": "Federal Constitutional Court of Germany",
+      "publisher": "Bundesverfassungsgericht",
+      "original_publication_date": "2023-11-15",
+      "source_type": "court_press_release",
+      "url": "https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/EN/2023/bvg23-101.html",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Discovery lead for the Court’s account of its supplementary-budget judgement.",
+      "supported_claim_ids": [],
+      "linked_dimensions": [
+        "Process",
+        "Policy",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Direct retrieval failed with HTTP 403. Search snippets are not admitted as verified claims. Retrieve the judgement and government submissions before drawing a leader-specific conclusion.",
+      "archival_reference": "2 BvF 1/22; press release 101/2023",
+      "review_extent": "discovery_only",
+      "access_status": "retrieval_failed_403",
+      "locator": "Press release 101/2023; case 2 BvF 1/22",
+      "independent_editorial_verification": false
+    },
+    {
+      "id": "OS05",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "German court deals 60 billion euro budget blow to Scholz government",
+      "author_or_issuing_institution": "Maria Martinez and Christian Kraemer",
+      "publisher": "Reuters, syndicated by Investing.com",
+      "original_publication_date": "2023-11-14",
+      "source_type": "independent_news_report",
+      "url": "https://www.investing.com/news/economy/german-court-to-make-key-ruling-on-budget-manoeuvre-3234469",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Reuters reported the budget ruling’s consequences and recorded Scholz’s stated intention to revise the relevant economic plan.",
+      "supported_claim_ids": [
+        "OS05-C1"
+      ],
+      "linked_dimensions": [
+        "Process",
+        "Policy",
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "The host displays initial publication on 14 November and update on 15 November, with no explicit timezone. The judgement date is 15 November. This is a separately reviewed secondary account; the original court text remains outstanding. Multiple syndications are one source origin.",
+      "archival_reference": null,
+      "review_extent": "relevant_passages_reviewed",
+      "access_status": "retrieved",
+      "locator": "Updated 15 November 2023; report opening and Scholz response",
+      "independent_editorial_verification": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "BJ01-C1",
+      "source_id": "BJ01",
+      "leader_id": "boris-johnson",
+      "text": "The biography gives the premiership as 24 July 2019 to 6 September 2022.",
+      "locator": "Biography",
+      "dimensions": [],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BJ02-C1",
+      "source_id": "BJ02",
+      "leader_id": "boris-johnson",
+      "text": "The Court held the advice to prorogue Parliament unlawful and the resulting prorogation null and without effect.",
+      "locator": "[2019] UKSC 41, paragraphs 50, 61 and 69–70",
+      "dimensions": [
+        "Process"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BJ03-C1",
+      "source_id": "BJ03",
+      "leader_id": "boris-johnson",
+      "text": "The Committee concluded that Johnson deliberately misled the House. The summary records its reasoning, his denials and his response to provisional conclusions.",
+      "locator": "Summary, paragraphs 11–17",
+      "dimensions": [
+        "Process",
+        "Humility",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BJ04-C1",
+      "source_id": "BJ04",
+      "leader_id": "boris-johnson",
+      "text": "The committees identified both vaccination successes and serious weaknesses in the early pandemic response, including delayed lockdown and shortcomings affecting vulnerable groups.",
+      "locator": "Opening summary and principal findings",
+      "dimensions": [
+        "People",
+        "Policy",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BJ05-C1",
+      "source_id": "BJ05",
+      "leader_id": "boris-johnson",
+      "text": "The government recorded Johnson’s Kyiv visit and announced additional military assistance and World Bank lending guarantees.",
+      "locator": "Paragraphs describing assistance and lending guarantees",
+      "dimensions": [
+        "Policy",
+        "Crisis",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS01-C1",
+      "source_id": "KS01",
+      "leader_id": "keir-starmer",
+      "text": "The retrieved biography states that Starmer was Prime Minister from 5 July 2024 to 20 July 2026.",
+      "locator": "Biography",
+      "dimensions": [],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS02-C1",
+      "source_id": "KS02",
+      "leader_id": "keir-starmer",
+      "text": "The announcement sets out monthly publication of ministerial gifts and hospitality, including values, and an independent adviser’s power to initiate investigations without a prime ministerial veto.",
+      "locator": "Gifts and hospitality rules; independent adviser powers",
+      "dimensions": [
+        "Process",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS03-C1",
+      "source_id": "KS03",
+      "leader_id": "keir-starmer",
+      "text": "The register includes Arsenal tickets and hospitality received on 17 August 2024 and declared on 10 September 2024. Other entries concern earlier dates or periods straddling the start of the premiership.",
+      "locator": "Category 3; Arsenal entry received 17 August 2024; accommodation entry 29 May–13 July 2024",
+      "dimensions": [
+        "Process",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS04-C1",
+      "source_id": "KS04",
+      "leader_id": "keir-starmer",
+      "text": "The publication record identifies the Plan for Change and states it was presented to Parliament on 5 December 2024.",
+      "locator": "Details and document metadata: CP 1210, ISBN 978-1-5286-5291-9",
+      "dimensions": [
+        "Policy"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS05-C1",
+      "source_id": "KS05",
+      "leader_id": "keir-starmer",
+      "text": "Starmer condemned violent disorder, referred to targeted Muslim and other minority communities, and stated that the government would support the police and pursue criminal enforcement.",
+      "locator": "Speech transcript, paragraphs on targeted communities and policing",
+      "dimensions": [
+        "People",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "KS06-C1",
+      "source_id": "KS06",
+      "leader_id": "keir-starmer",
+      "text": "The Treasury announced expanded Winter Fuel Payment eligibility in England and Wales using a £35,000 income threshold, following the narrower arrangements introduced for winter 2024/25.",
+      "locator": "Eligibility announcement and Further background",
+      "dimensions": [
+        "People",
+        "Policy",
+        "Humility"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "AB03-C1",
+      "source_id": "AB03",
+      "leader_id": "andy-burnham",
+      "text": "The inspection identified serious weaknesses in victim service, crime recording, investigation and governance, while recognising some improvements and a programme of change.",
+      "locator": "Printed pages 8–12: summary, supervision and governance, causes of concern; inspection conducted September–October 2020",
+      "dimensions": [
+        "People",
+        "Process",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "AB04-C1",
+      "source_id": "AB04",
+      "leader_id": "andy-burnham",
+      "text": "The police force announced removal from enhanced monitoring and described improvements in call handling, recording and investigation.",
+      "locator": "Opening announcement and crime-recording/investigation passages",
+      "dimensions": [
+        "People",
+        "Process",
+        "Policy"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO01-C1",
+      "source_id": "BO01",
+      "leader_id": "barack-obama",
+      "text": "The archival biography records Obama’s inauguration on 20 January 2009 and return to private life on 20 January 2017.",
+      "locator": "Political Career and Post-Presidency",
+      "dimensions": [],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO02-C1",
+      "source_id": "BO02",
+      "leader_id": "barack-obama",
+      "text": "GAO identified inadequate CMS planning and oversight, increased contract costs and delayed functionality. The record includes agency responses and later implementation of recommendations.",
+      "locator": "What GAO Found; Recommendations for Executive Action",
+      "dimensions": [
+        "Process",
+        "Policy",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO03-C1",
+      "source_id": "BO03",
+      "leader_id": "barack-obama",
+      "text": "The Board recommended ending bulk telephone-record collection, citing legal, privacy and effectiveness concerns. The report includes separate statements by two members.",
+      "locator": "Printed page 16, Recommendation 1; introduction and annex contents",
+      "dimensions": [
+        "People",
+        "Process",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO04-C1",
+      "source_id": "BO04",
+      "leader_id": "barack-obama",
+      "text": "Obama set out announced intelligence reforms and further privacy work, presenting the need to balance security and civil liberties.",
+      "locator": "Speech, reform proposals and closing discussion of privacy review",
+      "dimensions": [
+        "Process",
+        "Policy",
+        "Humility"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO05-C1",
+      "source_id": "BO05",
+      "leader_id": "barack-obama",
+      "text": "At the Newtown vigil Obama acknowledged bereaved families, praised responders and community support, and committed to work on preventing further shootings.",
+      "locator": "Speech at Newtown High School, passages on families and prevention",
+      "dimensions": [
+        "People",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO06-C1",
+      "source_id": "BO06",
+      "leader_id": "barack-obama",
+      "text": "The catalogue identifies the Patient Protection and Affordable Care Act as Public Law 111–148, dated 23 March 2010.",
+      "locator": "Content Details",
+      "dimensions": [
+        "Policy"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "BO07-C1",
+      "source_id": "BO07",
+      "leader_id": "barack-obama",
+      "text": "The analysis reports changes in health insurance coverage and other indicators, and warns that numerical changes do not determine presidential credit or blame.",
+      "locator": "Analysis introduction and Health Insurance section",
+      "dimensions": [
+        "People",
+        "Policy"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "OS01-C1",
+      "source_id": "OS01",
+      "leader_id": "olaf-scholz",
+      "text": "The government records Scholz’s election, appointment and oath as Federal Chancellor on 8 December 2021.",
+      "locator": "Change of government; Bundestag elects Scholz; oath",
+      "dimensions": [],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "OS02-C1",
+      "source_id": "OS02",
+      "leader_id": "olaf-scholz",
+      "text": "The official record documents the handover from Scholz to Merz on 6 May 2025 and includes their statements.",
+      "locator": "Dated introduction and handover statements",
+      "dimensions": [
+        "Humility",
+        "Service"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "OS03-C1",
+      "source_id": "OS03",
+      "leader_id": "olaf-scholz",
+      "text": "Scholz announced a security-policy shift following Russia’s invasion of Ukraine, including a defence fund, commitments to allies and measures on energy security and household pressures.",
+      "locator": "Fourth policy area: defence capability; energy security and relief package",
+      "dimensions": [
+        "People",
+        "Policy",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    },
+    {
+      "id": "OS05-C1",
+      "source_id": "OS05",
+      "leader_id": "olaf-scholz",
+      "text": "Reuters reported the budget ruling’s consequences and recorded Scholz’s stated intention to revise the relevant economic plan.",
+      "locator": "Updated 15 November 2023; report opening and Scholz response",
+      "dimensions": [
+        "Process",
+        "Policy",
+        "Crisis"
+      ],
+      "claim_type": "source_reported_fact",
+      "editorial_review_status": "unreviewed"
+    }
+  ]
+}

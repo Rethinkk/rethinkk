@@ -9,6 +9,9 @@ export function categoryPath(category: string) {
 }
 
 export function publicationPath(item: Publication) {
+  if (item.id === "wallace-index-chapter") return "/wallace-index";
+  if (item.id.startsWith("wallace-leader-")) return `/wallace-index/leaders/${item.slug.replace(/^wallace-profile-/, "")}`;
+  if (item.id.startsWith("wallace-note-")) return `/wallace-index/notes/${item.slug.replace(/^wallace-note-/, "")}`;
   if (item.type === "thinking") return `/thinking/${item.slug}`;
   if (item.type === "data") return `/data/${item.slug}`;
   if (item.type === "index" && item.slug === "democracy-direction-2026") return "/index/democracy-direction/2026";

@@ -1,9 +1,11 @@
 import { ArchiveClient } from "@/components/archive-client";
 import { PageActions, Section } from "@/components/site";
 import { published } from "@/lib/queries";
+import { wallacePublications } from "@/lib/wallace-index/publications";
+export const dynamic = "force-dynamic";
 
-export default function ArchivePage() {
-  const items = published().filter((item) => !item.hideFromArchive);
+export default async function ArchivePage() {
+  const items = [...published(), ...await wallacePublications()].filter((item) => !item.hideFromArchive);
 
   return (
     <Section>

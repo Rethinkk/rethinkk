@@ -11,6 +11,7 @@ export function generateStaticParams() {
 export default async function IndexDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (slug === "democracy-direction-2026") redirect("/index/democracy-direction/2026");
+  if (slug === "wallace-index") redirect("/wallace-index");
   const item = findPublication("index", slug);
   if (!item) notFound();
   return <PublicationPage item={item} />;

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "verified_file_versions": 25,
+  "verified_commit_records": 34,
+  "verified_score_observations": 26,
+  "distinct_assessment_records": 7,
+  "reconciled_csv_dimension_rows": 36,
+  "all_evidence_byte_checksums_match": true,
+  "all_git_blob_hashes_match": true,
+  "all_original_excerpts_found_in_preserved_files": true,
+  "json_csv_reconciliation": "passed",
+  "original_totals_and_current_model_totals_remain_unset": true,
+  "provisional_import_comparison": "pending: both files unavailable",
+  "scope": "Archive fidelity and consistency only; not verification of political claims or endorsement of scores."
+}
