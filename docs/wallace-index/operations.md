@@ -34,6 +34,8 @@ Apply migrations to an isolated preview database first. Take a production backup
 
 Vercel build command remains `pnpm build`, now including Prisma generation. Migrations and bootstrap are separate operator actions, not build hooks. Public routes render an honest empty state with no database. The desk closes when database/OAuth configuration is missing. A preview should have an independent database and OAuth callback configuration, with no production credentials or production research fixtures.
 
+pnpm 11 enforces dependency install-script approval. `pnpm-workspace.yaml` explicitly permits the reviewed, version-pinned Prisma, esbuild and Linux test-PostgreSQL scripts. A clean `pnpm install --frozen-lockfile` must pass before a deployment. Review the corresponding script and update its version-specific entry when upgrading one of these dependencies; do not disable this check globally. These scripts generate clients, prepare binaries or hydrate local test-library links; they do not migrate or seed any database.
+
 Verify the existing Vercel project `andre-kievits-projects/rethinkk`, Git integration, production branch and `rethinkk.org` domain mapping before production. Branch previews are review artefacts; do not merge or promote without explicit production approval. Keep the older Sites build path intact; the Wallace module is implemented in the Next.js application, not duplicated into the old static artefact.
 
 ## Scheduled maintenance
