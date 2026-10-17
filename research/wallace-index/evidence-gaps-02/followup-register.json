@@ -1,0 +1,946 @@
+{
+  "schema_version": "evidence-gap-followup-1",
+  "prepared_on": "2026-10-17",
+  "commissioned_by": "user",
+  "baseline_commit": "229aabc",
+  "baseline_register_sha256": "a7146cf93b4bf756e288f4a990e9e399670fa0003c68b53b25917d15b8b2daf6",
+  "review_type": "internal_followup_by_original_assistant",
+  "independent_review": false,
+  "official_publication": false,
+  "methodology_approved": false,
+  "full_period_threshold_changed": false,
+  "specific_gaps_closed": 7,
+  "specific_gaps_remaining": 1,
+  "new_sources": [
+    {
+      "id": "GC_BJ01",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "Prime Minister’s address on coronavirus, 23 March 2020",
+      "author_or_issuing_institution": "Boris Johnson",
+      "publisher": "Prime Minister’s Office",
+      "original_publication_date": "2020-03-23",
+      "event_date_or_period": "2020-03-23",
+      "source_type": "speech",
+      "url": "https://www.gov.uk/government/speeches/pm-address-to-the-nation-on-coronavirus-23-march-2020",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Johnson instructed people to stay at home, explained permitted exceptions and announced that restrictions would be reviewed in three weeks against evidence.",
+      "supported_claim_ids": [
+        "GC_BJ01-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Text establishes the content and clarity of communication, not inner composure, public compliance or whether the timing was appropriate.",
+      "archival_reference": null,
+      "locator": "Stay-at-home instructions, exceptions and three-week review paragraphs",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_BJ01.html",
+      "snapshot_sha256": "b9766c0e6fb4e28b4a6d91422c6e3578c9eb5fd7d382df6016e7c435f2183549",
+      "text_file": "GC_BJ01.txt",
+      "text_sha256": "8b0a908cdc4ed99d3573a96ac9bf0ef5ae49b54176785a237a3abe1c7f6703ac"
+    },
+    {
+      "id": "GC_BJ02",
+      "leader_ids": [
+        "boris-johnson"
+      ],
+      "title": "PM statement on coronavirus, 12 March 2020",
+      "author_or_issuing_institution": "Boris Johnson",
+      "publisher": "Prime Minister’s Office",
+      "original_publication_date": "2020-03-12",
+      "event_date_or_period": "2020-03-12",
+      "source_type": "speech",
+      "url": "https://www.gov.uk/government/speeches/pm-statement-on-coronavirus-12-march-2020",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Johnson warned that more families would lose loved ones, described the scientific advice and set out the measures then being taken.",
+      "supported_claim_ids": [
+        "GC_BJ02-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Compare with 23 March rather than treating a changed response as automatically inconsistent. Claims of scientific guidance remain the speaker’s account.",
+      "archival_reference": null,
+      "locator": "Opening risk warning and measures",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_BJ02.html",
+      "snapshot_sha256": "04523a78165e0f1d821272bd5d3a12e3fd09e226c82e186e4556868a1bfd1a5a",
+      "text_file": "GC_BJ02.txt",
+      "text_sha256": "54f1e839e27a35af9b1f2b76ac74dae5214637a639dc5558cbc9f8d5e1408f66"
+    },
+    {
+      "id": "GC_AB01",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Manchester terror attack — statement from Mayor Andy Burnham",
+      "author_or_issuing_institution": "Andy Burnham",
+      "publisher": "GMCA",
+      "original_publication_date": "2018-12-13",
+      "event_date_or_period": "2017-05-23",
+      "source_type": "reproduced_speech",
+      "url": "https://www.greatermanchester-ca.gov.uk/news/manchester-terror-attack-statement-from-greater-manchester-mayor-andy-burnham/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The reproduced statement acknowledges grief and anger, calls for solidarity, provides emergency contact information and asks people to share trusted information.",
+      "supported_claim_ids": [
+        "GC_AB01-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Official page displays a later 2018 timestamp. GC_AB03 corroborates the 23 May 2017 occasion; no claim of contemporaneous website publication is made.",
+      "archival_reference": null,
+      "locator": "Speech and emergency-information paragraphs",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_AB01.html",
+      "snapshot_sha256": "2b9bf4dc5a5f8adf09c81519abf2903bddbec96381982a8d2d7d6b13cbd6a262",
+      "text_file": "GC_AB01.txt",
+      "text_sha256": "2883532d1ace342fce9e6d36ee23769cbc85b4c8c18bfb8b07bafe0b57742663"
+    },
+    {
+      "id": "GC_AB02",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Burnham says he would accept imposed Tier 3 restrictions",
+      "author_or_issuing_institution": "Sky News interview/report",
+      "publisher": "Sky News",
+      "original_publication_date": "2020-10-20",
+      "event_date_or_period": "2020-10-20",
+      "source_type": "broadcast_reporting",
+      "url": "https://news.sky.com/story/coronavirus-andy-burnham-says-he-would-accept-tier-3-if-imposed-on-greater-manchester-12108890",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "In the reported interview Burnham said he would accept legally imposed restrictions while explaining concerns about harm to residents.",
+      "supported_claim_ids": [
+        "GC_AB02-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "A reported interview, not an independently tested account of negotiations or proof that all his communication remained calm.",
+      "archival_reference": null,
+      "locator": "Quotation from interview with Kay Burley",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_AB02.html",
+      "snapshot_sha256": "4139bbc6089d70a44d0d528fbd24931979614dc9778cea5b0121c70dc068b45a",
+      "text_file": "GC_AB02.txt",
+      "text_sha256": "038268fb6d32e24724996140d2c3a5a3c163b75e06f96a8f5ee520cc76ce141e"
+    },
+    {
+      "id": "GC_BO01",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "The President’s remarks on H1N1",
+      "author_or_issuing_institution": "Barack Obama; archived White House",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2009-04-30",
+      "event_date_or_period": "2009-04-29",
+      "source_type": "reproduced_transcript",
+      "url": "https://obamawhitehouse.archives.gov/blog/2009/04/30/presidentrsquos-remarks-h1n1",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Obama distinguished concern from panic, described consultation with public-health officials and explained why they did not recommend closing the Mexican border.",
+      "supported_claim_ids": [
+        "GC_BO01-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Direct communication evidence; medical appropriateness and implementation require other records. Publication is a day after the conference.",
+      "archival_reference": null,
+      "locator": "Press-conference question and answer reproduced in post",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_BO01.html",
+      "snapshot_sha256": "baffc1c42624174fac533a6ab8563d86dd3efcece222f89647fe0120e8a7b522",
+      "text_file": "GC_BO01.txt",
+      "text_sha256": "9312c2a7a599eb450731f18f165a06cf62ed0dba79399604c5c172b4f98dfe5c"
+    },
+    {
+      "id": "GC_BO02",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Remarks by the President on Ebola",
+      "author_or_issuing_institution": "Barack Obama",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2014-10-28",
+      "event_date_or_period": "2014-10-28",
+      "source_type": "speech",
+      "url": "https://obamawhitehouse.archives.gov/the-press-office/2014/10/28/remarks-president-ebola",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Obama advocated science-based monitoring, distinguished facts from fear and said he would obtain input from returning health workers.",
+      "supported_claim_ids": [
+        "GC_BO02-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Announced consultation is not proof that it occurred; reassurance does not prove effectiveness or consistent composure across the presidency.",
+      "archival_reference": null,
+      "locator": "Monitoring guidance and health-worker input paragraphs",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_BO02.html",
+      "snapshot_sha256": "db44bdbc60d2c352499ddf0b67360bed6f1a454fce30c7429ede4ff2953d589e",
+      "text_file": "GC_BO02.txt",
+      "text_sha256": "f1d366847d60fd8d078353b1dfffb8b7b5f1e40c0645e63b13e1bd38920619f9"
+    },
+    {
+      "id": "GS_BO01",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Barack Obama incumbent financial disclosure, calendar year 2015",
+      "author_or_issuing_institution": "Barack Obama and reviewing officials",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": null,
+      "event_date_or_period": "2015",
+      "source_type": "scanned_financial_disclosure",
+      "url": "https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/documents/oge_278_cy_2015_obama_051616.pdf",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The visually inspected cover identifies Obama’s personal incumbent financial disclosure for calendar year 2015 and includes signatures.",
+      "supported_claim_ids": [
+        "GS_BO01-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Text extraction is empty. Only the cover was inspected visually; no asset inventory, compliance conclusion or absence of conflicts is claimed.",
+      "archival_reference": null,
+      "locator": "PDF page 1, visually inspected",
+      "review_extent": "visual_cover_only",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_BO01.pdf",
+      "snapshot_sha256": "526b3d4b6024581b6359344f31e765b3abde552cfd5194dab35b999e91c17f02",
+      "text_file": "GS_BO01.txt",
+      "text_sha256": "a61f149fa51d21a7666743f05977a61c858db20e63ecc70834dd3885b3062550"
+    },
+    {
+      "id": "GS_BO02",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "The President donates Nobel Prize money to charity",
+      "author_or_issuing_institution": "Office of the Press Secretary",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2010-03-11",
+      "event_date_or_period": "2010-03-11",
+      "source_type": "announcement",
+      "url": "https://obamawhitehouse.archives.gov/realitycheck/the-press-office/president-donates-nobel-prize-money-charity/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The White House announced the charities designated to receive the Nobel Prize proceeds.",
+      "supported_claim_ids": [
+        "GS_BO02-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Announcement alone establishes intention. The subsequent transfer confirmation in GS_BO04 is the stronger action evidence.",
+      "archival_reference": null,
+      "locator": "Announcement and charity allocation list",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_BO02.html",
+      "snapshot_sha256": "5799dc89c990c83ee69f5a381c4df1c3dcaf305b203293eb929d82323a5ec4f1",
+      "text_file": "GS_BO02.txt",
+      "text_sha256": "fbd728fbb3ae7a49d88b81e69983c96c7372adb5bec2fa8a416ed3ed5e4d5fb2"
+    },
+    {
+      "id": "GP_OS01",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "KanzlerGESPRÄCH in Füssen",
+      "author_or_issuing_institution": "Federal Government account of questions and Scholz’s answers",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2023-07-13",
+      "event_date_or_period": "2023-07-13",
+      "source_type": "official_event_account",
+      "url": "https://www.bundesregierung.de/breg-de/aktuelles/kanzlergespraech-in-fuessen-2201984",
+      "accessed_on": "2026-10-17",
+      "language": "de",
+      "factual_summary": "The account records citizens’ questions about social insurance, skills, families and refugee employment, with Scholz’s direct responses.",
+      "supported_claim_ids": [
+        "GP_OS01-C1"
+      ],
+      "linked_dimensions": [
+        "People"
+      ],
+      "reliability_and_relevance_notes": "Government-selected account of a managed event, not an independent measure of empathy or proof that answers caused policy changes.",
+      "archival_reference": null,
+      "locator": "Topic-specific question-and-answer sections",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GP_OS01.html",
+      "snapshot_sha256": "5fb44bb5a377fbbfa71e60e05927387d9f639b86b5eb7c08cbf030566849141a",
+      "text_file": "GP_OS01.txt",
+      "text_sha256": "92e1b397b5e0d0bbda11705e18fe1c75c9496cfe10fac33ac27bf954d0350ad1"
+    },
+    {
+      "id": "GP_OS02",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "KanzlerGESPRÄCH in Bendorf",
+      "author_or_issuing_institution": "Federal Government account of questions and Scholz’s answers",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2023-05-01",
+      "event_date_or_period": "2023-05-01",
+      "source_type": "official_event_account",
+      "url": "https://www.bundesregierung.de/breg-de/aktuelles/kanzlergespraech-in-bendorf-2186724",
+      "accessed_on": "2026-10-17",
+      "language": "de",
+      "factual_summary": "The account records Scholz answering citizens about pensions and family support, including a commitment concerning basic support for children.",
+      "supported_claim_ids": [
+        "GP_OS02-C1"
+      ],
+      "linked_dimensions": [
+        "People"
+      ],
+      "reliability_and_relevance_notes": "Verifies recorded personal engagement, not delivery of the commitment. Do not turn attendance or a promise into sustained responsiveness.",
+      "archival_reference": null,
+      "locator": "Pensions and family-support question-and-answer passages",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GP_OS02.html",
+      "snapshot_sha256": "2f0bda28e8ed44655abed0a455b7ac5470658375d114fdec3e67d4b3c9d88524",
+      "text_file": "GP_OS02.txt",
+      "text_sha256": "c36fa803f9af74a58b6c51ab9411860fbac3bc47a3062dadfd3532ec2e23d230"
+    },
+    {
+      "id": "GC_OS01",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "Televised address on the Russian attack against Ukraine",
+      "author_or_issuing_institution": "Olaf Scholz",
+      "publisher": "Bundesregierung",
+      "original_publication_date": "2022-02-24",
+      "event_date_or_period": "2022-02-24",
+      "source_type": "official_english_transcript",
+      "url": "https://www.bundesregierung.de/breg-en/service/archive/televised-address-by-federal-chancellor-olaf-scholz-on-the-russian-attack-against-ukraine-2007846",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Scholz acknowledged citizens’ anxiety, described allied coordination and sanctions, and said the conflict should be prevented from spreading to other European countries.",
+      "supported_claim_ids": [
+        "GC_OS01-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Content of an acute-crisis address, not proof of internal calm, military outcomes or the completeness of preparation.",
+      "archival_reference": null,
+      "locator": "Opening acknowledgement and allied-coordination passages",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_OS01.html",
+      "snapshot_sha256": "f3cd26a25e94c0ffe47adca2315a866edd99676c89dc734e8c537595f56521bc",
+      "text_file": "GC_OS01.txt",
+      "text_sha256": "3d134a61928e4993733c14adf336879aa4796bdc01954a48c4463970586ca54f"
+    },
+    {
+      "id": "GS_OS01",
+      "leader_ids": [
+        "olaf-scholz"
+      ],
+      "title": "Archived member biography and mandatory disclosures, 20th Bundestag",
+      "author_or_issuing_institution": "Olaf Scholz’s disclosures; German Bundestag",
+      "publisher": "Bundestag",
+      "original_publication_date": null,
+      "event_date_or_period": "2021/2025",
+      "source_type": "archived_disclosure",
+      "url": "https://www.bundestag.de/webarchiv/abgeordnete/biografien20/S/scholz_olaf-860468",
+      "accessed_on": "2026-10-17",
+      "language": "de",
+      "factual_summary": "The archive lists declared functions and an interest in the law partnership Zimmermann, Scholz und Partner.",
+      "supported_claim_ids": [
+        "GS_OS01-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Disclosure is not proof of an improper conflict or of its resolution. The archive does not establish the decision-level recusal and benefit history needed for Service.",
+      "archival_reference": "20th Bundestag archive",
+      "locator": "Veröffentlichungspflichtige Angaben; functions and participations",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_OS01.html",
+      "snapshot_sha256": "74da7bd097f32c93bb5fb5964e64669db825916c3a65deae74d2fb596b8cc12f",
+      "text_file": "GS_OS01.txt",
+      "text_sha256": "1651b3e0b9057802de9bc56ee51ee8a0dacdd4a6f2e89cdd51016fe669c9052f"
+    },
+    {
+      "id": "GS_AB01",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Greater Manchester Mayor’s Charity CIO annual report and accounts, year ended 31 March 2024",
+      "author_or_issuing_institution": "Charity trustees; filed with Charity Commission",
+      "publisher": "Charity Commission",
+      "original_publication_date": null,
+      "event_date_or_period": "2023-04-01/2024-03-31",
+      "source_type": "filed_charity_accounts",
+      "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A16279518&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Ffull-print&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=5187030&p_p_cacheability=cacheLevelPage&p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_state=maximized",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The charity’s accounts identify a £12,375 contribution from patron Andy Burnham in the period and a £15,125 comparative figure for 2023.",
+      "supported_claim_ids": [
+        "GS_AB01-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Recipient-filed accounts, not personal bank statements or a guarantee of all annual payments. Do not infer a universal salary percentage or equate contributions with overall public-duty quality.",
+      "archival_reference": null,
+      "locator": "Accounts related-party note and fundraising section; PDF pages 11 and 41",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_AB01.pdf",
+      "snapshot_sha256": "fd0cece957725acb2ee5a59699627b75d0736d4bb1b518015822a235ae581a20",
+      "text_file": "GS_AB01.txt",
+      "text_sha256": "0aa8435c0bbf7a8478640f04703422f086dd2c2408cf57f109b41ce126287578"
+    },
+    {
+      "id": "GS_AB02",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Greater Manchester Mayor’s Charity CIO annual report and accounts, year ended 31 March 2025",
+      "author_or_issuing_institution": "Charity trustees; filed with Charity Commission",
+      "publisher": "Charity Commission",
+      "original_publication_date": null,
+      "event_date_or_period": "2024-04-01/2025-03-31",
+      "source_type": "filed_charity_accounts",
+      "url": "https://register-of-charities.charitycommission.gov.uk/en/charity-search?_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_objectiveId=A18081562&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_mvcRenderCommandName=%2Ffull-print&_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_priv_r_p_organisationNumber=5187030&p_p_cacheability=cacheLevelPage&p_p_id=uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=%2Faccounts-resource&p_p_state=maximized",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The annual report identifies £11,050 donated by Burnham and separately describes a £10,000 Sky speaker-fee contribution on his behalf in lieu of some direct payments.",
+      "supported_claim_ids": [
+        "GS_AB02-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Do not add the Sky fee as another direct personal payment or extrapolate a continuous payment history. The report explains an allocation spanning reporting periods.",
+      "archival_reference": null,
+      "locator": "Individual donations/fundraising section, PDF page 11",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_AB02.pdf",
+      "snapshot_sha256": "f7bdd1020aa47c6af6a816f55e951440c1c79511d590d1ddcabe49024f98c50b",
+      "text_file": "GS_AB02.txt",
+      "text_sha256": "738fcac150d256e53e531ba28d778d8c9744a7fe729193df29eecee4e4eec9f0"
+    },
+    {
+      "id": "GS_BO03",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "President Obama and Vice President Biden’s tax returns",
+      "author_or_issuing_institution": "Norm Eisen",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": "2010-04-15",
+      "event_date_or_period": "2009/2010",
+      "source_type": "tax_publication_explanation",
+      "url": "https://obamawhitehouse.archives.gov/blog/2010/04/15/president-obama-and-vice-president-biden-s-tax-returns",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "The tax-release explanation states that Obama directed the Nobel Prize funds to charities, with the prize excluded from income and no charitable deduction for its value.",
+      "supported_claim_ids": [
+        "GS_BO03-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "An official tax explanation, not a new audit or proof of motive. The account should not imply an additional charitable deduction was claimed.",
+      "archival_reference": null,
+      "locator": "Nobel Prize tax-treatment paragraphs",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_BO03.html",
+      "snapshot_sha256": "f201db54bda922fa7eed0de9d302d7a124095918fbd31085295f7be5d1f9f9b6",
+      "text_file": "GS_BO03.txt",
+      "text_sha256": "3f8c282736c982298eeb0a1e8b52246bd94a69e8e21ef770fccae0366f348972"
+    },
+    {
+      "id": "GS_BO04",
+      "leader_ids": [
+        "barack-obama"
+      ],
+      "title": "Nobel donation instructions and Foundation transfer confirmation",
+      "author_or_issuing_institution": "Barack Obama; Nobel Foundation signatories",
+      "publisher": "Archived Obama White House",
+      "original_publication_date": null,
+      "event_date_or_period": "2010-03-10/2010-04-12",
+      "source_type": "scanned_correspondence",
+      "url": "https://obamawhitehouse.archives.gov/sites/default/files/president-obama-2010-nobel-charity.pdf",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "Obama’s signed instruction directs the award to charities; the Foundation’s signed 12 April confirmation states that the proceeds were transferred on 18 March 2010.",
+      "supported_claim_ids": [
+        "GS_BO04-C1"
+      ],
+      "linked_dimensions": [
+        "Service"
+      ],
+      "reliability_and_relevance_notes": "Four-page scan inspected visually; no automated OCR claim. It establishes this documented disposal of an award, not absence of other conflicts or a general judgement about motives.",
+      "archival_reference": null,
+      "locator": "PDF page 1 instruction; page 4 Foundation confirmation; visually inspected",
+      "review_extent": "four_pages_visually_inspected",
+      "independent_editorial_review": false,
+      "snapshot_file": "GS_BO04.pdf",
+      "snapshot_sha256": "a6936ed6068dd68002c7dbde46b4d8384fcf9f5acaf33d96e16be77fe11fe4c0",
+      "text_file": "GS_BO04.txt",
+      "text_sha256": "009391559b2777d7003b4a8f2ac076416b66eee634361c208c85dae6d174cda0"
+    },
+    {
+      "id": "GC_AB03",
+      "leader_ids": [
+        "andy-burnham"
+      ],
+      "title": "Manchester wakes up after darkest of nights",
+      "author_or_issuing_institution": "ITV News Granada",
+      "publisher": "ITV News",
+      "original_publication_date": "2017-05-23",
+      "event_date_or_period": "2017-05-23",
+      "source_type": "contemporaneous_reporting",
+      "url": "https://www.itv.com/news/granada/update/2017-05-23/manchester-mayor-manchester-wakes-up-after-darkest-of-nights/",
+      "accessed_on": "2026-10-17",
+      "language": "en",
+      "factual_summary": "ITV’s dated coverage records Burnham’s address after the Arena attack and his expression of grief, shock and anger.",
+      "supported_claim_ids": [
+        "GC_AB03-C1"
+      ],
+      "linked_dimensions": [
+        "Crisis"
+      ],
+      "reliability_and_relevance_notes": "Corroborates occasion and words; does not verify emotional state or the quality of emergency-service operations.",
+      "archival_reference": null,
+      "locator": "Dated update and quoted address",
+      "review_extent": "specified_passages_reviewed",
+      "independent_editorial_review": false,
+      "snapshot_file": "GC_AB03.html",
+      "snapshot_sha256": "4899c43e0b35322b83f7a6c2f4c981c0cb9f622495ced9314b2cef258c2d2de8",
+      "text_file": "GC_AB03.txt",
+      "text_sha256": "6bcc23eaf8165a60887680b71acbd86152751f5427243a32e64946dc4621c706"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "GC_BJ01-C1",
+      "source_id": "GC_BJ01",
+      "leader_id": "boris-johnson",
+      "text": "Johnson instructed people to stay at home, explained permitted exceptions and announced that restrictions would be reviewed in three weeks against evidence.",
+      "locator": "Stay-at-home instructions, exceptions and three-week review paragraphs",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2020-03-23",
+      "limitations": "Text establishes the content and clarity of communication, not inner composure, public compliance or whether the timing was appropriate.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_BJ02-C1",
+      "source_id": "GC_BJ02",
+      "leader_id": "boris-johnson",
+      "text": "Johnson warned that more families would lose loved ones, described the scientific advice and set out the measures then being taken.",
+      "locator": "Opening risk warning and measures",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2020-03-12",
+      "limitations": "Compare with 23 March rather than treating a changed response as automatically inconsistent. Claims of scientific guidance remain the speaker’s account.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_AB01-C1",
+      "source_id": "GC_AB01",
+      "leader_id": "andy-burnham",
+      "text": "The reproduced statement acknowledges grief and anger, calls for solidarity, provides emergency contact information and asks people to share trusted information.",
+      "locator": "Speech and emergency-information paragraphs",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2017-05-23",
+      "limitations": "Official page displays a later 2018 timestamp. GC_AB03 corroborates the 23 May 2017 occasion; no claim of contemporaneous website publication is made.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_AB02-C1",
+      "source_id": "GC_AB02",
+      "leader_id": "andy-burnham",
+      "text": "In the reported interview Burnham said he would accept legally imposed restrictions while explaining concerns about harm to residents.",
+      "locator": "Quotation from interview with Kay Burley",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2020-10-20",
+      "limitations": "A reported interview, not an independently tested account of negotiations or proof that all his communication remained calm.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_BO01-C1",
+      "source_id": "GC_BO01",
+      "leader_id": "barack-obama",
+      "text": "Obama distinguished concern from panic, described consultation with public-health officials and explained why they did not recommend closing the Mexican border.",
+      "locator": "Press-conference question and answer reproduced in post",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2009-04-29",
+      "limitations": "Direct communication evidence; medical appropriateness and implementation require other records. Publication is a day after the conference.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_BO02-C1",
+      "source_id": "GC_BO02",
+      "leader_id": "barack-obama",
+      "text": "Obama advocated science-based monitoring, distinguished facts from fear and said he would obtain input from returning health workers.",
+      "locator": "Monitoring guidance and health-worker input paragraphs",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2014-10-28",
+      "limitations": "Announced consultation is not proof that it occurred; reassurance does not prove effectiveness or consistent composure across the presidency.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_BO01-C1",
+      "source_id": "GS_BO01",
+      "leader_id": "barack-obama",
+      "text": "The visually inspected cover identifies Obama’s personal incumbent financial disclosure for calendar year 2015 and includes signatures.",
+      "locator": "PDF page 1, visually inspected",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2015",
+      "limitations": "Text extraction is empty. Only the cover was inspected visually; no asset inventory, compliance conclusion or absence of conflicts is claimed.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "visual_inspection"
+    },
+    {
+      "id": "GS_BO02-C1",
+      "source_id": "GS_BO02",
+      "leader_id": "barack-obama",
+      "text": "The White House announced the charities designated to receive the Nobel Prize proceeds.",
+      "locator": "Announcement and charity allocation list",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2010-03-11",
+      "limitations": "Announcement alone establishes intention. The subsequent transfer confirmation in GS_BO04 is the stronger action evidence.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GP_OS01-C1",
+      "source_id": "GP_OS01",
+      "leader_id": "olaf-scholz",
+      "text": "The account records citizens’ questions about social insurance, skills, families and refugee employment, with Scholz’s direct responses.",
+      "locator": "Topic-specific question-and-answer sections",
+      "dimensions": [
+        "People"
+      ],
+      "event_date_or_period": "2023-07-13",
+      "limitations": "Government-selected account of a managed event, not an independent measure of empathy or proof that answers caused policy changes.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GP_OS02-C1",
+      "source_id": "GP_OS02",
+      "leader_id": "olaf-scholz",
+      "text": "The account records Scholz answering citizens about pensions and family support, including a commitment concerning basic support for children.",
+      "locator": "Pensions and family-support question-and-answer passages",
+      "dimensions": [
+        "People"
+      ],
+      "event_date_or_period": "2023-05-01",
+      "limitations": "Verifies recorded personal engagement, not delivery of the commitment. Do not turn attendance or a promise into sustained responsiveness.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GC_OS01-C1",
+      "source_id": "GC_OS01",
+      "leader_id": "olaf-scholz",
+      "text": "Scholz acknowledged citizens’ anxiety, described allied coordination and sanctions, and said the conflict should be prevented from spreading to other European countries.",
+      "locator": "Opening acknowledgement and allied-coordination passages",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2022-02-24",
+      "limitations": "Content of an acute-crisis address, not proof of internal calm, military outcomes or the completeness of preparation.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_OS01-C1",
+      "source_id": "GS_OS01",
+      "leader_id": "olaf-scholz",
+      "text": "The archive lists declared functions and an interest in the law partnership Zimmermann, Scholz und Partner.",
+      "locator": "Veröffentlichungspflichtige Angaben; functions and participations",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2021/2025",
+      "limitations": "Disclosure is not proof of an improper conflict or of its resolution. The archive does not establish the decision-level recusal and benefit history needed for Service.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_AB01-C1",
+      "source_id": "GS_AB01",
+      "leader_id": "andy-burnham",
+      "text": "The charity’s accounts identify a £12,375 contribution from patron Andy Burnham in the period and a £15,125 comparative figure for 2023.",
+      "locator": "Accounts related-party note and fundraising section; PDF pages 11 and 41",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2023-04-01/2024-03-31",
+      "limitations": "Recipient-filed accounts, not personal bank statements or a guarantee of all annual payments. Do not infer a universal salary percentage or equate contributions with overall public-duty quality.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_AB02-C1",
+      "source_id": "GS_AB02",
+      "leader_id": "andy-burnham",
+      "text": "The annual report identifies £11,050 donated by Burnham and separately describes a £10,000 Sky speaker-fee contribution on his behalf in lieu of some direct payments.",
+      "locator": "Individual donations/fundraising section, PDF page 11",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2024-04-01/2025-03-31",
+      "limitations": "Do not add the Sky fee as another direct personal payment or extrapolate a continuous payment history. The report explains an allocation spanning reporting periods.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_BO03-C1",
+      "source_id": "GS_BO03",
+      "leader_id": "barack-obama",
+      "text": "The tax-release explanation states that Obama directed the Nobel Prize funds to charities, with the prize excluded from income and no charitable deduction for its value.",
+      "locator": "Nobel Prize tax-treatment paragraphs",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2009/2010",
+      "limitations": "An official tax explanation, not a new audit or proof of motive. The account should not imply an additional charitable deduction was claimed.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    },
+    {
+      "id": "GS_BO04-C1",
+      "source_id": "GS_BO04",
+      "leader_id": "barack-obama",
+      "text": "Obama’s signed instruction directs the award to charities; the Foundation’s signed 12 April confirmation states that the proceeds were transferred on 18 March 2010.",
+      "locator": "PDF page 1 instruction; page 4 Foundation confirmation; visually inspected",
+      "dimensions": [
+        "Service"
+      ],
+      "event_date_or_period": "2010-03-10/2010-04-12",
+      "limitations": "Four-page scan inspected visually; no automated OCR claim. It establishes this documented disposal of an award, not absence of other conflicts or a general judgement about motives.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "visual_inspection"
+    },
+    {
+      "id": "GC_AB03-C1",
+      "source_id": "GC_AB03",
+      "leader_id": "andy-burnham",
+      "text": "ITV’s dated coverage records Burnham’s address after the Arena attack and his expression of grief, shock and anger.",
+      "locator": "Dated update and quoted address",
+      "dimensions": [
+        "Crisis"
+      ],
+      "event_date_or_period": "2017-05-23",
+      "limitations": "Corroborates occasion and words; does not verify emotional state or the quality of emergency-service operations.",
+      "editorial_review_status": "internal_followup_only",
+      "verification_status": "original_passages_checked"
+    }
+  ],
+  "followup_decisions": [
+    {
+      "leader_id": "boris-johnson",
+      "dimension": "Crisis",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GC_BJ01",
+        "GC_BJ02"
+      ],
+      "existing_context_source_ids": [
+        "BJ04",
+        "BJ02"
+      ],
+      "new_judgement": "The March 2020 addresses provide directly attributable acute-crisis communication: a severe warning followed by explicit stay-at-home instructions, exceptions and an evidence-linked review point. This supports a qualified analysis of clarity, risk framing and explanation of change.",
+      "limitations": "The timing and adequacy of decisions, actual delivery and consistency throughout the premiership remain contested or incomplete. Existing pandemic criticism is retained; words do not prove inner composure.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "andy-burnham",
+      "dimension": "Crisis",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GC_AB01",
+        "GC_AB02",
+        "GC_AB03"
+      ],
+      "existing_context_source_ids": [
+        "AB02",
+        "AB03"
+      ],
+      "new_judgement": "The Arena address provides actual acute-event language combining acknowledgement of shock, public solidarity and practical information. The 2020 interview supplies a second pressured episode in which legal compliance and harms to residents were discussed.",
+      "limitations": "The official address page has a later timestamp; ITV corroborates the occasion. Accounts of community gaps and policing failures remain relevant. Neither transcript establishes the quality of all operations or constant calm over nine years.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "andy-burnham",
+      "dimension": "Service",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GS_AB01",
+        "GS_AB02"
+      ],
+      "existing_context_source_ids": [
+        "NAB01",
+        "NAB04"
+      ],
+      "new_judgement": "Recipient-filed accounts now document named personal contributions in successive reporting periods, replacing reliance solely on a salary pledge. The Sky speaker fee is a separate category and is not counted as an additional direct personal donation.",
+      "limitations": "The documents establish specified contributions, not an unbroken percentage of salary, complete conflict management or absence of ambition. A complete interests and recusal history is still not assembled.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "barack-obama",
+      "dimension": "Crisis",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GC_BO01",
+        "GC_BO02"
+      ],
+      "existing_context_source_ids": [
+        "BO02",
+        "NBO01"
+      ],
+      "new_judgement": "The H1N1 and Ebola texts directly address acute public anxiety, explain reliance on public-health advice and distinguish precaution from panic. They support a qualified finding about the content of communication in two different public-health crises.",
+      "limitations": "Statements about consultation are not proof of implementation or medical correctness. Other first-term crises and contrary communications require broader sampling; rollout and civilian-harm evidence is preserved.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "barack-obama",
+      "dimension": "Service",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GS_BO01",
+        "GS_BO02",
+        "GS_BO03",
+        "GS_BO04"
+      ],
+      "existing_context_source_ids": [
+        "BO03",
+        "NBO04"
+      ],
+      "new_judgement": "The signed award-disposal instruction and subsequent Foundation confirmation provide a concrete case of foregoing a personal financial award. The tax explanation prevents attributing a further charitable deduction to the transfer; the disclosure cover establishes only that a report exists.",
+      "limitations": "A documented charitable transfer does not establish pure motives, consistent public-duty prioritisation or absence of conflicts. Surveillance concerns, ethics waivers and incomplete recusal evidence remain relevant.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "olaf-scholz",
+      "dimension": "People",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GP_OS01",
+        "GP_OS02"
+      ],
+      "existing_context_source_ids": [
+        "NOS07"
+      ],
+      "new_judgement": "The event accounts now connect named citizen questions to Scholz’s own recorded answers. This is directly attributable engagement, unlike relying on a Foreign Office participation process alone.",
+      "limitations": "Both accounts are government-selected, managed-event records from 2023. Empathy, representativeness, follow-through and the effect of listening on decisions throughout the chancellorship are not established.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "olaf-scholz",
+      "dimension": "Crisis",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_closed",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GC_OS01"
+      ],
+      "existing_context_source_ids": [
+        "NOS01",
+        "NOS02",
+        "NOS05"
+      ],
+      "new_judgement": "The address on the invasion day directly acknowledges anxiety and explains allied coordination, sanctions and the aim of containing escalation. It supplies acute-crisis communication evidence missing from an assessment based on coalition accusations alone.",
+      "limitations": "The later budget and coalition material remains qualifying context, not proof that all communication was calm. Internal decision quality, counterpart accounts and outcomes remain incompletely researched.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    },
+    {
+      "leader_id": "olaf-scholz",
+      "dimension": "Service",
+      "original_decision": "insufficient",
+      "followup_status": "specific_gap_remains",
+      "question_answered": "Does the packet now contain directly attributable evidence of the missing behaviour?",
+      "new_source_ids": [
+        "GS_OS01"
+      ],
+      "existing_context_source_ids": [
+        "OS02",
+        "NOS03"
+      ],
+      "new_judgement": "The archived personal disclosures identify functions and a partnership interest, but do not show how competing interests were managed in actual chancellorship decisions. They support a disclosure observation, not a finding that public duty outweighed private advantage.",
+      "limitations": "No sufficient decision-level benefit, recusal or foregone-advantage case has been established. Presence of a declared interest is not evidence of misconduct; absence of an identified adverse case is not exoneration.",
+      "whole_period_sufficiency": "not_established",
+      "proposed_score": null,
+      "official_score": null
+    }
+  ]
+}
