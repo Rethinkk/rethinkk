@@ -6,6 +6,7 @@ import { proposedMethodology } from "@/lib/wallace-index/methodology";
 import { Explorer, Comparison } from "@/components/wallace-index/explorer";
 import { VisitorTool } from "@/components/wallace-index/visitor";
 import { ContributionForm } from "@/components/wallace-index/contribution";
+import { ResearchResults } from "@/components/wallace-index/research-results";
 import { researchProfiles } from "@/lib/wallace-index/research";
 import { ResearchExplorer } from "@/components/wallace-index/research-explorer";
 import {
@@ -207,6 +208,7 @@ export default async function WallacePage({
             <section className="wi-section">
               <h2>Five leadership research profiles</h2>
               <ResearchNotice />
+              <ResearchResults profiles={researchProfiles} />
               <p>
                 Boris Johnson, Keir Starmer, Andy Burnham, Barack Obama and Olaf
                 Scholz: six-dimension concept assessments with supporting

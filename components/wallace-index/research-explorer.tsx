@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { ProposalMark, ResearchResults } from "./research-results";
+import { label } from "@/lib/wallace-index/model";
 import { useState } from "react";
 import type { ResearchProfile } from "@/lib/wallace-index/research";
 
@@ -73,7 +75,11 @@ export function ResearchExplorer({
       <p role="status">
         {items.length} qualitative research profiles · alphabetical order
       </p>
-      <p>Numeric sorting is unavailable: no scores have been assigned.</p>
+      <p>
+        Numeric ranking is unavailable: the four proposals are conditional and
+        the assessments are incomplete.
+      </p>
+      <ResearchResults profiles={items} />
       <div className="wi-selection">
         <p>Select two to four profiles to compare the written assessments.</p>
         {selected.length >= 2 ? (
@@ -118,8 +124,24 @@ export function ResearchExplorer({
               Assessment period: {p.start} – {p.end}
             </p>
             <p>
-              <strong>Not assessed numerically · no total</strong>
+              <strong>Research draft · no total</strong>
             </p>
+            <dl className="wi-bars">
+              {p.dimensions.map((d) => (
+                <div key={d.dimension}>
+                  <dt>
+                    <Link
+                      href={`/wallace-index/leaders/${p.id}?research=1#${d.dimension}`}
+                    >
+                      {label(d.dimension)}
+                    </Link>
+                  </dt>
+                  <dd>
+                    <ProposalMark dimension={d} />
+                  </dd>
+                </div>
+              ))}
+            </dl>
             {p.dimensions.some((d) => d.caveat) && (
               <p className="wi-notice">
                 {p.dimensions.find((d) => d.caveat)?.caveat}
