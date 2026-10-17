@@ -1,0 +1,885 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-17T12:43:22.529910+00:00",
+  "coverage": {
+    "repository": "https://github.com/Rethinkk/wallace-index",
+    "inspected_head": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+    "refs": [
+      {
+        "ref": "refs/heads/main",
+        "commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270"
+      }
+    ],
+    "reachable_commit_count": 34,
+    "earliest_authored_at": "2025-06-26T10:47:20+02:00",
+    "latest_authored_at": "2025-08-01T14:51:30+02:00",
+    "unique_file_version_count": 25,
+    "historical_paths": [
+      "README.md",
+      "charts.js",
+      "index.html",
+      "style.css",
+      "wallace_starmer_vs_boris.svg"
+    ],
+    "current_paths": [
+      "README.md",
+      "charts.js",
+      "index.html",
+      "style.css"
+    ],
+    "deletion_event_count": 13,
+    "limitations": [
+      "Only server-accessible references and their reachable objects can be inspected; inaccessible deleted branches, reflogs and garbage-collected objects are not recoverable from this clone.",
+      "Commit dates and SVG generation metadata are not assessment dates.",
+      "No provisional import file was supplied or located; comparison remains pending.",
+      "No external biographical enrichment, factual score verification or new assessments were performed."
+    ]
+  },
+  "commits": [
+    {
+      "sha": "3dd60502bf771f590bad085ffaf5584006fa5133",
+      "authored_at": "2025-06-26T10:47:20+02:00",
+      "committed_at": "2025-06-26T10:47:20+02:00",
+      "subject": "Initial commit",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/3dd60502bf771f590bad085ffaf5584006fa5133"
+    },
+    {
+      "sha": "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+      "authored_at": "2025-06-26T10:54:35+02:00",
+      "committed_at": "2025-06-26T10:54:35+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/872cd21c0120b9f9b07c17093c07193ca971a1fc"
+    },
+    {
+      "sha": "6954aa5b9a79be162a408a209e99a72d402157ac",
+      "authored_at": "2025-08-01T12:45:42+02:00",
+      "committed_at": "2025-08-01T12:45:42+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/6954aa5b9a79be162a408a209e99a72d402157ac"
+    },
+    {
+      "sha": "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+      "authored_at": "2025-08-01T12:50:17+02:00",
+      "committed_at": "2025-08-01T12:50:17+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/96aa910eb8dee39f5b003dca9c1a696e92beeff2"
+    },
+    {
+      "sha": "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+      "authored_at": "2025-08-01T13:02:24+02:00",
+      "committed_at": "2025-08-01T13:02:24+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/bb1f8ef329be2b580c50383ddd98d52c816e18c8"
+    },
+    {
+      "sha": "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+      "authored_at": "2025-08-01T13:14:07+02:00",
+      "committed_at": "2025-08-01T13:14:07+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/d894b4b9b9a6fca145c535e8951d336f5271a0f1"
+    },
+    {
+      "sha": "457e407b04d06265ef5743088402591e0708a763",
+      "authored_at": "2025-08-01T13:19:34+02:00",
+      "committed_at": "2025-08-01T13:19:34+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/457e407b04d06265ef5743088402591e0708a763"
+    },
+    {
+      "sha": "e634812383752aaa91bbbf387c24ef54f907927c",
+      "authored_at": "2025-08-01T13:27:22+02:00",
+      "committed_at": "2025-08-01T13:27:22+02:00",
+      "subject": "Update README.md",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/e634812383752aaa91bbbf387c24ef54f907927c"
+    },
+    {
+      "sha": "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+      "authored_at": "2025-08-01T13:35:22+02:00",
+      "committed_at": "2025-08-01T13:35:22+02:00",
+      "subject": "Delete charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc"
+    },
+    {
+      "sha": "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+      "authored_at": "2025-08-01T13:35:34+02:00",
+      "committed_at": "2025-08-01T13:35:34+02:00",
+      "subject": "Delete index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/99987b3e3909a27dcbf830e2ad2ce82d908f8b2b"
+    },
+    {
+      "sha": "4666ab2aba98e4d88a7361c9160e6f7592126dfd",
+      "authored_at": "2025-08-01T13:35:44+02:00",
+      "committed_at": "2025-08-01T13:35:44+02:00",
+      "subject": "Delete style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/4666ab2aba98e4d88a7361c9160e6f7592126dfd"
+    },
+    {
+      "sha": "6101f169dad547b7d20d390e35c89834549ebfee",
+      "authored_at": "2025-08-01T13:35:53+02:00",
+      "committed_at": "2025-08-01T13:35:53+02:00",
+      "subject": "Delete wallace_starmer_vs_boris.svg",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/6101f169dad547b7d20d390e35c89834549ebfee"
+    },
+    {
+      "sha": "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+      "authored_at": "2025-08-01T13:36:21+02:00",
+      "committed_at": "2025-08-01T13:36:21+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/8b842a40ad9b4095ce7b85b5ff81423c2122597c"
+    },
+    {
+      "sha": "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+      "authored_at": "2025-08-01T13:40:11+02:00",
+      "committed_at": "2025-08-01T13:40:11+02:00",
+      "subject": "Delete charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/28e888e6d3b2dfc74b2ff2ab15619a07490983b8"
+    },
+    {
+      "sha": "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+      "authored_at": "2025-08-01T13:40:22+02:00",
+      "committed_at": "2025-08-01T13:40:22+02:00",
+      "subject": "Delete index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/190c0b50eef0d7b770b3c5fc3db83356a54b8feb"
+    },
+    {
+      "sha": "4665a9b0ebd23a10249d86cb00dcce82ab8d8835",
+      "authored_at": "2025-08-01T13:40:35+02:00",
+      "committed_at": "2025-08-01T13:40:35+02:00",
+      "subject": "Delete style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/4665a9b0ebd23a10249d86cb00dcce82ab8d8835"
+    },
+    {
+      "sha": "aea64dd1ebe83f30899c97797fce00407c10747c",
+      "authored_at": "2025-08-01T13:40:47+02:00",
+      "committed_at": "2025-08-01T13:40:47+02:00",
+      "subject": "Delete wallace_starmer_vs_boris.svg",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/aea64dd1ebe83f30899c97797fce00407c10747c"
+    },
+    {
+      "sha": "719d8ccadd602d56298d8318ca4aa48080636662",
+      "authored_at": "2025-08-01T13:46:18+02:00",
+      "committed_at": "2025-08-01T13:46:18+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/719d8ccadd602d56298d8318ca4aa48080636662"
+    },
+    {
+      "sha": "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+      "authored_at": "2025-08-01T13:47:13+02:00",
+      "committed_at": "2025-08-01T13:47:13+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/5fd3da644e3d9feacb4c6c15cb5883b5943de1bb"
+    },
+    {
+      "sha": "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+      "authored_at": "2025-08-01T14:13:16+02:00",
+      "committed_at": "2025-08-01T14:13:16+02:00",
+      "subject": "Delete charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/74900c7b23e4b47b2242ec34fa4b2f75294079ee"
+    },
+    {
+      "sha": "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe",
+      "authored_at": "2025-08-01T14:13:28+02:00",
+      "committed_at": "2025-08-01T14:13:28+02:00",
+      "subject": "Delete index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe"
+    },
+    {
+      "sha": "2a31864d0a00b91ad5e601575c026815459c8b8e",
+      "authored_at": "2025-08-01T14:13:39+02:00",
+      "committed_at": "2025-08-01T14:13:39+02:00",
+      "subject": "Delete style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/2a31864d0a00b91ad5e601575c026815459c8b8e"
+    },
+    {
+      "sha": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "authored_at": "2025-08-01T14:14:04+02:00",
+      "committed_at": "2025-08-01T14:14:04+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/c01cb3c3c3b6ce386b169c44dd4961317339b100"
+    },
+    {
+      "sha": "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+      "authored_at": "2025-08-01T14:24:58+02:00",
+      "committed_at": "2025-08-01T14:24:58+02:00",
+      "subject": "Delete charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/1ef0998e7f5bb63b93396137395839dc6de1e4f2"
+    },
+    {
+      "sha": "95a80bdaccf4be64c4fa6b4fcbf9ca0b4a07b617",
+      "authored_at": "2025-08-01T14:25:09+02:00",
+      "committed_at": "2025-08-01T14:25:09+02:00",
+      "subject": "Delete style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/95a80bdaccf4be64c4fa6b4fcbf9ca0b4a07b617"
+    },
+    {
+      "sha": "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+      "authored_at": "2025-08-01T14:25:31+02:00",
+      "committed_at": "2025-08-01T14:25:31+02:00",
+      "subject": "Add files via upload",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6"
+    },
+    {
+      "sha": "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+      "authored_at": "2025-08-01T14:35:59+02:00",
+      "committed_at": "2025-08-01T14:35:59+02:00",
+      "subject": "Update charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/edf2dfacc5e9de51b63d36ef4f1bf759b16275ef"
+    },
+    {
+      "sha": "815499130718b429df97ff0e21c933593536bd0e",
+      "authored_at": "2025-08-01T14:40:59+02:00",
+      "committed_at": "2025-08-01T14:40:59+02:00",
+      "subject": "Update index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/815499130718b429df97ff0e21c933593536bd0e"
+    },
+    {
+      "sha": "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+      "authored_at": "2025-08-01T14:41:35+02:00",
+      "committed_at": "2025-08-01T14:41:35+02:00",
+      "subject": "Update charts.js",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf"
+    },
+    {
+      "sha": "57e6a204aea7a3152bf7d43224072860d2441bee",
+      "authored_at": "2025-08-01T14:43:25+02:00",
+      "committed_at": "2025-08-01T14:43:25+02:00",
+      "subject": "Update style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/57e6a204aea7a3152bf7d43224072860d2441bee"
+    },
+    {
+      "sha": "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+      "authored_at": "2025-08-01T14:47:05+02:00",
+      "committed_at": "2025-08-01T14:47:05+02:00",
+      "subject": "Update style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/e7e20fc7f515b938a566db7b46802a29cb1e219d"
+    },
+    {
+      "sha": "83107e5d79814a226e037f3392535fa03bbb6b7d",
+      "authored_at": "2025-08-01T14:47:51+02:00",
+      "committed_at": "2025-08-01T14:47:51+02:00",
+      "subject": "Update style.css",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/83107e5d79814a226e037f3392535fa03bbb6b7d"
+    },
+    {
+      "sha": "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+      "authored_at": "2025-08-01T14:49:22+02:00",
+      "committed_at": "2025-08-01T14:49:22+02:00",
+      "subject": "Update index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/faa80af0806efb4900bea2d8702a73b734bdc6fe"
+    },
+    {
+      "sha": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "authored_at": "2025-08-01T14:51:30+02:00",
+      "committed_at": "2025-08-01T14:51:30+02:00",
+      "subject": "Update index.html",
+      "body": "",
+      "url": "https://github.com/Rethinkk/wallace-index/commit/575c05c2d3fe8ffb337685e2f368ee1a49359270"
+    }
+  ],
+  "deletions": [
+    {
+      "path": "charts.js",
+      "deletion_commit": "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+      "recover_from_commit": "e634812383752aaa91bbbf387c24ef54f907927c",
+      "git_blob_sha": "b35ed8676a24487f7e03f0e91e0251cb319a0786"
+    },
+    {
+      "path": "index.html",
+      "deletion_commit": "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+      "recover_from_commit": "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+      "git_blob_sha": "ac5076cd4d9f4fa5bb2dcac10b9b05b4af3255ff"
+    },
+    {
+      "path": "style.css",
+      "deletion_commit": "4666ab2aba98e4d88a7361c9160e6f7592126dfd",
+      "recover_from_commit": "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+      "git_blob_sha": "e14a9d16a9753e5a46e28cf8349f2c6a6b79d232"
+    },
+    {
+      "path": "wallace_starmer_vs_boris.svg",
+      "deletion_commit": "6101f169dad547b7d20d390e35c89834549ebfee",
+      "recover_from_commit": "4666ab2aba98e4d88a7361c9160e6f7592126dfd",
+      "git_blob_sha": "4c4549574b5204440fb5890083d3eaf344da218f"
+    },
+    {
+      "path": "charts.js",
+      "deletion_commit": "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+      "recover_from_commit": "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+      "git_blob_sha": "b35ed8676a24487f7e03f0e91e0251cb319a0786"
+    },
+    {
+      "path": "index.html",
+      "deletion_commit": "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+      "recover_from_commit": "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+      "git_blob_sha": "ac5076cd4d9f4fa5bb2dcac10b9b05b4af3255ff"
+    },
+    {
+      "path": "style.css",
+      "deletion_commit": "4665a9b0ebd23a10249d86cb00dcce82ab8d8835",
+      "recover_from_commit": "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+      "git_blob_sha": "e14a9d16a9753e5a46e28cf8349f2c6a6b79d232"
+    },
+    {
+      "path": "wallace_starmer_vs_boris.svg",
+      "deletion_commit": "aea64dd1ebe83f30899c97797fce00407c10747c",
+      "recover_from_commit": "4665a9b0ebd23a10249d86cb00dcce82ab8d8835",
+      "git_blob_sha": "4c4549574b5204440fb5890083d3eaf344da218f"
+    },
+    {
+      "path": "charts.js",
+      "deletion_commit": "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+      "recover_from_commit": "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+      "git_blob_sha": "b35ed8676a24487f7e03f0e91e0251cb319a0786"
+    },
+    {
+      "path": "index.html",
+      "deletion_commit": "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe",
+      "recover_from_commit": "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+      "git_blob_sha": "8e7db130302dd0da02f0188b8b3814e5c519c74e"
+    },
+    {
+      "path": "style.css",
+      "deletion_commit": "2a31864d0a00b91ad5e601575c026815459c8b8e",
+      "recover_from_commit": "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe",
+      "git_blob_sha": "11cc161c8225c7004f34800dd0145287b5176ca6"
+    },
+    {
+      "path": "charts.js",
+      "deletion_commit": "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+      "recover_from_commit": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "git_blob_sha": "3f9edfa628bd23916d4e592295defbb1de49142a"
+    },
+    {
+      "path": "style.css",
+      "deletion_commit": "95a80bdaccf4be64c4fa6b4fcbf9ca0b4a07b617",
+      "recover_from_commit": "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+      "git_blob_sha": "6cd42615fa32e8cc11824cbdf8f5fdfd34d87a62"
+    }
+  ],
+  "file_versions": [
+    {
+      "id": "3293e9f16644bfb9e697158f749eb17bb25a54e6:README.md",
+      "original_path": "README.md",
+      "git_blob_sha": "3293e9f16644bfb9e697158f749eb17bb25a54e6",
+      "mode": "100644",
+      "present_in_commits": [
+        "3dd60502bf771f590bad085ffaf5584006fa5133",
+        "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+        "6954aa5b9a79be162a408a209e99a72d402157ac",
+        "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+        "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+        "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+        "457e407b04d06265ef5743088402591e0708a763"
+      ],
+      "archive_path": "evidence/3293e9f16644bfb9e697158f749eb17bb25a54e6/README.md",
+      "sha256": "ab725167be1eb079ee32c204733426344fc1ee1858a74cfb699f2e295ec18bd1",
+      "byte_length": 34,
+      "first_seen_commit": "3dd60502bf771f590bad085ffaf5584006fa5133",
+      "last_seen_commit": "457e407b04d06265ef5743088402591e0708a763",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/3dd60502bf771f590bad085ffaf5584006fa5133/README.md"
+    },
+    {
+      "id": "9822dd292ab3b7e1030968738d56bbd621e577b0:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "9822dd292ab3b7e1030968738d56bbd621e577b0",
+      "mode": "100644",
+      "present_in_commits": [
+        "872cd21c0120b9f9b07c17093c07193ca971a1fc"
+      ],
+      "archive_path": "evidence/9822dd292ab3b7e1030968738d56bbd621e577b0/index.html",
+      "sha256": "a1e4ba7a1cb40b6548722cb306ee97dd0867065a849bbf1a3683e577ecb42ab5",
+      "byte_length": 711,
+      "first_seen_commit": "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+      "last_seen_commit": "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/872cd21c0120b9f9b07c17093c07193ca971a1fc/index.html"
+    },
+    {
+      "id": "c462885e2822f044db15a7d37874f48e6ed66849:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "c462885e2822f044db15a7d37874f48e6ed66849",
+      "mode": "100644",
+      "present_in_commits": [
+        "872cd21c0120b9f9b07c17093c07193ca971a1fc"
+      ],
+      "archive_path": "evidence/c462885e2822f044db15a7d37874f48e6ed66849/style.css",
+      "sha256": "becc8310f4996d43aacb6be7b9648039821024e4991288196fb2d14f89e2ae26",
+      "byte_length": 257,
+      "first_seen_commit": "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+      "last_seen_commit": "872cd21c0120b9f9b07c17093c07193ca971a1fc",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/872cd21c0120b9f9b07c17093c07193ca971a1fc/style.css"
+    },
+    {
+      "id": "b35ed8676a24487f7e03f0e91e0251cb319a0786:charts.js",
+      "original_path": "charts.js",
+      "git_blob_sha": "b35ed8676a24487f7e03f0e91e0251cb319a0786",
+      "mode": "100644",
+      "present_in_commits": [
+        "6954aa5b9a79be162a408a209e99a72d402157ac",
+        "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+        "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+        "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+        "457e407b04d06265ef5743088402591e0708a763",
+        "e634812383752aaa91bbbf387c24ef54f907927c",
+        "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+        "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb"
+      ],
+      "archive_path": "evidence/b35ed8676a24487f7e03f0e91e0251cb319a0786/charts.js",
+      "sha256": "4bcebe9524716360b40647ae8473088083f642d9a2e7b54af7aa9d1b0fc10e7e",
+      "byte_length": 947,
+      "first_seen_commit": "6954aa5b9a79be162a408a209e99a72d402157ac",
+      "last_seen_commit": "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/6954aa5b9a79be162a408a209e99a72d402157ac/charts.js"
+    },
+    {
+      "id": "e176ee5311c6e3969c7a91997d9b4a97cae501b7:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "e176ee5311c6e3969c7a91997d9b4a97cae501b7",
+      "mode": "100644",
+      "present_in_commits": [
+        "6954aa5b9a79be162a408a209e99a72d402157ac",
+        "96aa910eb8dee39f5b003dca9c1a696e92beeff2"
+      ],
+      "archive_path": "evidence/e176ee5311c6e3969c7a91997d9b4a97cae501b7/index.html",
+      "sha256": "59f453cd01c54a4e1ae2c4eb35eaf7b7cea9195655c5f1c4c5a297a1e762e7ea",
+      "byte_length": 730,
+      "first_seen_commit": "6954aa5b9a79be162a408a209e99a72d402157ac",
+      "last_seen_commit": "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/6954aa5b9a79be162a408a209e99a72d402157ac/index.html"
+    },
+    {
+      "id": "e14a9d16a9753e5a46e28cf8349f2c6a6b79d232:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "e14a9d16a9753e5a46e28cf8349f2c6a6b79d232",
+      "mode": "100644",
+      "present_in_commits": [
+        "6954aa5b9a79be162a408a209e99a72d402157ac",
+        "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+        "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+        "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+        "457e407b04d06265ef5743088402591e0708a763",
+        "e634812383752aaa91bbbf387c24ef54f907927c",
+        "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+        "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+        "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+        "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+        "190c0b50eef0d7b770b3c5fc3db83356a54b8feb"
+      ],
+      "archive_path": "evidence/e14a9d16a9753e5a46e28cf8349f2c6a6b79d232/style.css",
+      "sha256": "a37109d768a875240ff8fcff9422bb068c02bd8f558e0183cc9371d666f83d2a",
+      "byte_length": 260,
+      "first_seen_commit": "6954aa5b9a79be162a408a209e99a72d402157ac",
+      "last_seen_commit": "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/6954aa5b9a79be162a408a209e99a72d402157ac/style.css"
+    },
+    {
+      "id": "4c4549574b5204440fb5890083d3eaf344da218f:wallace_starmer_vs_boris.svg",
+      "original_path": "wallace_starmer_vs_boris.svg",
+      "git_blob_sha": "4c4549574b5204440fb5890083d3eaf344da218f",
+      "mode": "100644",
+      "present_in_commits": [
+        "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+        "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+        "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+        "457e407b04d06265ef5743088402591e0708a763",
+        "e634812383752aaa91bbbf387c24ef54f907927c",
+        "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+        "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+        "4666ab2aba98e4d88a7361c9160e6f7592126dfd",
+        "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+        "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+        "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+        "4665a9b0ebd23a10249d86cb00dcce82ab8d8835"
+      ],
+      "archive_path": "evidence/4c4549574b5204440fb5890083d3eaf344da218f/wallace_starmer_vs_boris.svg",
+      "sha256": "1ea30269cc92354fff9137cb6662585e3a70a828ee1f113b1a977878c7618421",
+      "byte_length": 37153,
+      "first_seen_commit": "96aa910eb8dee39f5b003dca9c1a696e92beeff2",
+      "last_seen_commit": "4665a9b0ebd23a10249d86cb00dcce82ab8d8835",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/96aa910eb8dee39f5b003dca9c1a696e92beeff2/wallace_starmer_vs_boris.svg"
+    },
+    {
+      "id": "bf34ea21191c459da0fbe5a90095e59e59527844:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "bf34ea21191c459da0fbe5a90095e59e59527844",
+      "mode": "100644",
+      "present_in_commits": [
+        "bb1f8ef329be2b580c50383ddd98d52c816e18c8"
+      ],
+      "archive_path": "evidence/bf34ea21191c459da0fbe5a90095e59e59527844/index.html",
+      "sha256": "f33567e63de4580b40410edeedce1196a3f93f7d3f65355e233d23b47a6d92b5",
+      "byte_length": 946,
+      "first_seen_commit": "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+      "last_seen_commit": "bb1f8ef329be2b580c50383ddd98d52c816e18c8",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/bb1f8ef329be2b580c50383ddd98d52c816e18c8/index.html"
+    },
+    {
+      "id": "ac5076cd4d9f4fa5bb2dcac10b9b05b4af3255ff:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "ac5076cd4d9f4fa5bb2dcac10b9b05b4af3255ff",
+      "mode": "100644",
+      "present_in_commits": [
+        "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+        "457e407b04d06265ef5743088402591e0708a763",
+        "e634812383752aaa91bbbf387c24ef54f907927c",
+        "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+        "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+        "28e888e6d3b2dfc74b2ff2ab15619a07490983b8"
+      ],
+      "archive_path": "evidence/ac5076cd4d9f4fa5bb2dcac10b9b05b4af3255ff/index.html",
+      "sha256": "32fad796d0d1faaa967949b80d92232d965465197b0fab86a8902a1bdab565be",
+      "byte_length": 37976,
+      "first_seen_commit": "d894b4b9b9a6fca145c535e8951d336f5271a0f1",
+      "last_seen_commit": "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/d894b4b9b9a6fca145c535e8951d336f5271a0f1/index.html"
+    },
+    {
+      "id": "a9637a15ad8f44161d0f59cf9e4a2d4ef79a0974:README.md",
+      "original_path": "README.md",
+      "git_blob_sha": "a9637a15ad8f44161d0f59cf9e4a2d4ef79a0974",
+      "mode": "100644",
+      "present_in_commits": [
+        "e634812383752aaa91bbbf387c24ef54f907927c",
+        "77e429b8e10e32d9e3dadff217ae2e8a0f34f7dc",
+        "99987b3e3909a27dcbf830e2ad2ce82d908f8b2b",
+        "4666ab2aba98e4d88a7361c9160e6f7592126dfd",
+        "6101f169dad547b7d20d390e35c89834549ebfee",
+        "8b842a40ad9b4095ce7b85b5ff81423c2122597c",
+        "28e888e6d3b2dfc74b2ff2ab15619a07490983b8",
+        "190c0b50eef0d7b770b3c5fc3db83356a54b8feb",
+        "4665a9b0ebd23a10249d86cb00dcce82ab8d8835",
+        "aea64dd1ebe83f30899c97797fce00407c10747c",
+        "719d8ccadd602d56298d8318ca4aa48080636662",
+        "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+        "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+        "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe",
+        "2a31864d0a00b91ad5e601575c026815459c8b8e",
+        "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+        "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+        "95a80bdaccf4be64c4fa6b4fcbf9ca0b4a07b617",
+        "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+        "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+        "815499130718b429df97ff0e21c933593536bd0e",
+        "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+        "57e6a204aea7a3152bf7d43224072860d2441bee",
+        "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+        "83107e5d79814a226e037f3392535fa03bbb6b7d",
+        "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+        "575c05c2d3fe8ffb337685e2f368ee1a49359270"
+      ],
+      "archive_path": "evidence/a9637a15ad8f44161d0f59cf9e4a2d4ef79a0974/README.md",
+      "sha256": "fb72d2397ad102e34413bcc80b7a8dc79e633b100c259204f70b6ddd8333f6a1",
+      "byte_length": 35,
+      "first_seen_commit": "e634812383752aaa91bbbf387c24ef54f907927c",
+      "last_seen_commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "present_at_inspected_head": true,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/e634812383752aaa91bbbf387c24ef54f907927c/README.md"
+    },
+    {
+      "id": "8e7db130302dd0da02f0188b8b3814e5c519c74e:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "8e7db130302dd0da02f0188b8b3814e5c519c74e",
+      "mode": "100644",
+      "present_in_commits": [
+        "719d8ccadd602d56298d8318ca4aa48080636662",
+        "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+        "74900c7b23e4b47b2242ec34fa4b2f75294079ee"
+      ],
+      "archive_path": "evidence/8e7db130302dd0da02f0188b8b3814e5c519c74e/index.html",
+      "sha256": "dee385bb9c5f68f9ca928e33f53798849e75d973a83f712462c86cde238d26ff",
+      "byte_length": 1464,
+      "first_seen_commit": "719d8ccadd602d56298d8318ca4aa48080636662",
+      "last_seen_commit": "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/719d8ccadd602d56298d8318ca4aa48080636662/index.html"
+    },
+    {
+      "id": "11cc161c8225c7004f34800dd0145287b5176ca6:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "11cc161c8225c7004f34800dd0145287b5176ca6",
+      "mode": "100644",
+      "present_in_commits": [
+        "719d8ccadd602d56298d8318ca4aa48080636662",
+        "5fd3da644e3d9feacb4c6c15cb5883b5943de1bb",
+        "74900c7b23e4b47b2242ec34fa4b2f75294079ee",
+        "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe"
+      ],
+      "archive_path": "evidence/11cc161c8225c7004f34800dd0145287b5176ca6/style.css",
+      "sha256": "c4316af0d30361352e386d22001dd5b86cc021a3f1b8f672c692cebdfc4f166d",
+      "byte_length": 159,
+      "first_seen_commit": "719d8ccadd602d56298d8318ca4aa48080636662",
+      "last_seen_commit": "b9a2f7aa9eb5099efe4f3ac49aa8a5de056327fe",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/719d8ccadd602d56298d8318ca4aa48080636662/style.css"
+    },
+    {
+      "id": "3f9edfa628bd23916d4e592295defbb1de49142a:charts.js",
+      "original_path": "charts.js",
+      "git_blob_sha": "3f9edfa628bd23916d4e592295defbb1de49142a",
+      "mode": "100644",
+      "present_in_commits": [
+        "c01cb3c3c3b6ce386b169c44dd4961317339b100"
+      ],
+      "archive_path": "evidence/3f9edfa628bd23916d4e592295defbb1de49142a/charts.js",
+      "sha256": "34b54a7deca6e1520b94536faa237d5639fa7e573dbf23b566dc3b31a30f97a8",
+      "byte_length": 1146,
+      "first_seen_commit": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "last_seen_commit": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/c01cb3c3c3b6ce386b169c44dd4961317339b100/charts.js"
+    },
+    {
+      "id": "aeb3c9fc6aaac4399858166bf46ce4e323260fa8:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "aeb3c9fc6aaac4399858166bf46ce4e323260fa8",
+      "mode": "100644",
+      "present_in_commits": [
+        "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+        "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+        "95a80bdaccf4be64c4fa6b4fcbf9ca0b4a07b617",
+        "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+        "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef"
+      ],
+      "archive_path": "evidence/aeb3c9fc6aaac4399858166bf46ce4e323260fa8/index.html",
+      "sha256": "db9c61fd0b1808338699029558f11a02f8b0bdc7878179e8a468e09dd66cd7da",
+      "byte_length": 1004,
+      "first_seen_commit": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "last_seen_commit": "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/c01cb3c3c3b6ce386b169c44dd4961317339b100/index.html"
+    },
+    {
+      "id": "6cd42615fa32e8cc11824cbdf8f5fdfd34d87a62:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "6cd42615fa32e8cc11824cbdf8f5fdfd34d87a62",
+      "mode": "100644",
+      "present_in_commits": [
+        "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+        "1ef0998e7f5bb63b93396137395839dc6de1e4f2"
+      ],
+      "archive_path": "evidence/6cd42615fa32e8cc11824cbdf8f5fdfd34d87a62/style.css",
+      "sha256": "041a2e47ab0a9396558476a3211db898c725f88494beb62bfc81ae3c1c447fcc",
+      "byte_length": 719,
+      "first_seen_commit": "c01cb3c3c3b6ce386b169c44dd4961317339b100",
+      "last_seen_commit": "1ef0998e7f5bb63b93396137395839dc6de1e4f2",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/c01cb3c3c3b6ce386b169c44dd4961317339b100/style.css"
+    },
+    {
+      "id": "9d1b48e67efa1a9c4684ef20d4378df0e7b21702:charts.js",
+      "original_path": "charts.js",
+      "git_blob_sha": "9d1b48e67efa1a9c4684ef20d4378df0e7b21702",
+      "mode": "100644",
+      "present_in_commits": [
+        "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6"
+      ],
+      "archive_path": "evidence/9d1b48e67efa1a9c4684ef20d4378df0e7b21702/charts.js",
+      "sha256": "5b1e05eacc054a26f14b2763e8615c2497556b64cffd247684d3d4c23dff6e59",
+      "byte_length": 1436,
+      "first_seen_commit": "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+      "last_seen_commit": "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6/charts.js"
+    },
+    {
+      "id": "33468ab4ed1308b1b602d9efa382e9dfdb576c4e:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "33468ab4ed1308b1b602d9efa382e9dfdb576c4e",
+      "mode": "100644",
+      "present_in_commits": [
+        "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+        "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+        "815499130718b429df97ff0e21c933593536bd0e",
+        "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf"
+      ],
+      "archive_path": "evidence/33468ab4ed1308b1b602d9efa382e9dfdb576c4e/style.css",
+      "sha256": "a40a76f4f77a724216e92e867e1399eee5fda339f43cacb151b96d92e904c855",
+      "byte_length": 534,
+      "first_seen_commit": "f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6",
+      "last_seen_commit": "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/f2ae24fbedf6f94328c88ec1d7aa097bed06f2b6/style.css"
+    },
+    {
+      "id": "d3c8ef5a230a9fed65913d11bc445687a2870f08:charts.js",
+      "original_path": "charts.js",
+      "git_blob_sha": "d3c8ef5a230a9fed65913d11bc445687a2870f08",
+      "mode": "100644",
+      "present_in_commits": [
+        "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+        "815499130718b429df97ff0e21c933593536bd0e"
+      ],
+      "archive_path": "evidence/d3c8ef5a230a9fed65913d11bc445687a2870f08/charts.js",
+      "sha256": "4745ee22d68248f927b40723335c215ce79cb30d788f02559cd804efd6bb5f10",
+      "byte_length": 1557,
+      "first_seen_commit": "edf2dfacc5e9de51b63d36ef4f1bf759b16275ef",
+      "last_seen_commit": "815499130718b429df97ff0e21c933593536bd0e",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/edf2dfacc5e9de51b63d36ef4f1bf759b16275ef/charts.js"
+    },
+    {
+      "id": "8a97c2228127cfe747f3a2082bdcc90568fd0ba9:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "8a97c2228127cfe747f3a2082bdcc90568fd0ba9",
+      "mode": "100644",
+      "present_in_commits": [
+        "815499130718b429df97ff0e21c933593536bd0e",
+        "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+        "57e6a204aea7a3152bf7d43224072860d2441bee",
+        "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+        "83107e5d79814a226e037f3392535fa03bbb6b7d"
+      ],
+      "archive_path": "evidence/8a97c2228127cfe747f3a2082bdcc90568fd0ba9/index.html",
+      "sha256": "9deb349d39ef77db6de10ca9ac0a23e02dde388195a03cb20b9d82505da24e22",
+      "byte_length": 1014,
+      "first_seen_commit": "815499130718b429df97ff0e21c933593536bd0e",
+      "last_seen_commit": "83107e5d79814a226e037f3392535fa03bbb6b7d",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/815499130718b429df97ff0e21c933593536bd0e/index.html"
+    },
+    {
+      "id": "92049a25caf034c71b66fec396c16ce3964e39b7:charts.js",
+      "original_path": "charts.js",
+      "git_blob_sha": "92049a25caf034c71b66fec396c16ce3964e39b7",
+      "mode": "100644",
+      "present_in_commits": [
+        "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+        "57e6a204aea7a3152bf7d43224072860d2441bee",
+        "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+        "83107e5d79814a226e037f3392535fa03bbb6b7d",
+        "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+        "575c05c2d3fe8ffb337685e2f368ee1a49359270"
+      ],
+      "archive_path": "evidence/92049a25caf034c71b66fec396c16ce3964e39b7/charts.js",
+      "sha256": "c9cf0de11a79df7149c3d4a0b202ed99b3d008e3787503149006bdbd4334a990",
+      "byte_length": 1129,
+      "first_seen_commit": "d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf",
+      "last_seen_commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "present_at_inspected_head": true,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/d1b7f8d9d5c91e4e4133a1b3af59d59f612f11cf/charts.js"
+    },
+    {
+      "id": "7371608b2f6541e2a85f9e9065a2904ddb4197ce:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "7371608b2f6541e2a85f9e9065a2904ddb4197ce",
+      "mode": "100644",
+      "present_in_commits": [
+        "57e6a204aea7a3152bf7d43224072860d2441bee"
+      ],
+      "archive_path": "evidence/7371608b2f6541e2a85f9e9065a2904ddb4197ce/style.css",
+      "sha256": "dde26e318acfe56c87e8b763329b9d6251ac3fa23ed9bc987d19b35e29aba665",
+      "byte_length": 904,
+      "first_seen_commit": "57e6a204aea7a3152bf7d43224072860d2441bee",
+      "last_seen_commit": "57e6a204aea7a3152bf7d43224072860d2441bee",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/57e6a204aea7a3152bf7d43224072860d2441bee/style.css"
+    },
+    {
+      "id": "68ce138eb6ff46a7cb0dc477467a1566b652cd2b:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "68ce138eb6ff46a7cb0dc477467a1566b652cd2b",
+      "mode": "100644",
+      "present_in_commits": [
+        "e7e20fc7f515b938a566db7b46802a29cb1e219d"
+      ],
+      "archive_path": "evidence/68ce138eb6ff46a7cb0dc477467a1566b652cd2b/style.css",
+      "sha256": "f9d1b00e0ee0e7210bdf134c0132ebdd5f3b55b692d723ffb2074d7ad26c2936",
+      "byte_length": 1060,
+      "first_seen_commit": "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+      "last_seen_commit": "e7e20fc7f515b938a566db7b46802a29cb1e219d",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/e7e20fc7f515b938a566db7b46802a29cb1e219d/style.css"
+    },
+    {
+      "id": "1e710fc8c270252af3d8f4b6381b0a5bef6c69f0:style.css",
+      "original_path": "style.css",
+      "git_blob_sha": "1e710fc8c270252af3d8f4b6381b0a5bef6c69f0",
+      "mode": "100644",
+      "present_in_commits": [
+        "83107e5d79814a226e037f3392535fa03bbb6b7d",
+        "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+        "575c05c2d3fe8ffb337685e2f368ee1a49359270"
+      ],
+      "archive_path": "evidence/1e710fc8c270252af3d8f4b6381b0a5bef6c69f0/style.css",
+      "sha256": "549a29823d22f306fe6602596f06bd978797ec0d34f95b970d774433fd9328fb",
+      "byte_length": 1065,
+      "first_seen_commit": "83107e5d79814a226e037f3392535fa03bbb6b7d",
+      "last_seen_commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "present_at_inspected_head": true,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/83107e5d79814a226e037f3392535fa03bbb6b7d/style.css"
+    },
+    {
+      "id": "5052063542293dce97c2e5e0031912382d966bbc:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "5052063542293dce97c2e5e0031912382d966bbc",
+      "mode": "100644",
+      "present_in_commits": [
+        "faa80af0806efb4900bea2d8702a73b734bdc6fe"
+      ],
+      "archive_path": "evidence/5052063542293dce97c2e5e0031912382d966bbc/index.html",
+      "sha256": "2b9959a516951ff476375170a69c3103430bf1133cba3c9a08f22066776af3ab",
+      "byte_length": 1067,
+      "first_seen_commit": "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+      "last_seen_commit": "faa80af0806efb4900bea2d8702a73b734bdc6fe",
+      "present_at_inspected_head": false,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/faa80af0806efb4900bea2d8702a73b734bdc6fe/index.html"
+    },
+    {
+      "id": "917dd1eda8c63f99b693de22fcd1bddb0e63c197:index.html",
+      "original_path": "index.html",
+      "git_blob_sha": "917dd1eda8c63f99b693de22fcd1bddb0e63c197",
+      "mode": "100644",
+      "present_in_commits": [
+        "575c05c2d3fe8ffb337685e2f368ee1a49359270"
+      ],
+      "archive_path": "evidence/917dd1eda8c63f99b693de22fcd1bddb0e63c197/index.html",
+      "sha256": "0e92ee73191f0bb89ec0f854f74baa8c219b4de39317940148ea3ac5a960a2e0",
+      "byte_length": 1033,
+      "first_seen_commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "last_seen_commit": "575c05c2d3fe8ffb337685e2f368ee1a49359270",
+      "present_at_inspected_head": true,
+      "url": "https://github.com/Rethinkk/wallace-index/blob/575c05c2d3fe8ffb337685e2f368ee1a49359270/index.html"
+    }
+  ]
+}

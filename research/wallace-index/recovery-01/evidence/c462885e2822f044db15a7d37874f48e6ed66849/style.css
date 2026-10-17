@@ -1,0 +1,19 @@
+
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+  background-color: #fffbea;
+  color: #111;
+}
+header {
+  background: #ffcc00;
+  padding: 1rem;
+}
+h1 {
+  margin: 0;
+}
+section {
+  margin-top: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}

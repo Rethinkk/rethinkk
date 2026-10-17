@@ -1,0 +1,43 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef7dd;
+    margin: 0;
+    padding: 20px;
+    color: #000;
+}
+
+h1, h2 {
+    color: #111;
+}
+
+#chart {
+    margin-top: 20px;
+}
+
+.bar-group {
+    margin-bottom: 20px;
+}
+
+.category {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.bar {
+    height: 24px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 4px;
+    padding-left: 6px;
+    font-size: 14px;
+}
+
+.starmer {
+    background-color: #ffd400;
+}
+
+.johnson {
+    background-color: #333;
+    color: #fff;
+}
