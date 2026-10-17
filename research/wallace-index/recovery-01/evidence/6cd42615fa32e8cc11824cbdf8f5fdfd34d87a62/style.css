@@ -1,0 +1,49 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #f9cb00;
+    padding: 1rem;
+}
+h1, h2 {
+    margin: 0.5rem 0;
+}
+main {
+    padding: 1rem;
+}
+.profile {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bar-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.bar-group {
+    display: flex;
+    align-items: center;
+}
+.bar {
+    height: 20px;
+    margin-right: 10px;
+}
+.bar-yellow {
+    background-color: #f9cb00;
+}
+.bar-grey {
+    background-color: #333;
+}
+footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+}

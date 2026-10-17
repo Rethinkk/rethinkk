@@ -44,3 +44,7 @@ Required read access: Vercel team `andre-kievits-projects`, project `pam-desktop
 ## Current verdict
 
 Inspection complete; useful conceptual material documented. Production migration, deployment/domain verification and independence testing remain pending. The proposed architecture requires no legacy dependency. **The repository is not yet certified safe to remove.** No repository, deployment or domain was changed.
+
+## Historical research recovery follow-up — 17 October 2026
+
+The Phase 1 inspection above concerned the then-current default-branch files. Research Recovery Assignment 01 subsequently examined all 34 reachable commits and 25 unique file versions, including deleted material. It recovered two leaders, five complete numerical variants and two partial displays across two dimension-label families. No substantive original rationale or research citations were found. See the [full recovery report](../../research/wallace-index/recovery-01/wallace-legacy-recovery-report.md). Those historical artefacts are preserved for review; they have not been imported as official assessments. Retirement remains a separate decision.
