@@ -67,3 +67,23 @@ all eight browser tests (including axe/responsive checks at three widths), DDI
 validation, the research-packet validator and `git diff --check` passed. Browser
 tests used the installed system Chromium via a temporary local configuration;
 that configuration is not shipped. No database schema or publishing logic changed.
+
+## Current-results view (17 October 2026)
+
+Following the owner's request to see the index using current results, the four
+conditional numerical candidates in `score-proposals-01/score-proposals.json`
+are displayed in the native landing-page table, filtered explorer, leader
+profiles and comparisons. Each is explicitly labelled “conditional proposal”,
+not an official or approved whole-period rating. The other 26 dimensions remain
+unassessed. All totals remain absent; numeric ranking remains unavailable.
+Profiles and comparisons show the rationale and unresolved acceptance conditions;
+profiles also explain adjacent scores and retain prior evidence limitations.
+Scholz's Service caveat is unchanged.
+
+The public research export is now `wallace-qualitative-research-2` with a nullable
+`proposal` object for each dimension and an explicit proposal-packet origin. The
+object contains the suggested number, descriptor, reasoning, alternatives and
+conditions. `officialScoresAssigned`, `methodologyApproved` and
+`independentReviewCompleted` remain false. Official edition exports, CMS scoring,
+reviewer roles and publication validation are unchanged. The immutable original
+research and proposal packets are not rewritten to claim approval.

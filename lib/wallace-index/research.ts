@@ -1,10 +1,11 @@
 import register from "@/research/wallace-index/evidence-gaps-02/updated-register.json";
+import proposals from "@/research/wallace-index/score-proposals-01/score-proposals.json";
 import { dimensions, type Dimension } from "./model";
 
 // A research collection is deliberately not an Edition or PublicAssessment.
 // It cannot enter the official score, publication or edition export pathways.
 export const researchNotice =
-  "Qualitative research drafts — internally reviewed, with independent review pending. Methodology 1.0 is proposed and awaits editorial approval. No editorial scores or totals have been assigned. These profiles are not a published assessment edition.";
+  "Qualitative research drafts — internally reviewed, with independent review pending. Methodology 1.0 is proposed and awaits editorial approval. Four conditional score proposals are shown for editorial discussion. They are not approved whole-period ratings. The other 26 dimensions remain unassessed; no official scores or totals have been assigned. These profiles are not a published assessment edition.";
 export const scholzServiceCaveat =
   "Insufficient evidence for Service. The available records identify declared interests and duties of office, but do not establish how competing interests were managed in specific decisions during the assessment period. This is an evidence gap, not a finding of misconduct. No score has been assigned.";
 
@@ -43,7 +44,35 @@ export const researchProfiles = register.profiles.map((p) => ({
     const d = p.dimensions.find((d) => d.dimension.toLowerCase() === dimension);
     if (!d || d.official_score !== null || d.proposed_score !== null)
       throw new Error("Research draft must contain six unscored dimensions");
+    const proposal = proposals.profiles
+      .find((x) => x.id === p.id)
+      ?.dimensions.find((x) => x.dimension.toLowerCase() === dimension);
+    if (
+      !proposal ||
+      proposal.official_score !== null ||
+      proposal.whole_period_evidence_sufficiency_approved !== false
+    )
+      throw new Error("Invalid conditional research proposal");
+    if (
+      proposal.proposed_score !== null &&
+      (!Number.isInteger(proposal.proposed_score) ||
+        proposal.proposed_score < 0 ||
+        proposal.proposed_score > 3 ||
+        proposal.proposal_status !== "conditional_editorial_proposal")
+    )
+      throw new Error("Invalid proposed score");
     return {
+      proposal:
+        proposal.proposed_score === null
+          ? null
+          : {
+              score: proposal.proposed_score,
+              descriptor: proposal.descriptor,
+              rationale: proposal.rationale,
+              adjacentDescriptors: proposal.adjacent_descriptor_analysis,
+              conditions: proposal.condition_or_research_needed,
+              changeFromPrior: proposal.change_from_prior,
+            },
       dimension: dimension as Dimension,
       judgement: d.draft_judgement,
       uncertainties: d.uncertainties,
@@ -88,9 +117,11 @@ export const researchSources = register.sources
     locator: s.locator,
   }));
 export const researchSnapshot = {
-  schema: "wallace-qualitative-research-1",
+  schema: "wallace-qualitative-research-2",
   notice: researchNotice,
   origin: "research/wallace-index/evidence-gaps-02/updated-register.json",
+  proposalOrigin:
+    "research/wallace-index/score-proposals-01/score-proposals.json",
   asOf: "2026-10-17",
   methodologyApproved: false,
   independentReviewCompleted: false,

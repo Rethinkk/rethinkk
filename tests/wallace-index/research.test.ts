@@ -42,3 +42,34 @@ test("Scholz Service limitation remains visible without assigning zero or implyi
   assert.match(scholzServiceCaveat, /No score has been assigned/);
   assert.ok(!researchSources.some((s) => s.id === "NKS07"));
 });
+
+test("Only the four documented conditional proposals are exposed; other dimensions stay unassessed", () => {
+  const found = researchProfiles.flatMap((p) =>
+    p.dimensions
+      .filter((d) => d.proposal)
+      .map((d) => [p.id, d.dimension, d.proposal!.score]),
+  );
+  assert.deepEqual(found, [
+    ["boris-johnson", "process", 1],
+    ["boris-johnson", "humility", 1],
+    ["barack-obama", "humility", 2],
+    ["olaf-scholz", "process", 1],
+  ]);
+  assert.equal(
+    researchProfiles
+      .flatMap((p) => p.dimensions)
+      .filter((d) => d.proposal === null).length,
+    26,
+  );
+  for (const p of researchProfiles)
+    for (const d of p.dimensions)
+      if (d.proposal) {
+        assert.ok(
+          d.proposal.rationale &&
+            d.proposal.adjacentDescriptors &&
+            d.proposal.conditions &&
+            d.proposal.changeFromPrior,
+        );
+      }
+  assert.equal(researchSnapshot.officialScoresAssigned, false);
+});

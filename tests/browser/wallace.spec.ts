@@ -17,7 +17,9 @@ test("Native chapter, research profiles and existing DDI route", async ({
   ).toBeVisible();
   await expect(page.locator(".wi-card")).toHaveCount(5);
   await expect(
-    page.getByText("Research profiles — no editorial scores"),
+    page.getByText(
+      "Research profiles — conditional proposals, not official scores",
+    ),
   ).toBeVisible();
   await page.goto("/index/democracy-direction");
   await expect(page).toHaveURL(/index\/democracy-direction/);
@@ -165,4 +167,50 @@ test("Research filters, Scholz caveat, claim provenance and independent visitor 
   await expect(page.getByLabel("Leader or temporary profile name")).toHaveValue(
     "Olaf Scholz",
   );
+});
+
+test("Current results show four conditional proposals with reasons and no complete totals", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/wallace-index");
+  await expect(
+    page.getByRole("heading", { name: "Current research results" }),
+  ).toBeVisible();
+  const table = page.getByRole("table");
+  await expect(
+    table.getByText("1 / 3 — conditional proposal", { exact: true }),
+  ).toHaveCount(3);
+  await expect(
+    table.getByText("2 / 3 — conditional proposal", { exact: true }),
+  ).toHaveCount(1);
+  await expect(table.getByText("Not calculated", { exact: true })).toHaveCount(
+    5,
+  );
+  await page.goto("/wallace-index/leaders/boris-johnson?research=1#process");
+  await expect(page.locator("#process")).toContainText(
+    "1 / 3 — conditional proposal",
+  );
+  await expect(page.locator("#process")).toContainText(
+    "Why adjacent scores differ",
+  );
+  await expect(page.locator("#process")).toContainText(
+    "Unresolved conditions before acceptance",
+  );
+  await page.goto(
+    "/wallace-index/compare?research=1&leaders=boris-johnson,barack-obama",
+  );
+  await expect(page.getByRole("table")).toContainText(
+    "2 / 3 — conditional proposal",
+  );
+  await expect(page.getByRole("table")).toContainText("Before acceptance:");
+  const response = await request.get("/api/wallace-index/research");
+  const data = await response.json();
+  expect(data.schema).toBe("wallace-qualitative-research-2");
+  expect(data.officialScoresAssigned).toBe(false);
+  expect(
+    data.profiles
+      .flatMap((p: { dimensions: { proposal: unknown }[] }) => p.dimensions)
+      .filter((d: { proposal: unknown }) => d.proposal),
+  ).toHaveLength(4);
 });

@@ -35,7 +35,7 @@ export async function wallacePublications(): Promise<Publication[]> {
       type: "research",
       status: "published", // Public discovery entry; not an approved Assessment.
       title: `Research draft: ${p.name} — The Wallace Index`,
-      excerpt: `${p.country} · ${p.office}. Qualitative research draft with evidence and counterevidence. No editorial scores assigned; independent review pending.`,
+      excerpt: `${p.country} · ${p.office}. Qualitative research draft with evidence and counterevidence. Conditional proposals only; no official scores. Independent review pending.`,
       category: "Power & Politics",
       tags: [
         "The Wallace Index",

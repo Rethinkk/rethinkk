@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ProposalMark } from "./research-results";
 import { label } from "@/lib/wallace-index/model";
 import { proposedMethodology } from "@/lib/wallace-index/methodology";
 import {
@@ -12,7 +13,9 @@ import {
 export function ResearchNotice() {
   return (
     <aside className="wi-notice">
-      <strong>Research profiles — no editorial scores</strong>
+      <strong>
+        Research profiles — conditional proposals, not official scores
+      </strong>
       <p>{researchNotice}</p>
       <Link href="/wallace-index/methodology">
         Methodology and limitations →
@@ -85,7 +88,7 @@ export function ResearchProfileView({
         ))}
       </p>
       <p>
-        <strong>Not assessed numerically. No total is calculated.</strong>{" "}
+        <strong>Conditional proposals only. No total is calculated.</strong>{" "}
         Evidence supports bounded observations; it does not yet support a
         complete-period numerical judgement.
       </p>
@@ -116,13 +119,18 @@ export function ResearchProfileView({
       {p.dimensions.map((d) => (
         <section className="wi-section" key={d.dimension} id={d.dimension}>
           <h2>{label(d.dimension)}</h2>
-          <p>
-            <strong>
-              {d.caveat
-                ? "Insufficient evidence — not assessed"
-                : "Not assessed numerically"}
-            </strong>
-          </p>
+          <ProposalMark dimension={d} />
+          {d.proposal && (
+            <div className="wi-notice">
+              <h3>Why this score is proposed</h3>
+              <p>{d.proposal.rationale}</p>
+              <h3>Why adjacent scores differ</h3>
+              <p>{d.proposal.adjacentDescriptors}</p>
+              <h3>Unresolved conditions before acceptance</h3>
+              <p>{d.proposal.conditions}</p>
+              <p>{d.proposal.changeFromPrior}</p>
+            </div>
+          )}
           <p>{proposedMethodology.rubrics[d.dimension].definition}</p>
           {d.caveat && <p className="wi-notice">{d.caveat}</p>}
           <h3>Concept assessment</h3>
@@ -144,11 +152,12 @@ export function ResearchProfileView({
       <section className="wi-section">
         <h2>Research provenance and revisions</h2>
         <p>
-          Based on evidence-gap follow-up 02, following research, source
-          verification and internal review. Earlier packets remain preserved in
-          the research archive. Internal checking was conducted by the same
-          research assistant; it is not independent review. The historical
-          prototype scores have not been reused or converted.
+          Based on evidence-gap follow-up 02 and conditional score proposal
+          packet 01, following research, source verification and internal
+          review. Earlier packets remain preserved in the research archive.
+          Internal checking was conducted by the same research assistant; it is
+          not independent review. The historical prototype scores have not been
+          reused or converted.
         </p>
         <Link href="/wallace-index/about#corrections">
           Corrections and research contributions →
@@ -180,7 +189,7 @@ export function ResearchComparison({ ids }: { ids: string[] }) {
       <div className="wi-table-scroll">
         <table className="wi-table">
           <caption>
-            Qualitative comparison · no scores or totals assigned
+            Comparative research · conditional proposals only, no totals
           </caption>
           <thead>
             <tr>
@@ -203,11 +212,16 @@ export function ResearchComparison({ ids }: { ids: string[] }) {
                 <th scope="row">{label(d.dimension)}</th>
                 {items.map((p) => (
                   <td key={p.id}>
-                    <strong>
-                      {p.dimensions[i].caveat
-                        ? "Insufficient evidence"
-                        : "Not assessed numerically"}
-                    </strong>
+                    <ProposalMark dimension={p.dimensions[i]} />
+                    {p.dimensions[i].proposal && (
+                      <>
+                        <p>{p.dimensions[i].proposal.rationale}</p>
+                        <p>
+                          <strong>Before acceptance:</strong>{" "}
+                          {p.dimensions[i].proposal.conditions}
+                        </p>
+                      </>
+                    )}
                     {p.dimensions[i].caveat && (
                       <p className="wi-notice">{p.dimensions[i].caveat}</p>
                     )}
